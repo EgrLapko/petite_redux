@@ -12,6 +12,8 @@ import LoginPage from './components/pages/LoginPage/LoginPage';
 import ProductsPage from './components/pages/ProductsPage/ProductsPage';
 import Footer from './components/layout/Footer';
 
+import './styles.css'
+
 
 class App extends Component {
   unsubscribeFromAuth = null;
