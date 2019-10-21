@@ -4,13 +4,13 @@ import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
 import CustomButton from '../misc/CustomButton';
-import CartItem from '../CartItem/CartItem';
+import CartItem from './CartItem';
 
-import { selectCartItems } from '../../redux/cart/cart-selectors';
+import { selectCartItems, selectCartHidden } from '../../redux/cart/cart-selectors';
 
-function CartDropdown({ cartItems, history }) {
+function CartDropdown({ cartItems, history, hidden }) {
     return (
-        <div className="cart-dropdown">
+        <div className={`cart-dropdown ${hidden ? '' : 'visible'}`}>
             <div className="cart-items">
                 {cartItems.length 
                     ? (
@@ -27,7 +27,8 @@ function CartDropdown({ cartItems, history }) {
 }
 
 const mapStateToProps = createStructuredSelector({
-    cartItems: selectCartItems
+    cartItems: selectCartItems,
+    hidden: selectCartHidden
 });
 
 export default withRouter(connect(mapStateToProps)(CartDropdown));

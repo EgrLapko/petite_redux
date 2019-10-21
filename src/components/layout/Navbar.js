@@ -6,8 +6,10 @@ import { createStructuredSelector } from 'reselect';
 import { auth } from '../../firebase/firebase.utils';
 import { selectCurrentUser } from '../../redux/user/user-selectors';
 import CartIcon from '../misc/CartIcon';
+import { selectCartHidden } from '../../redux/cart/cart-selectors';
+import CartDropdown from '../cart/CartDropdown';
 
-function Navbar({ currentUser }) {
+function Navbar({ currentUser, hidden }) {
     return (
         <div className="navbar">
             <div className="menu">
@@ -30,12 +32,16 @@ function Navbar({ currentUser }) {
                     <CartIcon />
                 </div>
             </div>
+            {
+                hidden ? null : <CartDropdown />
+            }
         </div>
     )
 };
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
+    hidden: selectCartHidden
 })
 
 export default connect(mapStateToProps)(Navbar);

@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
 
-import { shopData } from '../../../shopData';
+import { products } from '../../../productsData';
 import ProductCard from './ProductCard';
 
 export default class ProductsPage extends Component {
     state = {
-        items: shopData
+        items: products
     }
     render() {
         const { items } = this.state;
+        const bras = items.filter(item => item.type === "Bras");
         return (
             <div className="products-page">
                 <h1>Bras here</h1>
                 <div className="products">
                 {
-                   items.map(({id, ...otherCollectionProps}) => {
+                   bras.map((item) => {
                        return (
-                           <ProductCard key={id} {...otherCollectionProps} />
+                           <ProductCard key={item.id} item={item} />
                        )
                    })
-               }
+                }
                 </div>
             </div>
         )
