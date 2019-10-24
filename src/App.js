@@ -13,6 +13,7 @@ import ProductsPage from './components/pages/ProductsPage/ProductsPage';
 import Footer from './components/layout/Footer';
 
 import './styles.css'
+import CheckoutPage from './components/pages/CheckOutPage/CheckoutPage';
 
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={MainPage} />
           <Route path='/products' component={ProductsPage} />
+          <Route exact path='/checkout' component={CheckoutPage} />
           <Route exact path='/login' render={() => 
             this.props.currentUser ? (
               <Redirect to='/' />

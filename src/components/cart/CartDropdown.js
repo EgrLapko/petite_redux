@@ -7,8 +7,9 @@ import CustomButton from '../misc/CustomButton';
 import CartItem from './CartItem';
 
 import { selectCartItems, selectCartHidden } from '../../redux/cart/cart-selectors';
+import { toggleCartHidden } from '../../redux/cart/cart-actions';
 
-function CartDropdown({ cartItems, history, hidden }) {
+function CartDropdown({ cartItems, history, hidden, dispatch }) {
     return (
         <div className={`cart-dropdown ${hidden ? '' : 'visible'}`}>
             <div className="cart-items">
@@ -21,7 +22,10 @@ function CartDropdown({ cartItems, history, hidden }) {
                     <span className="empty-message">Your cart is empty</span>
                 )}
             </div>
-            <CustomButton onClick={() => history.push('/checkout')}>Go to checkout</CustomButton>
+            <CustomButton onClick={() => {
+                history.push('/checkout');
+                dispatch(toggleCartHidden());
+            }}>Go to checkout</CustomButton>
         </div>
     )
 }
