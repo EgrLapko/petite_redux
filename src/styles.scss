@@ -82,9 +82,9 @@ $main-color: black;
     width: 100%;
     height: 4.5rem;
     position: sticky;
-    background-color: rgba(246, 246, 246, 1);
     top: 0rem;
     z-index: 99;
+    background-color: rgba(246, 246, 246, 1);
     .menu {
         display: flex;
         width: 100%;
@@ -140,6 +140,46 @@ $main-color: black;
               }
         }
     }
+}
+
+
+// --------------------------------------------------------------- NAVBAR SLIDER
+.navbar-slider {
+  position: fixed;
+  z-index: 98;
+  top: 4.5rem;
+  right: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, .05);
+  background-color: rgba(246, 246, 246, .9);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: .4s ease-in-out;
+  .slider-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 1rem;
+    padding: .5rem;
+    .nav-menu-image {
+      width: 100%;
+      width: 7rem;
+      cursor: pointer;
+    }
+    .nav-menu-title {
+      margin: 0;
+      padding: .7rem;
+      cursor: pointer;
+    }
+  }
+  &.visible {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 // --------------------------------------------------------------- CART DROPDOWN
