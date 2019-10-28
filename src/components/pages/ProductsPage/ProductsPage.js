@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-import { products } from '../../../productsData';
 import ProductCard from './ProductCard';
+import { selectCollections } from '../../../redux/shop/shop-selectors';
 
-export default class ProductsPage extends Component {
-    state = {
-        items: products
-    }
-    render() {
-        const { items } = this.state;
-        const bras = items.filter(item => item.type === "Bras");
-        return (
-            <div className="products-page">
-                <h1>Bras here</h1>
-                <div className="products">
-                {
-                   bras.map((item) => {
-                       return (
-                           <ProductCard key={item.id} item={item} />
-                       )
-                   })
-                }
-                </div>
+function ProductsPage({collections}) {
+    const bras = collections.filter(item => item.type === "Bras")
+    return (
+        <div className="products-page">
+            <h1>Bras here</h1>
+            <div className="products">
+            {
+                bras.map((item) => {
+                    return (
+                        <ProductCard key={item.id} item={item} />
+                    )
+                })
+            }
             </div>
-        )
-    }
+        </div>
+    )
 };
+
+const mapStateToProps = createStructuredSelector({
+    collections: selectCollections
+})
+
+export default connect(mapStateToProps)(ProductsPage);

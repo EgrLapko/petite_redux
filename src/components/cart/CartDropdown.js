@@ -11,21 +11,26 @@ import { toggleCartHidden } from '../../redux/cart/cart-actions';
 
 function CartDropdown({ cartItems, history, hidden, dispatch }) {
     return (
-        <div className={`cart-dropdown ${hidden ? '' : 'visible'}`}>
-            <div className="cart-items">
-                {cartItems.length 
-                    ? (
-                    cartItems.map(cartItem => (
-                     <CartItem key={cartItem.id} item={cartItem} />
-                    ))
-                ) : (
-                    <span className="empty-message">Your cart is empty</span>
-                )}
+        <div className={`dropdown-wrapper ${hidden ? '' : 'visible'}`}>
+            <div className="cart-dropdown">
+                <div className="inner-wrapper"></div>
+                <div className="cart-items">
+                    {cartItems.length 
+                        ? (
+                        cartItems.map(cartItem => (
+                        <CartItem key={cartItem.id} cartItem={cartItem} />
+                        ))
+                    ) : (
+                        <span className="empty-message">Your cart is empty</span>
+                    )}
+                </div>
             </div>
-            <CustomButton onClick={() => {
-                history.push('/checkout');
-                dispatch(toggleCartHidden());
-            }}>Go to checkout</CustomButton>
+            <div className={`btn-container ${cartItems.length > 0 && "visible"}`}> 
+                <CustomButton onClick={() => {
+                    history.push('/checkout');
+                    dispatch(toggleCartHidden());
+                }}>Checkout</CustomButton>
+            </div>
         </div>
     )
 }

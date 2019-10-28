@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
 
-export default function CartItem({ item: { imgSrc, price, title, quantity } }) {
+import { clearItemFromCart } from '../../redux/cart/cart-actions';
+import CustomButton from '../misc/CustomButton';
+
+function CartItem({cartItem, clearItem}) {
+    const { imgSrc, title, quantity, price } = cartItem;
     return (
         <div className="cart-item">
             <img src={imgSrc} alt='item'/>
@@ -9,7 +14,16 @@ export default function CartItem({ item: { imgSrc, price, title, quantity } }) {
                 <span className="price">
                     {quantity} x ${price}
                 </span>
+                <div className="remove-button" onClick={() => clearItem(cartItem)}>&#10005;</div>
             </div>
         </div>
     )
 }
+
+const mapDispatchToProps = dispatch => ({
+    clearItem: item => dispatch(clearItemFromCart(item))
+})
+
+export default connect(null, mapDispatchToProps)(CartItem);
+
+

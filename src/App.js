@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import { setCurrentUser } from './redux/user/user-actions';
 import { selectCurrentUser } from './redux/user/user-selectors';
 
-import Navbar from './components/layout/Navbar';
+import Navbar from './components/layout/Navbar/Navbar';
 import MainPage from './components/pages/MainPage/MainPage';
 import LoginPage from './components/pages/LoginPage/LoginPage';
 import ProductsPage from './components/pages/ProductsPage/ProductsPage';

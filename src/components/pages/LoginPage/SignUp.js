@@ -44,10 +44,9 @@ export default class SignUp extends Component {
     render() {
         const {displayName, email, password, confirmPassword} = this.state;
         return (
-            <div className="sign-up">
+            <div className="login-form sign-up">
                 <h2 className="title">I dont have an account</h2>
-                <span>Sign up with your e-mail and password</span>
-                <form className="sign-up-form" onSubmit={this.handleSubmit}>
+                <form className="main-form" onSubmit={this.handleSubmit}>
                     <FormInput
                         type="text"
                         name="displayName"

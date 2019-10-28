@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { auth } from '../../firebase/firebase.utils';
-import { selectCurrentUser } from '../../redux/user/user-selectors';
-import CartIcon from '../misc/CartIcon';
-import { selectCartHidden } from '../../redux/cart/cart-selectors';
-import CartDropdown from '../cart/CartDropdown';
+import { auth } from '../../../firebase/firebase.utils';
+import { selectCurrentUser } from '../../../redux/user/user-selectors';
+import CartIcon from '../../misc/CartIcon';
+import { selectCartHidden } from '../../../redux/cart/cart-selectors';
+import CartDropdown from '../../cart/CartDropdown';
 
 function Navbar({ currentUser, hidden }) {
     return (
@@ -32,9 +32,7 @@ function Navbar({ currentUser, hidden }) {
                     <CartIcon />
                 </div>
             </div>
-            {
-                hidden ? null : <CartDropdown />
-            }
+            <CartDropdown />
         </div>
     )
 };
