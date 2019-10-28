@@ -148,9 +148,9 @@ $main-color: black;
   position: fixed;
   z-index: 98;
   top: 4.5rem;
-  right: 0;
+  right: 20%;
   display: flex;
-  width: 100%;
+  width: 60%;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, .05);
@@ -158,16 +158,18 @@ $main-color: black;
   opacity: 0;
   transform: translateY(-100%);
   transition: .4s ease-in-out;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   .slider-item {
+    width: 9rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0rem 1rem;
+    margin: 0rem 1.5rem;
     padding: .5rem;
     .nav-menu-image {
       width: 100%;
-      width: 7rem;
       cursor: pointer;
     }
     .nav-menu-title {
