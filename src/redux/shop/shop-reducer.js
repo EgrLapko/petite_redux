@@ -1,4 +1,4 @@
-import { products } from './productsData';
+import { products } from './products';
 
 const INITIAL_STATE = {
     collections: products

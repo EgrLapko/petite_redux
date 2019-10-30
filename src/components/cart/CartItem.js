@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { clearItemFromCart } from '../../redux/cart/cart-actions';
-import CustomButton from '../misc/CustomButton';
 
 function CartItem({cartItem, clearItem}) {
     const { imgSrc, title, quantity, price } = cartItem;

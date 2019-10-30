@@ -14,13 +14,13 @@ export const navbarLinks = [
         image: 'https://i.imgur.com/qAHmGb3.jpg',
         category: 'bra'
     },
-    {
-        id: 3,
-        text: 'browse all',
-        path: '/products/bras',
-        image: '/images/navbar/bra.png',
-        category: 'bra'
-    },
+    // {
+    //     id: 3,
+    //     text: 'browse all',
+    //     path: '/products/bras',
+    //     image: '/images/navbar/bra.png',
+    //     category: 'bra'
+    // },
     {
         id: 4,
         text: 'strapless',
@@ -49,13 +49,13 @@ export const navbarLinks = [
         image: 'https://i.imgur.com/VrXOaVs.jpg',
         category: 'panty'
     },
-    {
-        id: 8,
-        text: 'browse all',
-        path: '/products/panties_all',
-        image: '/images/navbar/panties.png',
-        category: 'panty'
-    },
+    // {
+    //     id: 8,
+    //     text: 'browse all',
+    //     path: '/products/panties_all',
+    //     image: '/images/navbar/panties.png',
+    //     category: 'panty'
+    // },
     {
         id: 9,
         text: 'slimming',
@@ -84,13 +84,13 @@ export const navbarLinks = [
         image: 'https://i.imgur.com/Hn7O5YM.jpg',
         category: 'sleepwear'
     },
-    {
-        id: 13,
-        text: 'browse all',
-        path: '/products/sleepwear_all',
-        image: '/images/navbar/sleepwear.png',
-        category: 'sleepwear'
-    },
+    // {
+    //     id: 13,
+    //     text: 'browse all',
+    //     path: '/products/sleepwear_all',
+    //     image: '/images/navbar/sleepwear.png',
+    //     category: 'sleepwear'
+    // },
     {
         id: 14,
         text: 'short',
@@ -119,13 +119,13 @@ export const navbarLinks = [
         image: 'https://i.imgur.com/pdmDWb2.jpg',
         category: 'accs'
     },
-    {
-        id: 20,
-        text: 'browse all',
-        path: '/products/accessories_all',
-        image: '/images/navbar/accs.png',
-        category: 'accs'
-    },
+    // {
+    //     id: 20,
+    //     text: 'browse all',
+    //     path: '/products/accessories_all',
+    //     image: '/images/navbar/accs.png',
+    //     category: 'accs'
+    // },
     {
         id: 18,
         text: 'slippers',

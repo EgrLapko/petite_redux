@@ -12,7 +12,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
             <div className={`navbar-slider ${sliderBrasHidden ? '' : 'visible' }`}>
                 {
                     navbarLinks.map(link => link.category === `bra` &&
-                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} />
+                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} path={link.path} />
                     )
                 }
             </div>
@@ -20,7 +20,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
             <div className={`navbar-slider ${sliderPantiesHidden ? '' : 'visible' }`}>
                 {
                     navbarLinks.map(link => link.category === `panty` &&
-                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} />
+                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} path={link.path} />
                     )
                 }
             </div>
@@ -28,7 +28,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
             <div className={`navbar-slider ${sliderAccsHidden ? '' : 'visible' }`}>
                 {
                     navbarLinks.map(link => link.category === `accs` &&
-                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} />
+                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} path={link.path} />
                     )
                 }
             </div>
@@ -36,7 +36,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
             <div className={`navbar-slider ${sliderSleepHidden ? '' : 'visible' }`}>
                 {
                     navbarLinks.map(link => link.category === `sleepwear` &&
-                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} />
+                        <NavbarSliderItem key={link.id} image={link.image} text={link.text} path={link.path} />
                     )
                 }
             </div>
