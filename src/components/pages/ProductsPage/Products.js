@@ -3,12 +3,13 @@ import { connect } from 'react-redux';
 
 import { selectCollection } from '../../../redux/shop/shop-selectors';
 import ProductCard from './ProductCard';
+import Title from '../../misc/Title';
 
 function Products({ collection }) {
     const { title, items } = collection;
     return (
         <div className="products-section">
-            <h2 className="title">{title}</h2>
+            <Title text={title} />
             <div className="items">
                 {
                     items.map(item => (

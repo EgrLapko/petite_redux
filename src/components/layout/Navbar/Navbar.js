@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -20,7 +20,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
              <div className="navbar">
                 <div className="menu">
                     <div className="nav-logo">
-                        <Link className="option" to="/">Petite Mamsel</Link>
+                        <Link className="option" to="/"><span className="first-letter">P</span>etite.<span className="second-letter">M</span>amsel</Link>
                     </div>
                     <ul className="nav-links">
                         <li className="link" onClick={toggleSliderBras}>Bras</li>
@@ -31,9 +31,9 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                     <div className="nav-right">
                         {   
                             currentUser ?
-                            <div className="nav-option" onClick={() => auth.signOut()}>SIGN OUT</div>
+                            <div className="nav-option" onClick={() => auth.signOut()}>sign out</div>
                             :
-                            <Link className="nav-option" to="/login">SIGN IN</Link>
+                            <NavLink className="nav-option" activeClassName="link-active" to="/login">log in</NavLink>
                         }
                         <CartIcon />
                     </div>

@@ -14,7 +14,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: rgba(246, 246, 246, .6);
+    background-color: rgba(248, 248, 248, 1);
 }
 
 a {
@@ -84,40 +84,64 @@ $main-color: black;
     position: sticky;
     top: 0rem;
     z-index: 99;
-    background-color: rgba(246, 246, 246, 1);
+    background-color: rgba(248, 248, 248, 1);
     .menu {
         display: flex;
         width: 100%;
         justify-content: space-between;
+        text-transform: capitalize;
         .nav-logo {
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 7rem;
+            min-width: 10rem;
+            padding: 0rem 1rem;
+            color: rgba(105, 105, 105, .9);
+            font-weight: 600;
+            text-transform: lowercase;
+            font-size: 1.3rem;
+            .first-letter, .second-letter {
+              color: rgba(241, 106, 123, .9);
+            }
         }
         .nav-links {
             list-style-type: none;
             display: flex;
-            width: 80%;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            padding: 0;
             .link {
-                font-size: 1.3rem;
-                text-transform: lowercase;
+                font-size: 1.2rem;
                 color: rgba(105, 105, 105, .9);
                 font-weight: 600;
                 cursor: pointer;
                 margin: 0rem 2rem;
+                transition: .3s;
+                &:hover {
+                  color: rgba(241, 106, 123, .9);
+                }
             }
         }
         .nav-right {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            width: 10rem;
+            min-width: 10rem;
+            padding: 0rem 1rem;
             .nav-option {
                 font-size: 1.2rem;
+                color: rgba(105, 105, 105, .9);
+                font-weight: 600;
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                  color: rgba(241, 106, 123, .9);
+                }
+            }
+            .link-active {
+              color: rgba(241, 106, 123, .9);
             }
             .cart-icon {
                 width: 45px;
@@ -173,9 +197,21 @@ $main-color: black;
       cursor: pointer;
     }
     .nav-menu-title {
-      margin: 0;
-      padding: .7rem;
+      margin: 0 0;
+      padding: 0rem;
+      color: rgba(105, 105, 105, 1);
+      text-transform: capitalize;
       cursor: pointer;
+      transition: .3s;
+      &:hover {
+        color: rgba(241, 106, 123, .9);
+      }
+      &.link-active {
+        color: rgba(241, 106, 123, .9);
+      }
+      h3 {
+        margin: .5rem 0;
+      }
     }
   }
   &.visible {
@@ -270,6 +306,24 @@ $main-color: black;
     }
   }
 }
+// --------------------------------------------------------------- MAIN TITLE
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  border-top: 1px solid rgba(105, 105, 105, .1);
+  border-bottom: 1px solid rgba(105, 105, 105, .1);
+  margin: 2rem 0;
+  .main-title-text {
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0;
+    padding: 1rem;
+    text-transform: lowercase;
+    color: rgba(105, 105, 105, 1);
+  }
+}
 
 // --------------------------------------------------------------- PRODUCTS PAGE
 .products-page {
@@ -287,10 +341,10 @@ $main-color: black;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 65%;
   .items {
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
@@ -301,44 +355,69 @@ $main-color: black;
   display: flex;
   flex-direction: column;
   width: 22rem;
-  padding: .5rem;
-  margin: .3rem .3rem;
+  margin: 1rem 1rem;
   position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, .05);
+  transition: .5s;
   img {
     width: 100%;
     cursor: pointer;
     transition: .2s;
     position: relative;
   }
-  .card-title {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    font-weight: 300;
-  }
-  .custom-button {
-    position: absolute;
-    border-radius: 50%;
-    min-width: 4rem;
-    min-height: 4rem;
-    top: 78%;
-    right: 9.3rem;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-    background-color: $main-color;
-    color: white;
-    &:hover {
-      background-color: green;
+  .bottom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .category {
+      text-transform: uppercase;
+      color: rgba(105, 105, 105, .5);
+      letter-spacing: .2rem;
+      font-size: .8rem;
+      margin: 0;
+      padding: .7rem;
+    }
+    .card-title {
+      width: 90%;
+      text-transform: lowercase;
+      text-align: center;
+      font-size: 1.3rem;
+      margin: 0;
+      padding: .5rem;
+      font-weight: 600;
+      color: rgba(105, 105, 105, .9);
+      cursor: pointer;
+      transition: .3s;
+      border-bottom: 1px solid rgba(241, 106, 123, .3);
+      &:hover {
+        color: rgba(241, 106, 123, .7);
+      }
+    }
+    .bottom-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .price, .cart {
+        padding: 0rem 1rem;
+        text-transform: lowercase;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: rgba(105, 105, 105, .7);
+      }
+      .cart {
+        cursor: pointer;
+      }
+      .price {
+        cursor: default;
+      }
     }
   }
   &:hover {
-    img {
-      opacity: .9;
-    }
-    .custom-button {
-      opacity: 1;
-      visibility: visible;
-    }
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, .1);
   }
 }
 
