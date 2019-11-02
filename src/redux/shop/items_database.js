@@ -244,6 +244,14 @@ export const products = {
                 type: "Bras",
                 price: "26.00"
             },
+        ],
+    },
+    bras_pushup: {
+        id: 1,
+        title: "Pushup Bras",
+        routeName: 'bras_pushup',
+        items: [
+
         ]
     }
 }
