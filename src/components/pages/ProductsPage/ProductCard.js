@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import { addItem } from '../../../redux/cart/cart-actions';
 
 function ProductCard({item, addItem}) {
-    const {imgSrc, imgOver, title, category, price} = item;
+    const {imgSmall_1, imgSmall_2, title, category, price} = item;
     return (
         <div className="product-card">
             <img 
                 className="card-image" 
-                src={imgSrc} alt="item" 
-                onMouseOver = {e => {e.currentTarget.src = imgOver}}
-                onMouseOut = {e => {e.currentTarget.src = imgSrc}}    
+                src={imgSmall_1} alt="item" 
+                onMouseOver = {e => {e.currentTarget.src = imgSmall_2}}
+                onMouseOut = {e => {e.currentTarget.src = imgSmall_1}}    
             />
             <div className="bottom-info">
                 <h3 className="category">{category}</h3>

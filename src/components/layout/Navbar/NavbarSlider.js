@@ -27,7 +27,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
 
             <div className={`navbar-slider ${sliderAccsHidden ? '' : 'visible' }`}>
                 {
-                    navbarLinks.map(link => link.category === `accs` &&
+                    navbarLinks.map(link => link.category === `accessories` &&
                         <NavbarSliderItem key={link.id} image={link.image} text={link.text} path={link.path} />
                     )
                 }
