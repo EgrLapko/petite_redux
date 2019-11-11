@@ -14,6 +14,9 @@ export const items_database = {
                 description: 'Classic bra with glitter plumetis effect and double straps. A delicate and feminine wardrobe must-have.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                sizes: ["70", "75", "80"],
+                color: ["pink"],
                 price: "28.00"
             },
             {
@@ -26,6 +29,9 @@ export const items_database = {
                 description: 'Classic lace bra with underwire. Add a subtle hint of colour to your lingerie look.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80"],
+                color: ["pink"],
                 price: "29.00"
             },
             {
@@ -38,6 +44,9 @@ export const items_database = {
                 description: 'Classic lace bra with underwire. Add a subtle hint of colour to your lingerie look.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                sizes: ["70", "75"],
+                color: ["green"],
                 price: "25.00"
             },
             {
@@ -50,6 +59,9 @@ export const items_database = {
                 description: 'Classic lace bra with underwire. Add a subtle hint of colour to your lingerie look.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "C", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["pink"],
                 price: "25.00"
             },
             {
@@ -62,6 +74,9 @@ export const items_database = {
                 description: 'Classic lace bra with underwire. Add a subtle hint of colour to your lingerie look.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                sizes: ["85"],
+                color: ["red"],
                 price: "27.00"
             },
             {
@@ -74,6 +89,9 @@ export const items_database = {
                 description: 'Classic lace bra with underwire. Add a subtle hint of colour to your lingerie look.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["green"],
                 price: "23.00"
             },
             {
@@ -86,6 +104,9 @@ export const items_database = {
                 description: 'Classic bra with contrast floral lace. Option to cross straps at the back. You are going to fall in love with this must-have.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["black", "white"],
                 price: "27.00"
             },
             {
@@ -98,6 +119,9 @@ export const items_database = {
                 description: 'Classic bra in printed mesh with floral lace at the cups. Contrast straps, wider at the back. Sexy and on-trend!',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "B"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["white"],
                 price: "27.00"
             },
             {
@@ -110,6 +134,9 @@ export const items_database = {
                 description: 'Classic floral lace bra with lace inlay on the back of the straps. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70"],
+                color: ["green"],
                 price: "26.00"
             },
             {
@@ -122,6 +149,9 @@ export const items_database = {
                 description: 'Classic floral lace bra with lace inlay on the back of the straps. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "85"],
+                color: ["purple"],
                 price: "23.00"
             },
             {
@@ -134,6 +164,9 @@ export const items_database = {
                 description: 'Classic floral lace bra with lace inlay on the back of the straps. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75"],
+                color: ["pink"],
                 price: "24.00"
             },
             {
@@ -146,6 +179,9 @@ export const items_database = {
                 description: 'Classic floral lace bra with lace inlay on the back of the straps. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["80", "85"],
+                color: ["green"],
                 price: "25.00"
             },
             {
@@ -158,6 +194,9 @@ export const items_database = {
                 description: 'Classic bra with floral lace and bow detail on the neckline. Super sexy and feminine.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "C"],
+                sizes: ["70", "75", "85"],
+                color: ["pink"],
                 price: "28.00"
             },
             {
@@ -170,6 +209,9 @@ export const items_database = {
                 description: 'Classic bra with floral lace and bow detail on the neckline. Super sexy and feminine.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["pink"],
                 price: "29.00"
             },
             {
@@ -182,6 +224,9 @@ export const items_database = {
                 description: 'Classic bra with floral lace and bow detail on the neckline. Super sexy and feminine.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["green"],
                 price: "27.00"
             },
             {
@@ -194,6 +239,9 @@ export const items_database = {
                 description: 'Classic floral lace bra with lace inlay on the back of the straps. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80"],
+                color: ["blue"],
                 price: "24.00"
             },
             {
@@ -206,6 +254,9 @@ export const items_database = {
                 description: 'Classic plain bra in satin effect microfibre. Crossed over between the cups to avoid any marks. Double straps with gold details and the "Mamselles" logo on one side. Elegance and comfort in one bra.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                sizes: ["70", "75", "80"],
+                color: ["pink"],
                 price: "33.00"
             },
             {
@@ -218,6 +269,9 @@ export const items_database = {
                 description: 'Classic plain bra in satin effect microfibre. Crossed over between the cups to avoid any marks. Double straps with gold details and the "Mamselles" logo on one side. Elegance and comfort in one bra.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                sizes: ["70", "75", "80"],
+                color: ["green"],
                 price: "30.00"
             },
             {
@@ -230,6 +284,9 @@ export const items_database = {
                 description: 'Classic plain bra in satin effect microfibre. Crossed over between the cups to avoid any marks. Double straps with gold details and the "Mamselles" logo on one side. Elegance and comfort in one bra.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "B", "C", "D"],
+                sizes: ["70", "75", "80"],
+                color: ["green"],
                 price: "34.00"
             },
             {
@@ -242,6 +299,9 @@ export const items_database = {
                 description: 'The underwire in the BEAUTIFUL bra subtly lifts and centres the bust in a flattering, super sexy style. Classic modal and microfibre bra.',
                 category: "Bras, classic",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75", "80"],
+                color: ["black"],
                 price: "26.00"
             },
         ]
@@ -261,6 +321,9 @@ export const items_database = {
                 description: 'Lace push-up bra. A delicate and feminine wardrobe must-have.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["green"],
                 price: "26.00"
             },
             {
@@ -273,6 +336,9 @@ export const items_database = {
                 description: 'Lace push-up bra. A delicate and feminine wardrobe must-have.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["green"],
                 price: "29.00"
             },
             {
@@ -285,6 +351,9 @@ export const items_database = {
                 description: 'Lace push-up bra. A delicate and feminine wardrobe must-have.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "C", "D"],
+                sizes: ["70", "75", "85"],
+                color: ["purple"],
                 price: "28.00"
             },
             {
@@ -297,6 +366,9 @@ export const items_database = {
                 description: 'Lace push-up bra. A delicate and feminine wardrobe must-have.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["pink"],
                 price: "29.00"
             },
             {
@@ -309,6 +381,9 @@ export const items_database = {
                 description: 'Lace push-up bra with strappy back. Add a sexy splash of colour to your lingerie look.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                sizes: ["70", "85"],
+                color: ["purple"],
                 price: "27.00"
             },
             {
@@ -321,6 +396,9 @@ export const items_database = {
                 description: 'Floral lace push-up bra. Gorgeous cut out detail with strappy front and wide straps. The perfect bra for both special occasions and everyday wear.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["black"],
                 price: "33.00"
             },
             {
@@ -333,6 +411,9 @@ export const items_database = {
                 description: 'Plumetis push up bra with bow detail at the front and lace at the back. Feminine, comfortable, and sexy!',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["blue"],
                 price: "29.00"
             },
             {
@@ -345,6 +426,9 @@ export const items_database = {
                 description: 'Long-sleeved bra top with lace and tulle. Cut out detail at the back. A super feminine and sexy design.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                sizes: ["70", "75"],
+                color: ["black"],
                 price: "38.00"
             },
             {
@@ -357,6 +441,9 @@ export const items_database = {
                 description: 'Push up bra in floral lace with bow detail at the cleavage. Super sensual and feminine.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["blue"],
                 price: "25.00"
             },
             {
@@ -369,6 +456,9 @@ export const items_database = {
                 description: 'Lace push-up bra. Gorgeous cut out detail with strappy front and wide satin straps. The perfect bra for both special occasions and everyday wear.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["white"],
                 price: "32.00"
             },
             {
@@ -381,6 +471,9 @@ export const items_database = {
                 description: 'Floral lace push up bra with crossed straps and lace inlay detail at the back. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["purple"],
                 price: "26.00"
             },
             {
@@ -393,6 +486,9 @@ export const items_database = {
                 description: 'Floral lace push up bra with crossed straps and lace inlay detail at the back. A delicate and feminine model, a must for your wardrobe.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "C"],
+                sizes: ["70", "75"],
+                color: ["white"],
                 price: "27.00"
             },
             {
@@ -405,6 +501,9 @@ export const items_database = {
                 description: 'Floral lace push-up bra with thin straps on the cups. Bow detail. Super sexy and feminine.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["pink"],
                 price: "27.00"
             },
             {
@@ -417,6 +516,9 @@ export const items_database = {
                 description: 'Floral lace push-up bra with thin straps on the cups. Bow detail. Super sexy and feminine.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "B", "C", "D"],
+                sizes: [ "80", "85"],
+                color: ["blue"],
                 price: "29.00"
             },
             {
@@ -429,6 +531,9 @@ export const items_database = {
                 description: 'Push up bra in with floral lace and tulle details, and a bow at the cleavage. A feminine classic that will be your favourite.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "D"],
+                sizes: [ "80", "85"],
+                color: ["blue"],
                 price: "29.00"
             },
             {
@@ -441,6 +546,9 @@ export const items_database = {
                 description: 'Push up bra in with floral lace and tulle details, and a bow at the cleavage. A feminine classic that will be your favourite.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "D"],
+                sizes: ["70", "85"],
+                color: ["pink"],
                 price: "29.00"
             },
             {
@@ -453,6 +561,9 @@ export const items_database = {
                 description: 'Push-up bra with neckline detail and microfibre and tulle fabric sides. Show it off to add a sexy and elegant touch to your look.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70"],
+                color: ["black"],
                 price: "30.00"
             },
             {
@@ -465,6 +576,9 @@ export const items_database = {
                 description: 'Push up bra with floral lace. Gorgeous cut out detail with satin straps at the front and back, and wide lace straps. The perfect bra for both special occasions and everyday wear.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                sizes: ["70", "75", "85"],
+                color: ["black"],
                 price: "33.00"
             },
             {
@@ -477,6 +591,9 @@ export const items_database = {
                 description: 'Push up bra with floral lace. Gorgeous cut out detail with satin straps at the front and back, and wide lace straps. The perfect bra for both special occasions and everyday wear.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["green"],
                 price: "33.00"
             },
             {
@@ -489,6 +606,9 @@ export const items_database = {
                 description: 'Floral lace push-up bralette with crossover straps at the front and cups, and cut out details at the back. A super feminine and sensual design.',
                 category: "Bras, push-up",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["black"],
                 price: "33.00"
             },
         ]
@@ -508,6 +628,8 @@ export const items_database = {
                 description: 'Floral lace bralette with clasps at the back. Bow on the front. A super feminine and sensual design.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                color: ["black"],
                 price: "28.00"
             },
             {
@@ -520,6 +642,8 @@ export const items_database = {
                 description: 'Lace triangle bralette without underwire or padding. Add a splash of colour to your lingerie look. Dare to show it off?',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "C", "D"],
+                color: ["pink"],
                 price: "26.00"
             },
             {
@@ -532,6 +656,8 @@ export const items_database = {
                 description: 'Flowery lace halter bralette with thin strap detail on the neckline. A super sexy model and full of details that will conquer you.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                color: ["black"],
                 price: "29.00"
             },
             {
@@ -544,6 +670,8 @@ export const items_database = {
                 description: 'Halter-neck floral lace bralette. A super sexy design, full of details you will love.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                color: ["purple"],
                 price: "29.00"
             },
             {
@@ -556,6 +684,8 @@ export const items_database = {
                 description: 'Halter flowery lace bralette. Olympic back. A super sexy model and full of details that will conquer you.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                color: ["pink"],
                 price: "30.00"
             },
             {
@@ -568,6 +698,8 @@ export const items_database = {
                 description: 'Flowery lace halter bralette with thin strap detail on the neckline. A super sexy model and full of details that will conquer you.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B"],
+                color: ["purple"],
                 price: "29.00"
             },
             {
@@ -580,6 +712,8 @@ export const items_database = {
                 description: 'Floral lace push-up bralette with crossover straps at the front and cups, and cut out details at the back. A super feminine and sensual design.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "D"],
+                color: ["black"],
                 price: "32.00"
             },
             {
@@ -592,6 +726,8 @@ export const items_database = {
                 description: 'Lace halter-neck bralette with double straps, fastens at front with clasps. A super sexy design, full of details you will love.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "B", "C", "D"],
+                color: ["green"],
                 price: "28.00"
             },
             {
@@ -604,6 +740,8 @@ export const items_database = {
                 description: 'Lace triangle bralette without underwire or padding. Add a splash of colour to your lingerie look. Dare to show it off?',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B"],
+                color: ["red"],
                 price: "27.00"
             },
             {
@@ -616,6 +754,8 @@ export const items_database = {
                 description: 'Long-sleeved bra top. Lace and plumetis design with front fastening and opening detail.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                color: ["black"],
                 price: "39.00"
             },
             {
@@ -628,6 +768,8 @@ export const items_database = {
                 description: 'Floral lace triangle bralette. Fixed cups, clasps at the back, and adjustable straps. A super sexy design, full of details you will love.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B"],
+                color: ["pink"],
                 price: "25.00"
             },
             {
@@ -640,6 +782,8 @@ export const items_database = {
                 description: 'Halter flowery lace bralette. A super sexy model and full of details that will conquer you.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "C", "D"],
+                color: ["green"],
                 price: "28.00"
             },
             {
@@ -652,6 +796,8 @@ export const items_database = {
                 description: 'Floral lace bralette. Fixed cups, and straps that can be crossed over at the back. A super sexy design, full of details you willl love.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "B", "C", "D"],
+                color: ["blue"],
                 price: "30.00"
             },
             {
@@ -664,6 +810,8 @@ export const items_database = {
                 description: 'Corset style bra top. Satin design with lace and wide straps. A super feminine and sexy design.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                color: ["red"],
                 price: "34.00"
             },
             {
@@ -676,6 +824,8 @@ export const items_database = {
                 description: 'Corset style bra top. Satin design with lace and wide straps. A super feminine and sexy design.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "D"],
+                color: ["blue"],
                 price: "34.00"
             },
             {
@@ -688,6 +838,8 @@ export const items_database = {
                 description: 'Lace halter-neck bralette with double straps, fastens at front with clasps. A super sexy design, full of details you will love.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                color: ["black"],
                 price: "30.00"
             },
             {
@@ -700,6 +852,8 @@ export const items_database = {
                 description: 'Lace halter-neck bralette with double straps, fastens at front with clasps. A super sexy design, full of details you will love.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "C", "D"],
+                color: ["black"],
                 price: "30.00"
             },
             {
@@ -712,6 +866,8 @@ export const items_database = {
                 description: 'Flowery lace bralette with mesh at the neckline and back and open detail on the back.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "C", "D"],
+                color: ["black"],
                 price: "27.00"
             },
             {
@@ -724,6 +880,8 @@ export const items_database = {
                 description: 'Long-sleeved bra top with lace and tulle. Cut out detail at the back. A super feminine and sexy design.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                color: ["black"],
                 price: "36.00"
             },
             {
@@ -736,6 +894,8 @@ export const items_database = {
                 description: 'Halter flowery lace bralette. Olympic back. A super sexy model and full of details that will conquer you.',
                 category: "Bras, bralettes",
                 type: "Bras",
+                cup: [ "A", "B"],
+                color: ["black"],
                 price: "26.00"
             },
         ]
@@ -755,6 +915,9 @@ export const items_database = {
                 description: 'Plumetis triangle bra with lace details and bow at the front. Crossover straps design. A delicate and feminine wardrobe must-have',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B", "D"],
+                sizes: ["70", "75"],
+                color: ["green"],
                 price: "28.00"
             },
             {
@@ -767,6 +930,9 @@ export const items_database = {
                 description: 'Triangle bra with lace details. Double straps design. A delicate and feminine wardrobe must-have.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["blue", "pink"],
                 price: "27.00"
             },
             {
@@ -779,6 +945,9 @@ export const items_database = {
                 description: 'Halter-neck, half padded, the INTUITIVE bra with soft lace accentuates your sensual side. A wardrobe must.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["green"],
                 price: "27.00"
             },
             {
@@ -791,6 +960,9 @@ export const items_database = {
                 description: 'Halter-neck triangle bra with glitter plumetis effect.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["red"],
                 price: "30.00"
             },
             {
@@ -803,6 +975,9 @@ export const items_database = {
                 description: 'Plumetis triangle bra with lace details and bow at the front. Crossover straps design. A delicate and feminine wardrobe must-have',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "C"],
+                sizes: ["70", "75"],
+                color: ["pink"],
                 price: "30.00"
             },
             {
@@ -815,6 +990,9 @@ export const items_database = {
                 description: 'Halter-neck triangle bra with glitter plumetis effect.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["green"],
                 price: "30.00"
             },
             {
@@ -827,6 +1005,9 @@ export const items_database = {
                 description: 'Floral lace triangular bra with thin straps on the cups. Metallic piping detail. Super sexy and feminine.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["pink"],
                 price: "28.00"
             },
             {
@@ -839,6 +1020,9 @@ export const items_database = {
                 description: 'Floral lace triangular bra with thin straps on the cups. Metallic piping detail. Super sexy and feminine.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "B", "C", "D"],
+                sizes: [ "80", "85"],
+                color: ["blue"],
                 price: "27.00"
             },
             {
@@ -851,6 +1035,9 @@ export const items_database = {
                 description: 'Floral lace triangular bra with thin straps on the cups. Metallic piping detail. Super sexy and feminine.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "D"],
+                sizes: [ "80", "85"],
+                color: ["pink"],
                 price: "29.00"
             },
             {
@@ -863,6 +1050,9 @@ export const items_database = {
                 description: 'Triangular bra with floral lace details. A delicate, feminine option to highlight the natural shape of your chest.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "D"],
+                sizes: ["70", "85"],
+                color: ["purple"],
                 price: "28.00"
             },
             {
@@ -875,6 +1065,9 @@ export const items_database = {
                 description: 'Lace halter bra with tulle details and bow on the front. Sensuality and femininity in a single bra.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70"],
+                color: ["purple"],
                 price: "27.00"
             },
             {
@@ -887,6 +1080,9 @@ export const items_database = {
                 description: 'Triangular bra with floral lace details. A delicate, feminine option to highlight the natural shape of your chest.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80"],
+                color: ["green"],
                 price: "29.00"
             },
             {
@@ -899,6 +1095,9 @@ export const items_database = {
                 description: 'Satin effect triangle bra with contrast floral lace trim. The perfect bra for extra special occasions.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                sizes: ["70", "75", "80"],
+                color: ["green"],
                 price: "28.00"
             },
             {
@@ -911,6 +1110,9 @@ export const items_database = {
                 description: 'Moulded triangle bar without underwire, with neckline detail and microfibre and tulle fabric sides. Show it off to add a sexy and elegant touch to your look.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B", "C"],
+                sizes: ["70", "75", "80"],
+                color: ["purple"],
                 price: "30.00"
             },
             {
@@ -923,6 +1125,9 @@ export const items_database = {
                 description: 'Lace triangle bra with satin effect straps at the cups. A fresh and sensual design.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "B", "C", "D"],
+                sizes: ["70", "75", "80"],
+                color: ["blue"],
                 price: "27.00"
             },
             {
@@ -935,6 +1140,9 @@ export const items_database = {
                 description: 'Smooth cotton triangular halter bra with floral lace details. An everyday essential.',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B"],
+                sizes: ["70", "75", "80"],
+                color: ["white"],
                 price: "20.00"
             },
             {
@@ -947,6 +1155,9 @@ export const items_database = {
                 description: 'Smooth cotton triangle halter bra with floral lace details.',
                 category: "Bras, triangle",
                 type: "Bras",
+                 cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["white"],
                 price: "24.00"
             },
             {
@@ -959,6 +1170,9 @@ export const items_database = {
                 description: 'Wireless support and hold for irresistible style. The LOVELY bra is a firm favourite with our customers. Wear it once and then again, and again, and again…',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "B", "C", "D"],
+                sizes: ["70", "75", "80", "85"],
+                color: ["white"],
                 price: "28.00"
             },
             {
@@ -971,6 +1185,9 @@ export const items_database = {
                 description: 'Wireless support and hold for irresistible style. The LOVELY bra is a firm favourite with our customers. Wear it once and then again, and again, and again…',
                 category: "Bras, triangle",
                 type: "Bras",
+                cup: [ "A", "C", "D"],
+                sizes: ["70", "75", "85"],
+                color: ["white"],
                 price: "28.00"
             },
             {
@@ -983,7 +1200,10 @@ export const items_database = {
                 description: 'Satin effect triangle bra with thin straps. A fresh and sensual design.',
                 category: "Bras, triangle",
                 type: "Bras",
-                price: "28.00"
+                cup: [ "A", "B"],
+                sizes: ["70", "75"],
+                color: ["black"],
+                price: "28.00",
             },
         ]
     },
@@ -1002,6 +1222,8 @@ export const items_database = {
                 description: 'Classic panty with glitter plumetis effect. Gathered design with side strap detail. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["purple"],
                 price: "16.00"
             },
             {
@@ -1014,6 +1236,8 @@ export const items_database = {
                 description: 'Classic lace panty. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: [ "M", "L"],
+                color: ["purple"],
                 price: "17.00"
             },
             {
@@ -1026,6 +1250,8 @@ export const items_database = {
                 description: 'Classic panty with glitter plumetis effect. Gathered design with side strap detail. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "M", "L"],
+                color: ["grey"],
                 price: "16.00"
             },
             {
@@ -1038,6 +1264,8 @@ export const items_database = {
                 description: 'Glitter effect plumetis high-waisted panty. With velvet details. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS"],
+                color: ["green"],
                 price: "18.00"
             },
             {
@@ -1050,6 +1278,8 @@ export const items_database = {
                 description: 'Classic lace panty. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: [ "M", "L"],
+                color: ["pink"],
                 price: "18.00"
             },
             {
@@ -1062,6 +1292,8 @@ export const items_database = {
                 description: 'Classic lace panty with crossover straps at the back. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "M", "L"],
+                color: ["pink"],
                 price: "18.00"
             },
             {
@@ -1074,6 +1306,8 @@ export const items_database = {
                 description: 'Classic lace panty. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["green"],
                 price: "16.00"
             },
             {
@@ -1086,6 +1320,8 @@ export const items_database = {
                 description: 'High-waist panty in floral lace with cut out detail at the back with a small jewel. A super sexy and feminine design.',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["red"],
                 price: "19.00"
             },
             {
@@ -1098,6 +1334,8 @@ export const items_database = {
                 description: 'Classic floral lace panty. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "15.00"
             },
             {
@@ -1110,6 +1348,8 @@ export const items_database = {
                 description: 'Classic panty in floral print mesh. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: [ "L"],
+                color: ["grey"],
                 price: "13.00"
             },
             {
@@ -1122,6 +1362,8 @@ export const items_database = {
                 description: 'Classic floral lace panty with contrast trim. Slogan detail on the front. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["white", "black"],
                 price: "17.00"
             },
             {
@@ -1134,6 +1376,8 @@ export const items_database = {
                 description: 'High-waist panty in lace and flocked tulle with microfibre details. Accentuating and flattering, for ultimate comfort.',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS"],
+                color: ["black"],
                 price: "19.00"
             },
             {
@@ -1146,6 +1390,8 @@ export const items_database = {
                 description: 'High-waist panty in floral lace with cut out detail at the back with small metallic bead. A super sexy and feminine design.',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: [ "M", "L"],
+                color: ["black"],
                 price: "19.00"
             },
             {
@@ -1158,6 +1404,8 @@ export const items_database = {
                 description: 'Classic floral lace panty with contrast trim. Slogan detail on the front. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["white"],
                 price: "19.00"
             },
             {
@@ -1170,6 +1418,8 @@ export const items_database = {
                 description: 'Classic lace panty with crossover straps at the back. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["white"],
                 price: "17.00"
             },
             {
@@ -1182,6 +1432,8 @@ export const items_database = {
                 description: 'Classic panty in animal print mesh. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["white"],
                 price: "19.00"
             },
             {
@@ -1194,6 +1446,8 @@ export const items_database = {
                 description: 'Gorgeous classic plumetis panty with thin crossover straps at the back. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS","M"],
+                color: ["black"],
                 price: "19.00"
             },
             {
@@ -1206,6 +1460,8 @@ export const items_database = {
                 description: 'Classic panty in floral print mesh. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["white"],
                 price: "13.00"
             },
             {
@@ -1218,6 +1474,8 @@ export const items_database = {
                 description: 'Classic floral lace panty with contrast trim. Slogan detail on the front. Sexy and feminine!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["L"],
+                color: ["pink"],
                 price: "16.00"
             },
             {
@@ -1230,6 +1488,8 @@ export const items_database = {
                 description: 'Classic panty with floral lace. Feminine and sexy!',
                 category: "Panties, classic",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["white"],
                 price: "15.00"
             },
         ]
@@ -1249,11 +1509,13 @@ export const items_database = {
                 description: 'Lace tanga-style panty. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["purple"],
                 price: "13.00"
             },
             {
                 id: 102,
-                imgSmall_1: '/https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_thongs%2F2_lace_g_string%2Fsmall%2F1.jpg?alt=media&token=dc0d3f49-a03d-4313-ba81-b89456215edc',
+                imgSmall_1: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_thongs%2F2_lace_g_string%2Fsmall%2F1.jpg?alt=media&token=dc0d3f49-a03d-4313-ba81-b89456215edc',
                 imgSmall_2: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_thongs%2F2_lace_g_string%2Fsmall%2F2.jpg?alt=media&token=fd9e4a51-8d87-4c26-ab4c-4a4c7c244b8c',
                 imgBig_1: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_thongs%2F2_lace_g_string%2F1.jpg?alt=media&token=eb112ceb-be70-4b8a-89f7-a9564c9c650d',
                 imgBig_2: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_thongs%2F2_lace_g_string%2F2.jpg?alt=media&token=05761966-15a0-4ffe-a72f-a5f174fdc0f4',
@@ -1261,6 +1523,8 @@ export const items_database = {
                 description: 'Strappy g-string with contrast lace trim. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["green"],
                 price: "13.00"
             },
             {
@@ -1273,6 +1537,8 @@ export const items_database = {
                 description: 'Lace tanga-style panty. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["pink"],
                 price: "14.00"
             },
             {
@@ -1285,6 +1551,8 @@ export const items_database = {
                 description: 'Lace tanga-style panty. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["green"],
                 price: "14.00"
             },
             {
@@ -1297,6 +1565,8 @@ export const items_database = {
                 description: 'G-string with a thin strap in floral lace. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["pink"],
                 price: "13.00"
             },
             {
@@ -1309,6 +1579,8 @@ export const items_database = {
                 description: 'Tanga in floral print mesh. Sexy and on-trend!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["white"],
                 price: "13.00"
             },
             {
@@ -1321,6 +1593,8 @@ export const items_database = {
                 description: 'G-string with floral lace. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: [ "S", "M", "L"],
+                color: ["blue"],
                 price: "12.00"
             },
             {
@@ -1333,6 +1607,8 @@ export const items_database = {
                 description: 'G-string with lace and small metallic beads detail. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["black"],
                 price: "13.00"
             },
             {
@@ -1345,6 +1621,8 @@ export const items_database = {
                 description: 'G-string with a thin strap in floral lace. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "13.00"
             },
             {
@@ -1357,6 +1635,8 @@ export const items_database = {
                 description: 'G-string with lace. Sexy and feminine!',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["red"],
                 price: "12.00"
             },
             {
@@ -1369,6 +1649,8 @@ export const items_database = {
                 description: 'Flocked tulle strappy thong with lace details. Feel sexy in your daily life.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "12.00"
             },
             {
@@ -1381,6 +1663,8 @@ export const items_database = {
                 description: 'Strappy lace thong. Feel sexy at all times.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["black"],
                 price: "14.00"
             },
             {
@@ -1393,6 +1677,8 @@ export const items_database = {
                 description: 'Lace and microfibre thong. Dependable basics.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "14.00"
             },
             {
@@ -1405,6 +1691,8 @@ export const items_database = {
                 description: 'Strappy lace thong. Feel sexy at all times.',
                 category: "Panties, thongs",
                 type: "Panties",
+                 sizes: ["XS", "S", "L"],
+                 color: ["white"],
                 price: "13.00"
             },
             {
@@ -1417,6 +1705,8 @@ export const items_database = {
                 description: 'Strappy lace thong. Feel sexy at all times.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S","L"],
+                color: ["black"],
                 price: "13.00"
             },
             {
@@ -1429,6 +1719,8 @@ export const items_database = {
                 description: 'Thong-type panties with floral lace. Delicate and feminine.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: [ "S", "M", "L"],
+                color: ["green"],
                 price: "9.00"
             },
             {
@@ -1441,6 +1733,8 @@ export const items_database = {
                 description: 'Thong-type panties with floral lace. Delicate and feminine.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["blue"],
                 price: "9.00"
             },
             {
@@ -1453,6 +1747,8 @@ export const items_database = {
                 description: 'Thong-type panties with floral lace. Delicate and feminine.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: [ "L"],
+                color: ["purple"],
                 price: "9.00"
             },
             {
@@ -1465,6 +1761,8 @@ export const items_database = {
                 description: 'Thong-type panties with floral lace. Delicate and feminine.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "9.00"
             },
             {
@@ -1477,6 +1775,8 @@ export const items_database = {
                 description: 'Cotton thong with floral lace details and bow. Comfy and feminine. A basic wardrobe essential.',
                 category: "Panties, thongs",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "11.00"
             },
         ]
@@ -1496,6 +1796,8 @@ export const items_database = {
                 description: 'Boyshort in plumetis. Sexy and feminine!',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "17.00"
             },
             {
@@ -1508,6 +1810,8 @@ export const items_database = {
                 description: 'Boyshort in plumetis. Sexy and feminine!',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "L"],
+                color: ["blue"],
                 price: "17.00"
             },
             {
@@ -1520,6 +1824,8 @@ export const items_database = {
                 description: 'Wide Brazilian panty with floral lace and front bow detail. Super sexy and feminine.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "L"],
+                color: ["green"],
                 price: "18.00"
             },
             {
@@ -1532,6 +1838,8 @@ export const items_database = {
                 description: 'Wide Brazilian panty with floral lace and front bow detail. Super sexy and feminine.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["pink"],
                 price: "18.00"
             },
             {
@@ -1544,6 +1852,8 @@ export const items_database = {
                 description: 'Floral lace culotte. A super feminine essential - your wardrobe needs this.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["purple"],
                 price: "14.00"
             },
             {
@@ -1556,6 +1866,8 @@ export const items_database = {
                 description: 'Floral lace culotte. A super feminine essential - your wardrobe needs this.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["green"],
                 price: "14.00"
             },
             {
@@ -1568,6 +1880,8 @@ export const items_database = {
                 description: 'Cotton culottes with floral lace details. Comfy and feminine. A basic wardrobe essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                 sizes: ["XS", "M", "L"],
+                 color: ["white"],
                 price: "15.00"
             },
             {
@@ -1580,6 +1894,8 @@ export const items_database = {
                 description: 'Cotton culottes with floral lace details. Comfy and feminine. A basic wardrobe essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "15.00"
             },
             {
@@ -1592,6 +1908,8 @@ export const items_database = {
                 description: 'Floral lace boyshort. A super feminine essential - your wardrobe needs this.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["black"],
                 price: "17.00"
             },
             {
@@ -1604,6 +1922,8 @@ export const items_database = {
                 description: 'Floral lace boyshort. A super feminine essential - your wardrobe needs this.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: [ "S", "M", "L"],
+                color: ["white"],
                 price: "17.00"
             },
             {
@@ -1616,6 +1936,8 @@ export const items_database = {
                 description: 'Brazilian-style culotte panty with floral lace details. The perfect panty for your feminine side.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "9.00"
             },
             {
@@ -1628,6 +1950,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties, with print and floral lace in the upper part. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "L"],
+                color: ["grey"],
                 price: "9.00"
             },
             {
@@ -1640,6 +1964,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties, with print and floral lace in the upper part. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "L"],
+                color: ["black"],
                 price: "9.00"
             },
             {
@@ -1652,6 +1978,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties, with print and floral lace in the upper part. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["white"],
                 price: "9.00"
             },
             {
@@ -1664,6 +1992,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties with structural lace on the front sides and bow detail. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["blue"],
                 price: "14.00"
             },
             {
@@ -1676,6 +2006,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties, with print and floral lace in the upper part. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["white"],
                 price: "9.00"
             },
             {
@@ -1688,6 +2020,8 @@ export const items_database = {
                 description: 'Brazilian style boyshort panty, printed, with floral lace trim. Comfortable and feminine.',
                 category: "Panties, culottes",
                 type: "Panties",
+                 sizes: ["XS", "M", "L"],
+                 color: ["black"],
                 price: "9.00"
             },
             {
@@ -1700,6 +2034,8 @@ export const items_database = {
                 description: 'Cotton boyshort panty, printed, with floral lace detail at the top. The perfect panty for a super feminine look.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "9.00"
             },
             {
@@ -1712,6 +2048,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties, with print and floral lace in the upper part. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["black"],
                 price: "11.00"
             },
             {
@@ -1724,6 +2062,8 @@ export const items_database = {
                 description: 'Cotton culotte-type panties, with print and floral lace in the upper part. A comfortable and feminine essential.',
                 category: "Panties, culottes",
                 type: "Panties",
+                sizes: [ "S", "M", "L"],
+                color: ["purple"],
                 price: "10.00"
             },
         ]
@@ -1743,6 +2083,8 @@ export const items_database = {
                 description: 'High waist Shape brief.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "L"],
+                color: ["body"],
                 price: "22.00"
             },
             {
@@ -1755,6 +2097,8 @@ export const items_database = {
                 description: 'High waist Shape brief.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["body"],
                 price: "22.00"
             },
             {
@@ -1767,6 +2111,8 @@ export const items_database = {
                 description: 'High waist Shape brief.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "22.00"
             },
             {
@@ -1779,6 +2125,8 @@ export const items_database = {
                 description: 'High waist Shape brief.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "22.00"
             },
             {
@@ -1791,6 +2139,8 @@ export const items_database = {
                 description: 'Sculpting tulle thong with extra reinforcement in the front. From our Shapwear collection that slims and flatters your body in soft and high quality fabrics (LYCRA®). Garments created to bring out the best in you.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S"],
+                color: ["black"],
                 price: "24.00"
             },
             {
@@ -1803,6 +2153,8 @@ export const items_database = {
                 description: 'This tulle panty shapes your curves for a sleeker, slimmer silhouette. From our shapewear collection that slims and flatters your body in soft and quality fabrics.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: [ "M"],
+                color: ["black"],
                 price: "22.00"
             },
             {
@@ -1815,6 +2167,8 @@ export const items_database = {
                 description: 'This tulle panty shapes your curves for a sleeker, slimmer silhouette. From our shapewear collection that slims and flatters your body in soft and quality fabrics.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "L"],
+                color: ["black"],
                 price: "29.00"
             },
             {
@@ -1827,6 +2181,8 @@ export const items_database = {
                 description: 'Sculpting high-waist shorts with extra reinforcement in the front. From our Shapwear collection that slims and flatters your body in soft and high quality fabrics (LYCRA®). Garments created to bring out the best in you.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S","L"],
+                color: ["black"],
                 price: "30.00"
             },
             {
@@ -1839,6 +2195,8 @@ export const items_database = {
                 description: 'This tulle panty shapes your curves for a sleeker, slimmer silhouette. From our shapewear collection that slims and flatters your body in soft and quality fabrics.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["body"],
                 price: "29.00"
             },
             {
@@ -1851,6 +2209,8 @@ export const items_database = {
                 description: 'High waist Shape brief that sit on the hips. A brand line that slims and flatters your body in soft top quality fabrics. Garments created to bring out the best in you. LYCRA®',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["body"],
                 price: "25.00"
             },
             {
@@ -1863,6 +2223,8 @@ export const items_database = {
                 description: 'This bodyshape shorts in tulle shape your curves to give a defined silhouette. From our shapewear collection that slims and flatters your body in soft and quality fabrics.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "M"],
+                color: ["body"],
                 price: "33.00"
             },
             {
@@ -1875,6 +2237,8 @@ export const items_database = {
                 description: 'Sculpting tulle thong with extra reinforcement in the front. From our Shapwear collection that slims and flatters your body in soft and high quality fabrics (LYCRA®). Garments created to bring out the best in you.',
                 category: "Panties, slimming",
                 type: "Panties",
+                 sizes: ["XS", "S", "M"],
+                 color: ["body"],
                 price: "22.00"
             },
             {
@@ -1887,6 +2251,8 @@ export const items_database = {
                 description: 'High-waisted maximum support panties with lace details and waist reinforcement. They enhance and stylise with maximum comfort.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "17.00"
             },
             {
@@ -1899,11 +2265,13 @@ export const items_database = {
                 description: 'High-waisted maximum support microfibre, lace and flocked tulle panties. Waist reinforcement. They enhance and stylise with maximum comfort.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "16.00"
             },
             {
                 id: 155,
-                imgSmall_1: '/https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_slimming%2F15_high_waist_maximum_support_lace_and_tulle_panty%2Fsmall%2F1.jpg?alt=media&token=2ccdc5cd-d741-4ee7-b00a-93a14d0a07d9',
+                imgSmall_1: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_slimming%2F15_high_waist_maximum_support_lace_and_tulle_panty%2Fsmall%2F1.jpg?alt=media&token=2ccdc5cd-d741-4ee7-b00a-93a14d0a07d9',
                 imgSmall_2: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_slimming%2F15_high_waist_maximum_support_lace_and_tulle_panty%2Fsmall%2F2.jpg?alt=media&token=0b724e76-618e-478e-91ef-628629248f20',
                 imgBig_1: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_slimming%2F15_high_waist_maximum_support_lace_and_tulle_panty%2F1.jpg?alt=media&token=8925e577-7e72-425f-a133-a26d0ff6e4cb',
                 imgBig_2: 'https://firebasestorage.googleapis.com/v0/b/petite-auth-49202.appspot.com/o/items_database%2Fpanties%2Fpanties_slimming%2F15_high_waist_maximum_support_lace_and_tulle_panty%2F2.jpg?alt=media&token=d2e76582-f697-4af0-a972-f0661d3f6ef4',
@@ -1911,6 +2279,8 @@ export const items_database = {
                 description: 'High-waisted maximum support microfibre, lace and flocked tulle panties. Waist reinforcement. They enhance and stylise with maximum comfort.',
                 category: "Panties, slimming",
                 type: "Panties",
+                sizes: ["XS", "L"],
+                color: ["white"],
                 price: "16.00"
             },
         ]
@@ -1930,6 +2300,8 @@ export const items_database = {
                 description: 'Run resistant tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S", "M"],
+                color: ["black"],
                 price: "17.00"
             },
             {
@@ -1942,6 +2314,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                 sizes: ["XS", "S", "M"],
+                 color: ["body"],
                 price: "17.00"
             },
             {
@@ -1954,6 +2328,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "20.00"
             },
             {
@@ -1966,6 +2342,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["body"],
                 price: "20.00"
             },
             {
@@ -1978,6 +2356,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "L"],
+                color: ["black"],
                 price: "20.00"
             },
             {
@@ -1990,6 +2370,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S", "M"],
+                color: ["red"],
                 price: "20.00"
             },
             {
@@ -2002,6 +2384,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                 sizes: ["XS", "S", "M"],
+                 color: ["blue"],
                 price: "20.00"
             },
             {
@@ -2014,6 +2398,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "20.00"
             },
             {
@@ -2026,6 +2412,8 @@ export const items_database = {
                 description: 'Seamless tights, 20 denier. A must-have to every wardrobe.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "20.00"
             },
             {
@@ -2038,6 +2426,8 @@ export const items_database = {
                 description: '20 high denier stand up tights with silicone grip perfect for wearing alone or with suspender belt. Can not be returned or exchanged.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "L"],
+                color: ["body"],
                 price: "18.00"
             },
             {
@@ -2050,6 +2440,8 @@ export const items_database = {
                 description: '20 high denier stand up tights with silicone grip perfect for wearing alone or with suspender belt. Can not be returned or exchanged.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S", "M"],
+                color: ["black"],
                 price: "18.00"
             },
             {
@@ -2062,6 +2454,8 @@ export const items_database = {
                 description: 'Basic plumetis tights. The favourite of your legs. Can not be returned or exchanged.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S"],
+                color: ["black"],
                 price: "16.00"
             },
             {
@@ -2074,6 +2468,8 @@ export const items_database = {
                 description: 'Basic plumetis tights. The favourite of your legs. Can not be returned or exchanged.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS","M"],
+                color: ["black"],
                 price: "16.00"
             },
             {
@@ -2086,6 +2482,8 @@ export const items_database = {
                 description: 'Basic plumetis tights. The favourite of your legs. Can not be returned or exchanged.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["XS", "S"],
+                color: ["body"],
                 price: "16.00"
             },
             {
@@ -2098,6 +2496,8 @@ export const items_database = {
                 description: 'Dots tights. The favourite of your legs. Can not be returned or exchanged.',
                 category: "Accessories, tights and leggins",
                 type: "Accessories",
+                sizes: ["L"],
+                color: ["black"],
                 price: "17.00"
             },
         ]
@@ -2117,6 +2517,9 @@ export const items_database = {
                 description: 'Firm control body. From our shapewear collection that slims and flatters your body in soft and quality fabrics.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B"],
+                sizes: ["XS", "S", "L"],
+                color: ["body"],
                 price: "48.00"
             },
             {
@@ -2129,6 +2532,9 @@ export const items_database = {
                 description: 'Firm control body. From our shapewear collection that slims and flatters your body in soft and quality fabrics.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B", "C"],
+                sizes: ["XS", "S", "L"],
+                color: ["black"],
                 price: "47.00"
             },
             {
@@ -2141,6 +2547,9 @@ export const items_database = {
                 description: 'Plain cotton and Lycra body with removable cups and floral lace straps. A super feminine essential with gorgeous detailing.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B", "D"],
+                sizes: [ "S", "M", "L"],
+                color: ["purple"],
                 price: "23.00"
             },
             {
@@ -2153,6 +2562,9 @@ export const items_database = {
                 description: 'Floral lace body with halter neck and underwire. Openings at the front and back. A gorgeous, super sexy design, brimming with details you will love.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "D"],
+                sizes: ["XS", "S", "M"],
+                color: ["black"],
                 price: "40.00"
             },
             {
@@ -2165,6 +2577,9 @@ export const items_database = {
                 description: 'Floral lace and plumetis body. Strappy design with straps at the neckline and front and back cut out details. A gorgeous, feminine design.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B","D"],
+                sizes: ["XS", "M", "L"],
+                color: ["black"],
                 price: "46.00"
             },
             {
@@ -2177,6 +2592,9 @@ export const items_database = {
                 description: 'Lace body with tulle details and thin straps at the cups. Strappy design with a satin band at the waist and opening at the back. A delicate and feminine wardrobe must-have.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                 cup: [ "A", "B"],
+                sizes: ["XS", "S", "L"],
+                color: ["red"],
                 price: "39.00"
             },
             {
@@ -2189,6 +2607,9 @@ export const items_database = {
                 description: 'Body in floral lace and plumetis with thin strappy details at the cups and cut out at the back. Super sexy and feminine.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B", "C"],
+                sizes: ["XS", "S", "L"],
+                color: ["black"],
                 price: "40.00"
             },
             {
@@ -2201,6 +2622,9 @@ export const items_database = {
                 description: 'Long-sleeved body in tulle microfibre fabric. Flattering neckline and plunging back. An elegant essential with a sexy touch, to show off on those magical and special nights.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B", "D"],
+                sizes: [ "S", "M", "L"],
+                color: ["black"],
                 price: "37.00"
             },
             {
@@ -2213,6 +2637,9 @@ export const items_database = {
                 description: 'Plain strappy body. A basic essential for your wardrobe.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "D"],
+                sizes: ["XS", "S", "M"],
+                color: ["black"],
                 price: "24.00"
             },
             {
@@ -2225,6 +2652,9 @@ export const items_database = {
                 description: 'Plain strappy body. A basic essential for your wardrobe.',
                 category: "Accessories, bodysuits",
                 type: "Accessories",
+                cup: [ "A", "B","D"],
+                sizes: ["XS", "M", "L"],
+                color: ["body"],
                 price: "24.00"
             },
         ]
@@ -2244,6 +2674,7 @@ export const items_database = {
                 description: 'Invisible socks. One size. Can not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["red"],
                 price: "6.00"
             },
             {
@@ -2256,6 +2687,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["blue"],
                 price: "6.00"
             },
             {
@@ -2268,6 +2700,7 @@ export const items_database = {
                 description: 'Pack of 3 invisible socks. One size. Can not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["black"],
                 price: "13.00"
             },
             {
@@ -2280,6 +2713,7 @@ export const items_database = {
                 description: 'Soft and comfy, pack of 3 Short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["pink"],
                 price: "13.00"
             },
             {
@@ -2292,6 +2726,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["black"],
                 price: "5.00"
             },
             {
@@ -2304,6 +2739,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["black"],
                 price: "5.00"
             },
             {
@@ -2316,6 +2752,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["blue"],
                 price: "5.00"
             },
             {
@@ -2328,6 +2765,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["pink"],
                 price: "5.00"
             },
             {
@@ -2340,6 +2778,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["black"],
                 price: "5.00"
             },
             {
@@ -2352,6 +2791,7 @@ export const items_database = {
                 description: 'Soft and comfy, short socks. One size. May not be returned or exchanged.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["white"],
                 price: "5.00"
             },
             {
@@ -2364,6 +2804,7 @@ export const items_database = {
                 description: 'Printed ankle socks. One size fits all. No exchanges or refunds.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["purple"],
                 price: "5.00"
             },
             {
@@ -2376,6 +2817,7 @@ export const items_database = {
                 description: 'Printed fun ankle socks. One size fits all. No exchanges or refunds.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["green"],
                 price: "5.00"
             },
             {
@@ -2388,6 +2830,7 @@ export const items_database = {
                 description: 'Printed short socks. One size fits all. No exchanges or refunds.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["black"],
                 price: "5.00"
             },
             {
@@ -2400,6 +2843,7 @@ export const items_database = {
                 description: 'Printed fun ankle socks. One size fits all. No exchanges or refunds.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["grey"],
                 price: "5.00"
             },
             {
@@ -2412,6 +2856,7 @@ export const items_database = {
                 description: 'Textured ankle socks. One size fits all. No exchanges or refunds.',
                 category: "Accessories, socks",
                 type: "Accessories",
+                color: ["grey"],
                 price: "6.00"
             },
         ]
@@ -2618,6 +3063,8 @@ export const items_database = {
                 description: 'Long jumpsuit in a cactus print. Henley neck, long sleeves, and drawstring waist. Fun and cosy!',
                 category: "Sleepwear, jumpsuits",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["grey"],
                 price: "35.00"
             },
             {
@@ -2630,6 +3077,8 @@ export const items_database = {
                 description: 'Long cotton jumpsuit in a Harry Potter print. Short sleeves, round neck, buttons down the front, and adjustable waist. Perfect for dreaming of magic.',
                 category: "Sleepwear, jumpsuits",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["purple"],
                 price: "34.00"
             },
             {
@@ -2642,6 +3091,8 @@ export const items_database = {
                 description: 'Long jumpsuit in teddy fur. Front zip fastening with pompom detail and a fun hood with rabbit ears.',
                 category: "Sleepwear, jumpsuits",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["grey"],
                 price: "45.00"
             },
             {
@@ -2654,6 +3105,8 @@ export const items_database = {
                 description: 'Short plain jumpsuit with straps, vintage Mickey Mouse motifs, and side pockets. Starring Mickey at his most classic. Models height: 175 cm. ',
                 category: "Sleepwear, jumpsuits",
                 type: "Sleepwear",
+                sizes: ["XS", "S"],
+                color: ["grey"],
                 price: "29.00"
             },
             {
@@ -2666,6 +3119,8 @@ export const items_database = {
                 description: 'Cotton capri jumpsuit in a daisy print with vintage Minnie Mouse motif. Buttons at the neck, short sleeves, adjustable waist, and side pockets. Starring Minnie at her most classic.',
                 category: "Sleepwear, jumpsuits",
                 type: "Sleepwear",
+                sizes: ["XS", "M", "L"],
+                color: ["grey"],
                 price: "38.00"
             },
         ]
@@ -2685,6 +3140,8 @@ export const items_database = {
                 description: 'Long sheer nightgown. Floaty silhouette, in a glitter stars print. With V-neck and double strap detail, gathered at the waist, and an open back with adjustable crossover straps. Perfect for those special nights.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "L"],
+                color: ["pink"],
                 price: "45.00"
             },
             {
@@ -2697,6 +3154,8 @@ export const items_database = {
                 description: 'Sheer midi nightgown. Floaty silhouette, in a glitter stars print. Fitted under the chest, with a V-neck and open back with adjustable straps. Perfect for those special nights.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S","L"],
+                color: ["white"],
                 price: "39.00"
             },
             {
@@ -2709,6 +3168,8 @@ export const items_database = {
                 description: 'Sheer midi nightgown. Floaty silhouette, in a glitter stars print. Fitted under the chest, with a V-neck and open back with adjustable straps. Perfect for those special nights.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: [ "S", "M", "L"],
+                color: ["pink"],
                 price: "39.00"
             },
             {
@@ -2721,6 +3182,8 @@ export const items_database = {
                 description: 'Long sheer nightgown. Floaty silhouette, in a glitter stars print. With V-neck and double strap detail, gathered at the waist, and an open back with adjustable crossover straps. Perfect for those special nights.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "L"],
+                color: ["white"],
                 price: "45.00"
             },
             {
@@ -2733,6 +3196,8 @@ export const items_database = {
                 description: 'Cotton Harry Potter midi nightgown. Round neck and short sleeves, Hogwarts logo. Side slits detail. Dream of getting into the best ever school of magic!',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: [ "L"],
+                color: ["red"],
                 price: "35.00"
             },
             {
@@ -2745,6 +3210,8 @@ export const items_database = {
                 description: 'Cotton Harry Potter short nightgown. Round neck and short sleeves, Hogwarts logo. Side slits detail. Dream of getting into the best ever school of magic!',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["red"],
                 price: "34.00"
             },
             {
@@ -2757,6 +3224,8 @@ export const items_database = {
                 description: 'Midi length nightgown with short sleeves and comfy boat neck. All-over print with Halloween motifs in white and grey marl. With a motif from Tim Burtons film, The Nightmare Before Christmas. Are you ready to relive Jack Skeleton & Sallys love story?',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "34.00"
             },
             {
@@ -2769,6 +3238,8 @@ export const items_database = {
                 description: 'Midi length nightgown with short sleeves and comfy boat neck. All-over print with Halloween motifs in white and grey marl. With a motif from Tim Burtons film, The Nightmare Before Christmas. Are you ready to relive Jack Skeleton & Sallys love story?',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "34.00"
             },
             {
@@ -2781,6 +3252,8 @@ export const items_database = {
                 description: 'Midi camisole in a unique print. With shirt-style collar, long gathered sleeves, and side slits. Stay perfect, even at home.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "39.00"
             },
             {
@@ -2793,6 +3266,8 @@ export const items_database = {
                 description: 'Plain midi nightgown with 3/4-length sleeves and chiffon effect V-neck. Stay comfy and feminine at home.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["grey"],
                 price: "28.00"
             },
             {
@@ -2805,6 +3280,8 @@ export const items_database = {
                 description: 'Short floral lace and plumetis nightgown. Thin adjustable straps. Super sexy for those extra special nights.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "39.00"
             },
             {
@@ -2817,6 +3294,8 @@ export const items_database = {
                 description: 'Long semi-sheer nightgown in mesh and floral lace. Empire line, short sleeves, and V-neck. A super sexy design for those extra special nights',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "44.00"
             },
             {
@@ -2829,6 +3308,8 @@ export const items_database = {
                 description: 'Short strappy nightgown with floral lace details at the top. Super sexy and feminine.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "39.00"
             },
             {
@@ -2841,6 +3322,8 @@ export const items_database = {
                 description: 'Short strappy nightgown with floral lace details at the top. Super sexy and feminine.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["green"],
                 price: "39.00"
             },
             {
@@ -2853,6 +3336,8 @@ export const items_database = {
                 description: 'Satin midi dress with straps and draped neckline. Stay comfy and sophisticated at home, or show it off when you are out.',
                 category: "Sleepwear, nightgowns",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "39.00"
             },
         ]
@@ -2872,6 +3357,8 @@ export const items_database = {
                 description: 'Long crossover robe, semi-sheer, in mesh and plumetis, with lace at the sleeves and hem. Wide sleeves and matching belt. A super sexy design for those extra special nights',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["green"],
                 price: "49.00"
             },
             {
@@ -2884,6 +3371,8 @@ export const items_database = {
                 description: 'Long printed silky robe, kimono style. The perfect complement to your looks, at home or out and about. How about with jeans?',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["green"],
                 price: "44.00"
             },
             {
@@ -2896,6 +3385,8 @@ export const items_database = {
                 description: 'Long wrap style robe with floral lace details. Batwing sleeves with lace detail, also at the bottom, and matching belt. Perfect for those special moments.',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "49.00"
             },
             {
@@ -2908,6 +3399,8 @@ export const items_database = {
                 description: 'Long printed silky robe, kimono style. The perfect complement to your looks, at home or out and about. How about with jeans?',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "39.00"
             },
             {
@@ -2920,6 +3413,8 @@ export const items_database = {
                 description: 'Long wrap style robe with floral lace details. Batwing sleeves with lace detail, also at the bottom, and matching belt. Perfect for those special moments.',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["pink"],
                 price: "49.00"
             },
             {
@@ -2932,6 +3427,8 @@ export const items_database = {
                 description: 'Long crossover robe, semi-sheer, in mesh and plumetis, with lace at the sleeves and hem. Wide sleeves and matching belt. A super sexy design for those extra special nights',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["black"],
                 price: "51.00"
             },
             {
@@ -2944,6 +3441,8 @@ export const items_database = {
                 description: 'Short fluffy robe with zip neck and lurex effect. Fluffy and super cozzy, perfect for the cold days.',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["blue"],
                 price: "34.00"
             },
             {
@@ -2956,6 +3455,8 @@ export const items_database = {
                 description: 'Short fleece robe with chimney neck with zipper and teddy effect. Fluffy and super cozy, perfect for cold days.',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["red"],
                 price: "35.00"
             },
             {
@@ -2968,6 +3469,8 @@ export const items_database = {
                 description: 'Short crossover maternity robe with lace details and matching belt. An essential - perfect for future mums.',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "39.00"
             },
             {
@@ -2980,6 +3483,8 @@ export const items_database = {
                 description: 'Long crossover Maternity robe with long sleeves slightly puffed at the cuffs, and a comfortable adjustable bathrobe belt. Perfect for future moms.',
                 category: "Sleepwear, robes",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L"],
+                color: ["white"],
                 price: "37.00"
             },
         ]
@@ -2999,6 +3504,8 @@ export const items_database = {
                 description: 'Short pyjama set with stripey print. Henley neck tank top and matching flounced shorts. The perfect design for a comfy nights sleep.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["blue"],
                 price: "29.00"
             },
             {
@@ -3011,6 +3518,8 @@ export const items_database = {
                 description: 'Short pyjama set with stripey print. Henley neck tank top and matching flounced shorts. The perfect design for a comfy nights sleep.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["white"],
                 price: "29.00"
             },
             {
@@ -3023,6 +3532,8 @@ export const items_database = {
                 description: 'Short pyjama set with stripey print. Henley neck tank top and matching flounced shorts. The perfect design for a comfy nights sleep.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["white"],
                 price: "29.00"
             },
             {
@@ -3035,6 +3546,8 @@ export const items_database = {
                 description: 'Set of plain short oversize pyjamas. Plain v-neck t-shirt top with lace detail and short sleeves, and matching short bottoms with a floral lace trim at the sides. A perfect design for the hottest nights.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["white"],
                 price: "34.00"
             },
             {
@@ -3047,6 +3560,8 @@ export const items_database = {
                 description: 'Short pyjama set in micro animal print. Vest top with lace detail and buttons, and matching short bottoms with floral lace at the hem. A perfect design for the hottest nights.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["white"],
                 price: "34.00"
             },
             {
@@ -3059,6 +3574,8 @@ export const items_database = {
                 description: 'Short, plain pyjama set with printed "Welcome to my Paradise" design. Round-neck, short-sleeved tee and matching shorts. The perfect design for a comfy nights sleep.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["blue"],
                 price: "29.00"
             },
             {
@@ -3071,6 +3588,8 @@ export const items_database = {
                 description: 'Short pyjama set in micro animal print. Vest top with lace detail and buttons, and matching short bottoms with floral lace at the hem. A perfect design for the hottest nights.',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["white"],
                 price: "34.00"
             },
             {
@@ -3083,6 +3602,8 @@ export const items_database = {
                 description: 'Short satin-effect co-ord in floral print with lace details. Strappy camisole with adjustable straps and matching shorts with adjustable waistband. Show your more sensual side out on the street!',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["pink"],
                 price: "35.00"
             },
             {
@@ -3094,6 +3615,8 @@ export const items_database = {
                 title: 'Short printed camsole co-ord',
                 description: 'Short satin-effect co-ord in floral print with lace details. Strappy camisole with adjustable straps and matching shorts with adjustable waistband. Show your more sensual side out on the street!',
                 category: "Sleepwear, short",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["black"],
                 type: "Sleepwear",
                 price: "35.00"
             },
@@ -3107,6 +3630,8 @@ export const items_database = {
                 description: 'Short satin-effect co-ord in floral print with lace details. Strappy camisole with adjustable straps and matching shorts with adjustable waistband. Show your more sensual side out on the street!',
                 category: "Sleepwear, short",
                 type: "Sleepwear",
+                sizes: ["XS", "S", "M", "L", "XL"],
+                color: ["black"],
                 price: "35.00"
             },
         ]
