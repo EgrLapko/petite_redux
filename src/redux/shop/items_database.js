@@ -1,8 +1,8 @@
 export const items_database = {
-    bras_classic: {
+    classic: {
         id: 1,
         title: "Classic Bras",
-        routeName: 'bras_classic',
+        routeName: 'classic',
         items: [
             {
                 id: 1,
@@ -306,10 +306,10 @@ export const items_database = {
             },
         ]
     },
-    bras_pushup: {
-        id: 1,
+    pushup: {
+        id: 2,
         title: "Pushup Bras",
-        routeName: 'bras_pushup',
+        routeName: "pushup",
         items: [
             {
                 id: 21,
@@ -613,10 +613,10 @@ export const items_database = {
             },
         ]
     },
-    bras_bralettes: {
+    bralettes: {
         id: 3,
         title: "Bralettes",
-        routeName: 'bras_bralettes',
+        routeName: 'bralettes',
         items: [
             {
                 id: 41,
@@ -900,10 +900,10 @@ export const items_database = {
             },
         ]
     },
-    bras_triangle: {
+    triangle: {
         id: 4,
         title: "Triangle",
-        routeName: 'bras_triangle',
+        routeName: 'triangle',
         items: [
             {
                 id: 61,
@@ -1207,10 +1207,10 @@ export const items_database = {
             },
         ]
     },
-    panties_classic: {
+    simple: {
         id: 5,
         title: "Classic Panties",
-        routeName: 'panties_classic',
+        routeName: 'simple',
         items: [
             {
                 id: 81,
@@ -1494,10 +1494,10 @@ export const items_database = {
             },
         ]
     },
-    panties_thongs: {
+    thongs: {
         id: 6,
         title: "Thongs",
-        routeName: 'panties_thongs',
+        routeName: 'thongs',
         items: [
             {
                 id: 101,
@@ -1781,10 +1781,10 @@ export const items_database = {
             },
         ]
     },
-    panties_culottes: {
+    culottes: {
         id: 7,
         title: "Culottes",
-        routeName: 'panties_culottes',
+        routeName: 'culottes',
         items: [
             {
                 id: 121,
@@ -2068,10 +2068,10 @@ export const items_database = {
             },
         ]
     },
-    panties_slimming: {
+    slimming: {
         id: 8,
         title: "Slimming",
-        routeName: 'panties_slimming',
+        routeName: 'slimming',
         items: [
             {
                 id: 141,
@@ -2285,10 +2285,10 @@ export const items_database = {
             },
         ]
     },
-    accessories_tights_and_leggins: {
+    tights: {
         id: 9,
         title: "Tights and leggins",
-        routeName: 'accessories_tights_and_leggins',
+        routeName: 'tights',
         items: [
             {
                 id: 156,
@@ -2502,10 +2502,10 @@ export const items_database = {
             },
         ]
     },
-    accessories_bodysuits: {
+    bodysuits: {
         id: 10,
         title: "Bodysuits",
-        routeName: 'accessories_bodysuits',
+        routeName: 'bodysuits',
         items: [
             {
                 id: 171,
@@ -2659,10 +2659,10 @@ export const items_database = {
             },
         ]
     },
-    accessories_socks: {
+    socks: {
         id: 11,
-        title: "Bodysuits",
-        routeName: 'accessories_socks',
+        title: "Socks",
+        routeName: 'socks',
         items: [
             {
                 id: 181,
@@ -2861,10 +2861,10 @@ export const items_database = {
             },
         ]
     },
-    accessories_other: {
+    other: {
         id: 12,
         title: "Other",
-        routeName: 'accessories_other',
+        routeName: 'other',
         items: [
             {
                 id: 196,
@@ -3048,10 +3048,10 @@ export const items_database = {
             },
         ]
     },
-    sleepwear_jumpsuits: {
+    jumpsuits: {
         id: 13,
         title: "Jumpsuits",
-        routeName: 'sleepwear_jumpsuits',
+        routeName: 'jumpsuits',
         items: [
             {
                 id: 211,
@@ -3125,10 +3125,10 @@ export const items_database = {
             },
         ]
     },
-    sleepwear_nightgowns: {
+    nightgowns: {
         id: 14,
         title: "Nightgowns",
-        routeName: 'sleepwear_nightgowns',
+        routeName: 'nightgowns',
         items: [
             {
                 id: 216,
@@ -3342,10 +3342,10 @@ export const items_database = {
             },
         ]
     },
-    sleepwear_robes: {
+    robes: {
         id: 15,
         title: "Robes",
-        routeName: 'sleepwear_robes',
+        routeName: 'robes',
         items: [
             {
                 id: 231,
@@ -3489,10 +3489,10 @@ export const items_database = {
             },
         ]
     },
-    sleepwear_short: {
+    short: {
         id: 16,
         title: "Short pajamas",
-        routeName: 'sleepwear_short',
+        routeName: 'short',
         items: [
             {
                 id: 241,

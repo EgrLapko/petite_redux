@@ -3,8 +3,9 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Products from './Products';
+import ProductsOverview from './ProductsOverview';
 
-import { firestore, convertCollectionsSnapshotToMap } from '../../../firebase/firebase.utils';
+import { firestore, convertCollectionsSnapshotsToMap } from '../../../firebase/firebase.utils';
 import { updateCollections } from '../../../redux/shop/shop-actions';
 
 
@@ -16,20 +17,16 @@ class ProductsPage extends Component {
         const collectionRef = firestore.collection('collections');
 
         this.unsubscribeFromSnapshot = collectionRef.onSnapshot(async snapshot => {
-            const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+            const collectionsMap = convertCollectionsSnapshotsToMap(snapshot);
             updateCollections(collectionsMap);
-        });
+        })
     }
 
-    render() {
+    render() { 
         const { match } = this.props;
         return (
             <div className="products-page">
-                <Route exact path={`${match.path}`} render={() =>
-                    <div>
-                        <h2>Direct page</h2>
-                    </div>
-                } />
+                <Route exact path={`${match.path}`} component={ProductsOverview}/>
                 <Route path={`${match.path}/:categoryId`} component={Products} />
             </div>
         )
@@ -38,7 +35,7 @@ class ProductsPage extends Component {
 
 const mapDispatchToProps = dispatch => ({
     updateCollections: collectionsMap => dispatch(updateCollections(collectionsMap))
-});
+})
 
 export default connect(null, mapDispatchToProps)(ProductsPage);
  

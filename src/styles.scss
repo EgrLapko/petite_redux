@@ -350,6 +350,27 @@ $main-color: black;
   }
 }
 
+// --------------------------------------------------------------- PRODUCTS OVERVIEW
+.products-overview {
+  display: flex;
+  flex-direction: column;
+  .products-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .preview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .product-card {
+        width: 18rem;
+      }
+    }
+  }
+}
+
 // --------------------------------------------------------------- PRODUCT CARD
 .product-card {
   display: flex;
