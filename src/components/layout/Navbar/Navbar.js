@@ -8,13 +8,13 @@ import {
     toggleSliderPanties, 
     toggleSliderAccs, 
     toggleSliderSleep} from '../../../redux/navbar-slider/slider-actions';
-import { auth } from '../../../firebase/firebase.utils';
+import { signOutStart } from '../../../redux/user/user-actions';
 import { selectCurrentUser } from '../../../redux/user/user-selectors';
 import CartIcon from '../../misc/CartIcon';
 import CartDropdown from '../../cart/CartDropdown';
 import NavbarSlider from './NavbarSlider';
 
-function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep }) {
+function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart }) {
     return (
         <React.Fragment>
              <div className="navbar">
@@ -31,7 +31,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                     <div className="nav-right">
                         {   
                             currentUser ?
-                            <div className="nav-option" onClick={() => auth.signOut()}>sign out</div>
+                            <div className="nav-option" onClick={signOutStart}>sign out</div>
                             :
                             <NavLink className="nav-option" activeClassName="link-active" to="/login">log in</NavLink>
                         }
@@ -51,6 +51,7 @@ const mapDispatchToProps = (dispatch) => ({
     toggleSliderPanties: () => dispatch(toggleSliderPanties()),
     toggleSliderAccs: () => dispatch(toggleSliderAccs()),
     toggleSliderSleep: () => dispatch(toggleSliderSleep()),
+    signOutStart: () => dispatch(signOutStart())
 });
 
 const mapStateToProps = createStructuredSelector({

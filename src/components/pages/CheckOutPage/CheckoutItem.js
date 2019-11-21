@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { clearItemFromCart, addItem, removeItem } from '../../../redux/cart/cart-actions';
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
-    const { title, imgSrc, price, quantity } = cartItem;
+    const { title, imgSmall_1, price, quantity } = cartItem;
     return (
         <div className="checkout-item">
             <div className="image-container">
-                <img src={imgSrc} alt="item" />
+                <img src={imgSmall_1} alt="item" />
             </div>
             <span className="name">{title}</span>
             <span className="quantity">

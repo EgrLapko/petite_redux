@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { clearItemFromCart } from '../../redux/cart/cart-actions';
 
 function CartItem({cartItem, clearItem}) {
-    const { imgSrc, title, quantity, price } = cartItem;
+    const { imgSmall_1, title, quantity, price } = cartItem;
     return (
         <div className="cart-item">
-            <img src={imgSrc} alt='item'/>
+            <img src={imgSmall_1} alt='item'/>
             <div className="item-details">
                 <span className="name"> {title} </span>
                 <span className="price">
