@@ -6,6 +6,7 @@ import userReducer from './user/user-reducer';
 import cartReducer from './cart/cart-reducer';
 import shopReducer from  './shop/shop-reducer';
 import sliderReducer from './navbar-slider/slider-reducer';
+import indiReducer from './indi-slider/indi-reducer';
 
 
 const persistConfig = {
@@ -14,11 +15,12 @@ const persistConfig = {
     whitelist: ['cart']
 }
 
-const rootReducer = combineReducers ({
+export const rootReducer = combineReducers ({
     user: userReducer,
     cart: cartReducer,
     shop: shopReducer,
-    slider: sliderReducer
+    slider: sliderReducer,
+    indi: indiReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);

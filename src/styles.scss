@@ -26,6 +26,11 @@ a {
     box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 $sub-color: grey;
 $main-color: black;
 
@@ -464,6 +469,12 @@ $main-color: black;
 }
 
 // --------------------------------------------------------------- PRODUCTS PAGE
+.products {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 .products-page {
   display: flex;
   flex-direction: column;
@@ -577,6 +588,128 @@ $main-color: black;
   }
   &:hover {
     box-shadow: 0px 20px 40px rgba(0, 0, 0, .1);
+  }
+}
+
+// --------------------------------------------------------------- INDIVIDUAL PAGE
+.indi-wrapper {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  display: flex;
+  z-index: 100;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  // background-color: rgba(242, 242, 242, .8);
+  background-color: rgba(0, 0, 0, .2);
+  transform: translateX(-100%);
+  transition: .4s;
+  &.opened {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .indi-container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px rgba(105, 105, 105, .3);
+    overflow: hidden;
+    .info-container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      justify-content: space-between;
+      .info-images {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        overflow-y: scroll;
+        img {
+          width: 100%;
+          margin: 0;
+        }
+      }
+      .info-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        .text-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 80%;
+          padding: 1rem;
+          text-align: center;
+          .indi-category {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 200;
+            margin: 0;
+            color: rgba(105, 105, 105, .4);
+          }
+          .indi-price {
+            font-size: 2rem;
+            color: rgba(106, 105, 105, 1);
+          }
+          .indi-description {
+            width: 60%;
+            margin: 0;
+          }
+        }
+        .extra-info {
+          display: flex;
+          justify-content: space-around;
+          width: 50%;
+          .sizes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            .size-type {
+              font-size: 1.5rem;
+              margin: 0;
+            }
+            .info-size {
+              display: flex;
+              margin: .5rem;
+              padding: .7rem;
+              border: 1px solid rgba(105, 105, 105, .1);
+              .size-item {
+                font-size: 1.5rem;
+                margin: 0rem .5rem;
+                cursor: pointer;
+                &:hover {
+                  color: rgba(241, 106, 123, .9);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border: none;
+      &:hover {
+        background-color: unset;
+        color: rgba(241, 106, 123, .9);
+      }
+    }
   }
 }
 

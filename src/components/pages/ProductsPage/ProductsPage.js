@@ -14,9 +14,8 @@ const ProductsPage = ({ fetchCollectionsStart, match }) => {
 
     return (
         <div className="products-page">
-            <Route exact path={`${match.path}`} component={ProductsOverviewContainer}/>
-            <Route path={`${match.path}/:categoryId`} component={ProductsContainer}
-            />
+            <Route exact path={`${match.path}`} component={ProductsOverviewContainer} />
+            <Route path={`${match.path}/:categoryId`} component={ProductsContainer} />
         </div>
     )
 

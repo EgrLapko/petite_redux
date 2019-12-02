@@ -13,6 +13,10 @@ a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+ul {
+  list-style-type: none;
+  padding: 0; }
+
 .btn {
   font-size: 1.2rem;
   border: 1px solid rgba(241, 106, 123, 0.7);
@@ -560,6 +564,18 @@ a {
         .selections .selections-container .sel-wrapper .sel-card:hover .sel-text-wrapper .btn {
           opacity: 1; }
 
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .products-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -724,6 +740,167 @@ a {
   .product-card:hover {
     -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1); }
+
+.indi-wrapper {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+  opacity: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
+  .indi-wrapper.opened {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1; }
+  .indi-wrapper .indi-container {
+    width: 90%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 40px rgba(105, 105, 105, 0.3);
+    box-shadow: 0px 0px 40px rgba(105, 105, 105, 0.3);
+    overflow: hidden; }
+    .indi-wrapper .indi-container .info-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .indi-wrapper .indi-container .info-container .info-images {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 50%;
+        overflow-y: scroll; }
+        .indi-wrapper .indi-container .info-container .info-images img {
+          width: 100%;
+          margin: 0; }
+      .indi-wrapper .indi-container .info-container .info-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 50%; }
+        .indi-wrapper .indi-container .info-container .info-text .text-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 80%;
+          padding: 1rem;
+          text-align: center; }
+          .indi-wrapper .indi-container .info-container .info-text .text-container .indi-category {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 200;
+            margin: 0;
+            color: rgba(105, 105, 105, 0.4); }
+          .indi-wrapper .indi-container .info-container .info-text .text-container .indi-price {
+            font-size: 2rem;
+            color: #6a6969; }
+          .indi-wrapper .indi-container .info-container .info-text .text-container .indi-description {
+            width: 60%;
+            margin: 0; }
+        .indi-wrapper .indi-container .info-container .info-text .extra-info {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: distribute;
+          justify-content: space-around;
+          width: 50%; }
+          .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 1rem; }
+            .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .size-type {
+              font-size: 1.5rem;
+              margin: 0; }
+            .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              margin: .5rem;
+              padding: .7rem;
+              border: 1px solid rgba(105, 105, 105, 0.1); }
+              .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item {
+                font-size: 1.5rem;
+                margin: 0rem .5rem;
+                cursor: pointer; }
+                .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item:hover {
+                  color: rgba(241, 106, 123, 0.9); }
+    .indi-wrapper .indi-container .btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border: none; }
+      .indi-wrapper .indi-container .btn:hover {
+        background-color: unset;
+        color: rgba(241, 106, 123, 0.9); }
 
 .main-page {
   display: -webkit-box;
