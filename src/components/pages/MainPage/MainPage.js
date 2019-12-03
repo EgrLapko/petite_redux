@@ -60,22 +60,39 @@ export default function MainPage() {
                     contentClassName="parallax-background"
                 >   
                     <div className="parallax-content-section">
-                        <h2 className="parallax-title">we`re on instagram!</h2>
-                        <p className="parallax-description">come find us and become 
-                        a part of our cozy community</p>
-                        <button className="btn btn-white">We`re here</button>
-                    </div>             
+                        <div className="parallax-top-info">
+                            <h2 className="parallax-title">we`re on instagram!</h2>
+                            <p className="parallax-description">come find us and become 
+                            a part of our cozy community</p>
+                            <button className="btn btn-white">We`re here</button>
+                        </div>
+                        <div className="insta-section">
+                            <Title 
+                                text = "show us your pd look"
+                                desc= "share your look with us, add #iampd to your image and watch yourself on our main page!"
+                            />
+                            <InstagramSection />
+                        </div>  
+                    </div>       
                 </Parallax>
             </div>
 
-            <div className="insta-section">
-              <Title 
-                text = "show us your pd look"
-                desc= "share your look with us, add #iampd to your image and watch yourself on our main page!"
-              />
-              <InstagramSection />
+            
+            <div className="parallax-mobile">
+                <Title 
+                    text = "We`re on Instagram"
+                    desc= "So come find us!"
+                /> 
+                <div className="parallax-mobile-container">
+                    <div className="parallax-mobile-info">
+                        <Title 
+                            text = "show us your pm look"
+                            desc= "share your look with us, add #iampm to your image and watch yourself on our main page!"
+                        />
+                        <button className="btn btn-white">We`re here</button>
+                    </div>
+                </div>  
             </div>
-
         </div>
     )
 }

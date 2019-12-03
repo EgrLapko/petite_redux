@@ -21,6 +21,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                             <h3 className="indi-category">{ category }</h3>
                             <h3 className="indi-price">${price}</h3>
                             <h3 className="indi-description">{ description }</h3>
+                            <h3 className="indi-color">Color: { color }</h3>
                         </div>
                         <div className="extra-info">
                             {
@@ -56,7 +57,11 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                         </div>
                     </div>       
                 </div>  
-                <button className="btn" onClick={() => {toggleIndiPage(); removeSingleItem()}}>&#10005;</button>
+                <button className="btn" 
+                        onClick={() => { toggleIndiPage(); setTimeout(() => {removeSingleItem()}, 500)  }}
+                >
+                    &#10005;
+                </button>
             </div>   
         </div>
     )

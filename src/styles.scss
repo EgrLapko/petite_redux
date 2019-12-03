@@ -460,6 +460,13 @@ $main-color: black;
   }
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .main-title {
+    width: 100%;
+    margin: 1rem;
+  }
+}
+
 // --------------------------------------------------------------- SELECTIONS
 
 .selections {
@@ -471,76 +478,105 @@ $main-color: black;
       width: 100%;
       margin: 1rem 0;
       padding: 1rem;
-      .sel-wrapper {
-          @include flexbox;
-          flex-direction: column;
-          margin: 0rem 1.5rem;
-          width: 25rem;
-          .sel-card {
-              overflow: hidden;
+      .sel-card {
+          overflow: hidden;
+          width: 100%;
+          height: 35rem; 
+          width: 23rem;
+          margin: 0 1rem;
+          border-radius: 15px;
+          position: relative;
+          overflow: hidden;
+          z-index: 1;
+          .sel-image {
+              @include flexbox;
               width: 100%;
-              height: 35rem; 
-              border-radius: 3%;
-              position: relative;
-              overflow: hidden;
-              z-index: 1;
-              .sel-image {
-                  @include flexbox;
-                  width: 100%;
-                  height: 100%;
-                  position: absolute;
-                  top: 0;
-                  background-position: center;
-                  background-size: cover;
-                  cursor: pointer;
-                  transform: scale(1);
-                  transition: .8s;
-                  z-index: -1;
-              }
-              .sel-text-wrapper {
-                @include flexbox;
-                flex-direction: column;
-                text-align: center;
-                padding: 1rem;
-                background-color: rgba(105, 105, 105, .4);
-                width: 100%;
-                height: 100%;
-                transition: .3s ease-in-out;
-                cursor: pointer;
-                .sel-description, .sel-title {
-                    font-size: 1.5rem;
-                    font-family: $fontmain;
-                    color: rgba(246, 246, 246, 1);
-                    font-weight: 200;
-                    margin: 0;
-                    opacity: 0;
-                    transition: .5s ease-in-out;
-                }
-                .sel-title {
-                    font-size: 2.5rem;
-                    font-weight: 600;
-                }
-                .btn {
-                    opacity: 0;
-                    transition: .3s;
-                }
-            }
+              height: 100%;
+              position: absolute;
+              top: 0;
+              background-position: center;
+              background-size: cover;
+              cursor: pointer;
+              transform: scale(1);
+              transition: .8s;
+              z-index: -1;
           }
-          .sel-card:hover {
-              .sel-image {
-                  transform: scale(1.1);
-              }
-              .sel-text-wrapper {
-                background-color: rgba(195, 195, 195, .5);
-                .sel-description, .sel-title {
-                    opacity: 1;
-                }
-                .btn {
-                    opacity: 1;
-                }
+          .sel-text-wrapper {
+            @include flexbox;
+            flex-direction: column;
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(105, 105, 105, .4);
+            width: 100%;
+            height: 100%;
+            transition: .3s ease-in-out;
+            cursor: pointer;
+            .sel-description, .sel-title {
+                font-size: 1.5rem;
+                font-family: $fontmain;
+                color: rgba(246, 246, 246, 1);
+                font-weight: 200;
+                margin: 0;
+                opacity: 0;
+                transition: .5s ease-in-out;
             }
-          }
+            .sel-title {
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+            .btn {
+                opacity: 0;
+                transition: .3s;
+            }
+        }
       }
+      .sel-card:hover {
+          .sel-image {
+              transform: scale(1.1);
+          }
+          .sel-text-wrapper {
+            background-color: rgba(195, 195, 195, .5);
+            .sel-description, .sel-title {
+                opacity: 1;
+            }
+            .btn {
+                opacity: 1;
+            }
+        }
+      }
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .selections {
+    .selections-container {
+      flex-direction: column;
+      padding: 0;
+      .sel-card {
+        width: 100%;
+        height: 40vh;
+        border-radius: unset;
+        transition: .4s ease-in-out;
+        .sel-image {
+          background-position: bottom;
+        }
+        .sel-text-wrapper {
+          .sel-description, .sel-title {
+            opacity: 1;
+            font-size: 1.5rem;
+          }
+          .sel-title {
+            font-size: 3rem;
+          }
+          .btn {
+              opacity: 1;
+          }
+        }
+        &:hover {
+          height: 80vh;
+        }
+      }
+    }
   }
 }
 
@@ -682,7 +718,7 @@ $main-color: black;
   // background-color: rgba(242, 242, 242, .8);
   background-color: rgba(0, 0, 0, .2);
   transform: translateX(-100%);
-  transition: .4s;
+  transition: .8s;
   &.opened {
     transform: translateX(0%);
     opacity: 1;
@@ -831,59 +867,70 @@ $main-color: black;
       transform: scale(1);
       transition: .8s;
     }
-    .trends-info {
+    a {
       width: 100%;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      background-color: rgba(105, 105, 105, .4);
-      transition: .3s;
-      .trends-title {
-        font-size: 4rem;
-        color: rgba(246, 246, 246, 1);
-        margin: 0;
-        text-transform: lowercase;
-      }
-      .trends-description {
-        font-size: 2rem;
-        margin: 0;
-        color: rgba(246, 246, 246, 1);
-        padding: .5rem;
+      .trends-info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(105, 105, 105, .4);
+        transition: .3s;
+        .trends-title {
+          font-size: 4rem;
+          color: rgba(246, 246, 246, 1);
+          margin: 0;
+          text-transform: lowercase;
+        }
+        .trends-description {
+          font-size: 2rem;
+          margin: 0;
+          color: rgba(246, 246, 246, 1);
+          padding: .5rem;
+        }
+        &:hover {
+          background-color: rgba(195, 195, 195, .4);
+        }
       }
       &:hover {
-        background-color: rgba(195, 195, 195, .4);
-      }
-    }
-    &:hover {
-      .trends-wrapper {
-        transform: scale(1.1);
+        .trends-wrapper {
+          transform: scale(1.1);
+        }
       }
     }
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
   .trends-container {
-      flex-direction: column;
-      padding: 0;
-      .trends {
-          margin: .5rem 0;
-          .trends-card {
-              width: 100%;
-              height: 30vh;
-              border-radius: 0%;
-              .trends-text-wrapper {
-                  .trends-title {
-                      font-size: 2rem;
-                  }
-                  .trends-description {
-                      font-size: 1.2rem;
-                  }
-              }
-          }
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    .trends-card:first-child {
+      .trends-info {
+        background-color: rgba(195, 195, 195, .4);
       }
+    }
+    .trends-card {
+      width: 100%;
+      height: 45vh;
+      border-radius: 0%;
+      margin: 0;
+      a {
+        .trends-info {
+          .trends-title {
+              font-size: 4rem;
+          }
+          .trends-description {
+              font-size: 2rem;
+              padding: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -901,19 +948,66 @@ $main-color: black;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 30rem;
+  min-height: 120vh;
   width: 100vw;
   text-align: center;
-  background-color: rgba(106, 105, 105, .4);
-  .parallax-title {
-    color: rgba(242, 242, 242, 1);
-    font-size: 4rem;
-    margin: 0;
+  background-color: rgba(106, 105, 105, .2);
+  .parallax-top-info {
+    @include flexbox;
+    flex-direction: column;
+    .parallax-title {
+      color: rgba(242, 242, 242, 1);
+      font-size: 4rem;
+      margin: 0;
+    }
+    .parallax-description {
+      color: rgba(242, 242, 242, 1);
+      font-size: 2rem;
+      margin: 0;
+    }
   }
-  .parallax-description {
-    color: rgba(242, 242, 242, 1);
-    font-size: 2rem;
-    margin: 0;
+  
+}
+
+.parallax-mobile {
+  display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .parallax-container {
+    display: none;
+  }
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .parallax-mobile {
+    @include flexbox; 
+    flex-direction: column;
+    .parallax-mobile-container {
+      @include flexbox;
+      background-image: url('./components//images/parallax/parallax-banner2.jpg');
+      background-attachment: fixed;
+      background-position: top;
+      width: 100%;
+      height: 70vh;
+      flex-direction: column;
+      .parallax-mobile-info {
+        @include flexbox;
+        flex-direction: column;
+        background-color: rgba(105, 105, 105, .5);
+        width: 100%;
+        height: 100%;
+        .main-title {
+          margin: 0;
+          padding: 0;
+          .main-title-text, .main-title-description {
+            color: rgba(246, 246, 246, 1);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -923,7 +1017,12 @@ $main-color: black;
 .insta-section {
   @include flexbox;
   flex-direction: column;
-  margin: 1rem 0;
+  background-color: rgba(246, 246, 246, 1);
+  width: 70%;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px rgba(105, 105, 105, .3);
   .insta-container {
     @include flexbox;
     width: 100%;
@@ -933,8 +1032,8 @@ $main-color: black;
     .insta-card {
         @include flexbox;
         background-size: cover;
-        width: 17rem;
-        height: 17rem;
+        width: 12rem;
+        height: 12rem;
         margin: 1rem 1rem;
         border-radius: 5%;
         box-shadow: 0px 0px 40px rgba(105, 105, 105, .2);
