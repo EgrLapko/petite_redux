@@ -13,6 +13,7 @@ import { selectCurrentUser } from '../../../redux/user/user-selectors';
 import CartIcon from '../../misc/CartIcon';
 import CartDropdown from '../../cart/CartDropdown';
 import NavbarSlider from './NavbarSlider';
+import NavbarSmall from './NavbarSmall';
 
 function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart }) {
     return (
@@ -41,6 +42,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                 <CartDropdown />
             </div>
             <NavbarSlider />
+            <NavbarSmall />
         </React.Fragment>
         
     )
