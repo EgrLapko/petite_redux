@@ -8,10 +8,16 @@ import {
     toggleSliderBras, 
     toggleSliderPanties, 
     toggleSliderAccs, 
-    toggleSliderSleep
+    toggleSliderSleep,
+    dropAllSliders,
+    toggleMobileMenu
 } from '../../../redux/navbar-slider/slider-actions';
 
-const SliderMobile = ({ currentUser, signOutStart, mobileMenuHidden, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep }) => {
+const SliderMobile = ({ currentUser, signOutStart, 
+                        mobileMenuHidden, toggleSliderBras, 
+                        toggleSliderPanties, toggleSliderAccs, 
+                        toggleSliderSleep, toggleMobileMenu,
+                        dropAllSliders }) => {
     return (
         <div className={`nav-mobile-slider ${!mobileMenuHidden && "slider-opened"}`}>
             <ul className="nav-links">
@@ -24,7 +30,7 @@ const SliderMobile = ({ currentUser, signOutStart, mobileMenuHidden, toggleSlide
                         currentUser ?
                         <div className="nav-option" onClick={signOutStart}>sign out</div>
                         :
-                        <Link className="nav-option" to="/login">log in</Link>
+                        <Link className="nav-option" to="/login" onClick={() => {toggleMobileMenu(); dropAllSliders()}}>log in</Link>
                     }
                 </div>
             </ul>
@@ -37,7 +43,8 @@ const mapDispatchToProps = (dispatch) => ({
     toggleSliderPanties: () => dispatch(toggleSliderPanties()),
     toggleSliderAccs: () => dispatch(toggleSliderAccs()),
     toggleSliderSleep: () => dispatch(toggleSliderSleep()),
-
+    toggleMobileMenu: () => dispatch(toggleMobileMenu()),
+    dropAllSliders: () => dispatch(dropAllSliders())
 });
 
 

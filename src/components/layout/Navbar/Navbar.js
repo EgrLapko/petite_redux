@@ -40,8 +40,9 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                         <CartIcon />
                     </div>
                 </div>
-                <CartDropdown />
+                
             </div>
+            <CartDropdown />
             <NavbarSlider />
             <NavbarSmall />
             <SliderMobile currentUser={currentUser} signOutStart={signOutStart} />

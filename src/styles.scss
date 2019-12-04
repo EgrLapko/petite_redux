@@ -128,7 +128,7 @@ $main-color: black;
         display: flex;
         width: 100%;
         justify-content: space-between;
-        text-transform: capitalize;
+        text-transform: lowercase;
         .nav-logo {
             height: 100%;
             display: flex;
@@ -151,7 +151,7 @@ $main-color: black;
             align-items: center;
             padding: 0;
             .link {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 color: rgba(105, 105, 105, .9);
                 font-weight: 600;
                 cursor: pointer;
@@ -214,16 +214,21 @@ $main-color: black;
   top: 0rem;
   z-index: 100;
   background-color: rgba(248, 248, 248, 1);
+  box-shadow: 0px 0px 30px rgba(105, 105, 105, .2);
   .mobile-logo {
     padding: .5rem;
-    font-size: .7rem;
+    font-size: .8rem;
     text-transform: lowercase;
     color: rgba(105, 105, 105, 1);
+    .pink {
+      color: rgba(241, 106, 123, .9);
+      font-weight: 600;
+    }
   }
   .mobile-menu {
     @include flexbox;
-    height: 4.5rem;
-    width: 70px;
+    height: 45px;
+    width: 45px;
     .hamburger {
       margin: 0;
       font-size: 2rem;
@@ -312,7 +317,7 @@ $main-color: black;
       margin: 0 0;
       padding: 0rem;
       color: rgba(105, 105, 105, 1);
-      text-transform: capitalize;
+      text-transform: lowercase;
       cursor: pointer;
       transition: .3s;
       &:hover {
@@ -323,6 +328,7 @@ $main-color: black;
       }
       h3 {
         margin: .5rem 0;
+        font-size: 1.1em;
       }
     }
   }
@@ -334,12 +340,11 @@ $main-color: black;
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
   .navbar-slider {
-    @include flexbox;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     position: fixed;
-    top: 4.5rem;
+    top: 0;
     right: 0;
     width: 60%;
     height: 100%;
@@ -352,21 +357,35 @@ $main-color: black;
       @include flexbox;
       justify-content: center;
       align-items: center;
+      position: relative;
       width: 100%;
-      height: 11.5rem;
+      height: 25%;
       display: flex;
       padding: 0;
       margin: 0rem;
       overflow: hidden;
       .nav-menu-image {
-        width: 6rem;
+        width: 15vh;
+        transform: translateY(-15%);
+        display: block;
       }
       .nav-menu-title {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(246, 246, 246, 1);
+        text-align: center;
         h3 {
           margin: 0;
-          margin-left: .8rem;
+          color: rgba(105, 105, 105, 1);
+          font-size: 1.4rem;
+          padding: .4rem;
+          text-transform: lowercase;
         }
       }
+    }
+    .slider-item:first-child {
+      margin-top: 4.5rem;
     }
   }
 }
@@ -382,29 +401,32 @@ $main-color: black;
     align-items: flex-start;
     justify-content: center;
     position: fixed;
-    top: 4.5rem;
+    top: 0rem;
     z-index: 98;
     width: 40%;
     height: 100%;
     padding: .3rem;
-    background-color: rgba(246, 246, 246, .9);
+    background-color: rgba(246, 246, 246, 1);
     transform: translateX(-100%);
     transition: .4s ease-in-out;
     .nav-links {
       @include flexbox;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-end;
       justify-content: space-around;
+      margin-top: 4.5rem;
       .link {
         padding: .4rem;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+        margin-top: 1rem;
         cursor: pointer;
         color: rgba(105, 105, 105, 1);
         text-transform: lowercase;
         font-weight: 600;
       }
       .link:last-child {
-        margin-top: 1rem;
+        margin-top: 3rem;
+        
       }
     }
     &.slider-opened{
@@ -483,8 +505,8 @@ $main-color: black;
 @media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
   .dropdown-wrapper {
     width: 100%;
-    height: 80%;
-    top: 5rem;
+    height: 70%;
+    top: 4.5rem;
     right: 0;
     border-radius: 0;
   }
