@@ -203,6 +203,8 @@ $main-color: black;
     }
 }
 
+// --------------------------------------------------------------- NAVBAR MOBILE
+
 .navbar-mobile {
   width: 100%;
   display: none;
@@ -210,16 +212,23 @@ $main-color: black;
   align-items: center;
   position: sticky;
   top: 0rem;
-  z-index: 99;
+  z-index: 100;
   background-color: rgba(248, 248, 248, 1);
   .mobile-logo {
     padding: .5rem;
-    font-size: .8rem;
+    font-size: .7rem;
     text-transform: lowercase;
     color: rgba(105, 105, 105, 1);
   }
   .mobile-menu {
-    font-size: 1.5rem;
+    @include flexbox;
+    height: 4.5rem;
+    width: 70px;
+    .hamburger {
+      margin: 0;
+      font-size: 2rem;
+      color: rgba(105, 105, 105, 1);
+    }
   }
   .mobile-right {
     display: flex;
@@ -320,6 +329,87 @@ $main-color: black;
   &.visible {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .navbar-slider {
+    @include flexbox;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 4.5rem;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: .4s ease-in-out;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: rgba(246, 246, 246, 1);
+    .slider-item {
+      @include flexbox;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 11.5rem;
+      display: flex;
+      padding: 0;
+      margin: 0rem;
+      overflow: hidden;
+      .nav-menu-image {
+        width: 6rem;
+      }
+      .nav-menu-title {
+        h3 {
+          margin: 0;
+          margin-left: .8rem;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------------------- NAVBAR SLIDER MOBILE
+.nav-mobile-slider {
+  display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .nav-mobile-slider {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    top: 4.5rem;
+    z-index: 98;
+    width: 40%;
+    height: 100%;
+    padding: .3rem;
+    background-color: rgba(246, 246, 246, .9);
+    transform: translateX(-100%);
+    transition: .4s ease-in-out;
+    .nav-links {
+      @include flexbox;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      .link {
+        padding: .4rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: rgba(105, 105, 105, 1);
+        text-transform: lowercase;
+        font-weight: 600;
+      }
+      .link:last-child {
+        margin-top: 1rem;
+      }
+    }
+    &.slider-opened{
+      transform: translateX(0%);
+    }
   }
 }
 

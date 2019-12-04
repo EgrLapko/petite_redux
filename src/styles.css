@@ -205,15 +205,29 @@ ul {
   position: -webkit-sticky;
   position: sticky;
   top: 0rem;
-  z-index: 99;
+  z-index: 100;
   background-color: #f8f8f8; }
   .navbar-mobile .mobile-logo {
     padding: .5rem;
-    font-size: .8rem;
+    font-size: .7rem;
     text-transform: lowercase;
     color: dimgray; }
   .navbar-mobile .mobile-menu {
-    font-size: 1.5rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 4.5rem;
+    width: 70px; }
+    .navbar-mobile .mobile-menu .hamburger {
+      margin: 0;
+      font-size: 2rem;
+      color: dimgray; }
   .navbar-mobile .mobile-right {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -333,6 +347,125 @@ ul {
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%); }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+  .navbar-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 4.5rem;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #f6f6f6; }
+    .navbar-slider .slider-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 11.5rem;
+      display: flex;
+      padding: 0;
+      margin: 0rem;
+      overflow: hidden; }
+      .navbar-slider .slider-item .nav-menu-image {
+        width: 6rem; }
+      .navbar-slider .slider-item .nav-menu-title h3 {
+        margin: 0;
+        margin-left: .8rem; } }
+
+.nav-mobile-slider {
+  display: none; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+  .nav-mobile-slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: fixed;
+    top: 4.5rem;
+    z-index: 98;
+    width: 40%;
+    height: 100%;
+    padding: .3rem;
+    background-color: rgba(246, 246, 246, 0.9);
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out; }
+    .nav-mobile-slider .nav-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      .nav-mobile-slider .nav-links .link {
+        padding: .4rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: dimgray;
+        text-transform: lowercase;
+        font-weight: 600; }
+      .nav-mobile-slider .nav-links .link:last-child {
+        margin-top: 1rem; }
+    .nav-mobile-slider.slider-opened {
+      -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      transform: translateX(0%); } }
 
 @-webkit-keyframes cartDrop {
   0% {

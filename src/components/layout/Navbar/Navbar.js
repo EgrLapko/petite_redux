@@ -14,6 +14,7 @@ import CartIcon from '../../misc/CartIcon';
 import CartDropdown from '../../cart/CartDropdown';
 import NavbarSlider from './NavbarSlider';
 import NavbarSmall from './NavbarSmall';
+import SliderMobile from './SliderMobile';
 
 function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart }) {
     return (
@@ -43,6 +44,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
             </div>
             <NavbarSlider />
             <NavbarSmall />
+            <SliderMobile currentUser={currentUser} signOutStart={signOutStart} />
         </React.Fragment>
         
     )

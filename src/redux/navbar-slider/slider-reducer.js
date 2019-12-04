@@ -4,7 +4,8 @@ const INITIAL_STATE = {
     sliderBrasHidden: true,
     sliderPantiesHidden: true,
     sliderAccsHidden: true,
-    sliderSleepHidden: true
+    sliderSleepHidden: true,
+    mobileMenuHidden: true
 };
 
 const sliderReducer = (state = INITIAL_STATE, action) => {
@@ -29,7 +30,19 @@ const sliderReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 sliderSleepHidden: !state.sliderSleepHidden
             };
-            
+        case sliderActionTypes.TOGGLE_MOBILE_MENU:
+            return {
+                ...state,
+                mobileMenuHidden: !state.mobileMenuHidden
+            }
+        case sliderActionTypes.DROP_ALL_SLIDERS:
+            return {
+                ...state,
+                sliderBrasHidden: true,
+                sliderPantiesHidden: true,
+                sliderAccsHidden: true,
+                sliderSleepHidden: true
+            }
         default:
             return state;
     }

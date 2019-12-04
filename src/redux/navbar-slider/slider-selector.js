@@ -21,3 +21,8 @@ export const selectSliderSleep = createSelector (
     [selectSlider],
     slider => slider.sliderSleepHidden
 );
+
+export const selectMobileMenuSlider = createSelector (
+    [selectSlider],
+    slider => slider.mobileMenuHidden
+);
