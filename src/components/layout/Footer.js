@@ -1,13 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-export default function Footer() {
+import { signOutStart } from '../../redux/user/user-actions';
+import { selectCurrentUser } from '../../redux/user/user-selectors';
+
+const Footer = ({ currentUser }) => {
     return (
         <div className = "footer">
             <div className="footer-container">
             <div className="account-container">
                 <div className="maintag">My Account</div>
-                <div className="footer-item">Login</div>
-                <div className="footer-item">Register</div>
+                <div className="footer-item">
+                    {   
+                        currentUser ?
+                        <div className="nav-option" onClick={signOutStart}>sign out</div>
+                        :
+                        <Link className="nav-option" to="/login">log in</Link>
+                    }
+                </div>
             </div>
 
             <div className="subscribe-container">
@@ -24,14 +36,20 @@ export default function Footer() {
 
             <div className="about-container">
                 <div className="maintag">Our name:</div>
-                <div className="footer-item">About Us</div>
-                <div className="footer-item">Job Opportunities</div>
-                <div className="footer-item">Customer Service</div>
+                <div className="footer-item">About This Website</div>
+                <div className="footer-item">More</div>
             </div>
             </div>
             <div className="under-part">
-            <p className="under-text">©2019 Petite Damsel. Made by Yehor Lapko. </p>
+            <p className="under-text">©2019 Petite Mamsell. Made by Yehor Lapko. </p>
             </div>
         </div>
     )
 }
+
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser
+})
+
+export default connect(mapStateToProps)(Footer);
+

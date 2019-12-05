@@ -14,6 +14,7 @@ const NavbarSmall = ({ toggleMobileMenu, dropAllSliders, mobileMenuHidden }) => 
             <div className="mobile-menu">
                 <p className="hamburger" onClick={() => { toggleMobileMenu(); dropAllSliders() }}>  {mobileMenuHidden ? <>&#9776;</> : <>&#10005;</> } </p>
             </div>
+
             <div className="mobile-logo">
                 <Link to="/"><h1 className="logo"><span className="pink">petite</span>.mamsell</h1></Link>
             </div>

@@ -1,10 +1,14 @@
 import React from 'react'
 
-export default function Title(props) {
+const Title = ({ text, desc }) => {
     return (
         <div className="main-title">
-            <h2 className="main-title-text">{props.text}</h2>
-            <p className="main-title-description">{props.desc}</p>
+            <h2 className="main-title-text">{text}</h2>
+            {
+                desc ? <p className="main-title-description">{desc}</p> : null
+            }
         </div>
     )
-}
+};
+
+export default Title;
