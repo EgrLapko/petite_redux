@@ -7,14 +7,18 @@ import { toggleMobileMenu, dropAllSliders } from '../../../redux/navbar-slider/s
 const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders}) => {
     return (
         <div className="slider-item">
-            <Link to={path}>
-                <img 
-                    className="nav-menu-image" 
-                    src={image} alt="menu-item" 
-                    onClick={() => { toggleMobileMenu(); dropAllSliders()}}
-                />
-            </Link>
-            <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders()}}><h3>{text}</h3></NavLink>
+            <div className="image-container">
+                <Link to={path}>
+                    <img 
+                        className="nav-menu-image" 
+                        src={image} alt="menu-item" 
+                        onClick={() => { toggleMobileMenu(); dropAllSliders()}}
+                    />
+                </Link>   
+            </div>
+            <div className="bottom-link">
+                <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders()}}><h3>{text}</h3></NavLink>
+            </div>
         </div>
     )
 }

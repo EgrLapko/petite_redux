@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
 
 import { selectCollection } from '../../../redux/shop/shop-selectors';
 import { selectIndiVisible } from '../../../redux/indi-slider/indi-selector';

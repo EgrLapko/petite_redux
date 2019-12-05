@@ -5,7 +5,7 @@ import { addItem } from '../../../redux/cart/cart-actions';
 import { toggleIndiPage, setSingleItem } from '../../../redux/indi-slider/indi-actions';
 
 const ProductCard = ({item, addItem, toggleIndiPage, setSingleItem}) => {
-    const { imgSmall_1, imgSmall_2, title, category, price, id } = item;
+    const { imgSmall_1, imgSmall_2, title, category, price } = item;
     return (
         <div className="product-card">
             <img 
