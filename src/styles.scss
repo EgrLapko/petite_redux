@@ -43,6 +43,9 @@ $main-color: black;
 .btn {
   font-size: 1.2rem;
   border: 1px solid rgba(241, 106, 123, .7);
+  color: rgba(105, 105, 105, 1);
+  font-weight: 600;
+  text-transform: lowercase;
   background-color: unset;
   border-radius: .7rem;
   padding: .8rem;
@@ -63,7 +66,6 @@ $main-color: black;
 .btn-white {
   border: 1px solid rgba(242, 242, 242, 1);
   color: rgba(246, 246, 246, 1);
-  margin-top: 1rem;
   &:hover {
     border: 1px solid rgba(242, 242, 242, 0);
   }
@@ -73,6 +75,15 @@ $main-color: black;
   color: rgba(246, 246, 246, .9);
   background-color: rgba(241, 106, 123, .9);
   border: 1px solid rgba(246, 246, 246, 0);
+}
+
+.btn-gray {
+  border: 1px solid rgba(105, 105, 105, .3);
+  color: rgba(105, 105, 105, .8);
+  &:hover {
+    border: 1px solid rgba(242, 242, 242, 0);
+    background-color: rgba(241, 106, 123, .9);
+  }
 }
 
 // --------------------------------------------------------------- CUSTOM BUTTON
@@ -357,7 +368,7 @@ $main-color: black;
     background-color: rgba(246, 246, 246, 1);
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    border-left: 1px solid rgba(105, 105, 105, .1);
+    // border-left: 1px solid rgba(105, 105, 105, .1);
     .slider-item {
       @include flexbox;
       justify-content: center;
@@ -434,14 +445,14 @@ $main-color: black;
         cursor: pointer;
         color: rgba(105, 105, 105, 1);
         text-transform: capitalize;
-        border-bottom: 1px  solid rgba(106, 105, 105, .1);
+        // border-bottom: 1px  solid rgba(106, 105, 105, .1);
         font-weight: 600;
         &.link-active {
           color: rgba(241, 106, 123, .9);
         }
       }
       .link:last-child {
-        margin-top: 3rem;
+        margin-top: 1rem;
         color: rgba(241, 106, 123, .9);
       }
     }
@@ -1365,8 +1376,72 @@ $main-color: black;
     .buttons {
       display: flex;
       justify-content: space-between;
+      .btn:last-child {
+        border: none;
+        .fa-google {
+          font-size: 2rem;
+        }
+        &:hover {
+          border: none;
+          background-color: unset;
+          color: rgba(241, 106, 123, .9);
+        }
+      }
     }
   }
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .login {
+    flex-direction: column;
+    padding: 1rem 0;
+    .login-form {
+      width: 90%;
+      height: auto;
+      .main-form {
+        width: 90%;
+        button {
+          margin: 1rem 0;
+        }
+      }
+    }
+    .sign-in {
+      border-radius: 0;
+      border-top-right-radius: 5%;
+      border-top-left-radius: 5%;
+      .title {
+        font-size: 1.3  rem;
+        color: rgba(106, 105, 105, 1);
+        font-weight: 600;
+      }
+      
+    }
+    .sign-up {
+      border-radius: 0;
+      border-bottom-right-radius: 5%;
+      border-bottom-left-radius: 5%;
+      .title {
+        font-size: 1.3  rem;
+        color: rgba(106, 105, 105, 1);
+        font-weight: 600;
+      }
+    }
+    .group {
+      margin: 1.3rem 0;
+      .form-input {
+        margin: 1rem 0;
+      }
+    }
+    .buttons {
+      justify-content: space-around;
+    }
+    .btn {
+      border: 1px solid rgba(105, 105, 105, .3);
+      font-size: 1.3rem;
+      box-shadow: 0px 0px 30px rgba(105, 105, 105, .05);
+    }
+  }
+}
 
   //-------------------------------------------------- CHECKOUT PAGE
 
@@ -1382,8 +1457,10 @@ $main-color: black;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid rgba(105, 105, 105, .3);
     .header-block {
+      @include flexbox;
+      justify-content: flex-start;
       text-transform: capitalize;
       width: 23%;
       &:last-child {
@@ -1398,12 +1475,46 @@ $main-color: black;
   }
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .checkout-page {
+    width: 90%;
+    .checkout-header {
+      font-size: .7rem;
+      font-weight: 600;
+      font-family: $fontmain;
+      justify-content: center;
+      .header-block {
+        text-align: center;
+      }
+    }
+    .checkout-item {
+      .quantity {
+        display: flex;
+        .arrow {
+          font-size: 1rem;
+        }
+        .value {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  .total {
+    @include flexbox;
+    width: 100%;
+    span {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
 //-------------------------------------------------- CHECKOUT ITEM
 .checkout-item {
   width: 100%;
   display: flex;
   min-height: 100px;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid rgba(105, 105, 105, .3);
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
@@ -1419,6 +1530,11 @@ $main-color: black;
   .quantity,
   .price {
     width: 23%;
+  }
+  .name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(105, 105, 105, 1);
   }
   .quantity {
     display: flex;
