@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { Route } from 'react-router-dom';
@@ -10,6 +10,14 @@ import Title from '../../misc/Title';
 import IndividualPage from './indPage/IndividualPage';
 
 const Products = ({ collection, indiVisible, match }) => {
+
+    useEffect(() => {
+        if (indiVisible) {document.body.style.overflow = 'hidden'};
+        return () => {
+            document.body.style.overflow = 'auto'
+        }
+    })
+
     const { title, items } = collection;
 
     const defineSingle = (id) => {

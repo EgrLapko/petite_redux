@@ -21,6 +21,7 @@ const App = ({ checkUserSession, currentUser }) => {
     checkUserSession();
   }, [checkUserSession]);
 
+
   return (
     <div className="app">
       <Navbar />

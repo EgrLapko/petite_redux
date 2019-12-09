@@ -774,7 +774,7 @@ $main-color: black;
   display: flex;
   flex-direction: column;
   width: 22rem;
-  margin: 1rem 1rem;
+  margin: 1rem 1.5rem;
   position: relative;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 1rem;
@@ -1060,13 +1060,15 @@ $main-color: black;
           .info-text {
             width: 100%;
             overflow: unset;
+            padding: .5rem;
             .text-container {
               width: 90%;
               padding: 0;
               .main-title {
                 margin: 0;
+                padding: .7rem;
                 .main-title-text {
-                  font-size: 1.8rem;
+                  font-size: 1.3rem;
                   padding: 0;
                 }
               }
@@ -1075,15 +1077,16 @@ $main-color: black;
                 padding: .4rem;
               }
               .indi-price {
-                font-size: 1.5rem;
-                margin: .5rem 0rem;
+                font-size: 1.3rem;
+                margin: 0rem 0rem;
               }
               .indi-description {
                 width: 100%;
-                font-size: 1rem;
+                font-size: .9rem;
+                margin: .2rem 0;
               }
               .indi-color {
-                font-size: 1rem;
+                font-size: .8rem;
               }
             }
           }

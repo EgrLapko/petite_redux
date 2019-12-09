@@ -907,7 +907,7 @@ ul {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 22rem;
-  margin: 1rem 1rem;
+  margin: 1rem 1.5rem;
   position: relative;
   background-color: white;
   border-radius: 1rem;
@@ -1253,26 +1253,29 @@ ul {
         overflow: auto; }
       .indi-wrapper.opened .indi-container .info-container .info-text {
         width: 100%;
-        overflow: unset; }
+        overflow: unset;
+        padding: .5rem; }
         .indi-wrapper.opened .indi-container .info-container .info-text .text-container {
           width: 90%;
           padding: 0; }
           .indi-wrapper.opened .indi-container .info-container .info-text .text-container .main-title {
-            margin: 0; }
+            margin: 0;
+            padding: .7rem; }
             .indi-wrapper.opened .indi-container .info-container .info-text .text-container .main-title .main-title-text {
-              font-size: 1.8rem;
+              font-size: 1.3rem;
               padding: 0; }
           .indi-wrapper.opened .indi-container .info-container .info-text .text-container .indi-category {
             font-size: .8rem;
             padding: .4rem; }
           .indi-wrapper.opened .indi-container .info-container .info-text .text-container .indi-price {
-            font-size: 1.5rem;
-            margin: .5rem 0rem; }
+            font-size: 1.3rem;
+            margin: 0rem 0rem; }
           .indi-wrapper.opened .indi-container .info-container .info-text .text-container .indi-description {
             width: 100%;
-            font-size: 1rem; }
+            font-size: .9rem;
+            margin: .2rem 0; }
           .indi-wrapper.opened .indi-container .info-container .info-text .text-container .indi-color {
-            font-size: 1rem; }
+            font-size: .8rem; }
       .indi-wrapper.opened .indi-container .info-container .extra-info .sizes {
         padding: 0; }
         .indi-wrapper.opened .indi-container .info-container .extra-info .sizes .size-type {
