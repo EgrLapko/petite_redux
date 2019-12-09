@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { Route } from 'react-router-dom';
@@ -8,16 +8,10 @@ import { selectIndiVisible } from '../../../redux/indi-slider/indi-selector';
 import ProductCard from './ProductCard';
 import Title from '../../misc/Title';
 import IndividualPage from './indPage/IndividualPage';
+import FilterPanel from '../../filters/FilterPanel';
+import InnerNav from '../../layout/InnerNav';
 
 const Products = ({ collection, indiVisible, match }) => {
-
-    useEffect(() => {
-        if (indiVisible) {document.body.style.overflow = 'hidden'};
-        return () => {
-            document.body.style.overflow = 'auto'
-        }
-    })
-
     const { title, items } = collection;
 
     const defineSingle = (id) => {
@@ -25,10 +19,17 @@ const Products = ({ collection, indiVisible, match }) => {
         console.log(singleProduct);
     }
 
+    let itemType = [...new Set(items.map(item => item.type).flat())].toString();
+
     return (
         <div className="products">
+            <Title text={title} />
+            <InnerNav 
+                type={itemType}
+            />
+            <FilterPanel items={items} />
+            <h1> {items.length} </h1>
             <div className="products-section">
-                <Title text={title} />
                 <div className="items">
                     {
                         items.map(item => (

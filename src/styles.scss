@@ -294,6 +294,59 @@ $main-color: black;
   }
 }
 
+// --------------------------------------------------------------- INNER NAV
+.inner-nav {
+  width: 100%;
+  @include flexbox;
+  .inner-links-list {
+    width: 50%;
+    @include flexbox;
+    justify-content: space-around;
+    margin: 0;
+    .inner-link {
+      font-size: 1.6rem;
+      padding: .5rem;
+      color: rgba(105, 105, 105, .9);
+      transition: .4s;
+      &:hover {
+        color: rgba(241, 106, 123, .9);
+      }
+      a {
+        &.link-active {
+          color: rgba(241, 106, 123, .9);
+          font-weight: 600;
+          border-bottom: 1px solid rgba(241, 106, 123, .9);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .inner-nav {
+    .inner-links-list {
+      width: 100%;
+      .inner-link {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------------------- FILTERS
+.filter-panels {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .filter-list {
+    @include flexbox;
+    width: 70%;
+    .filter-item {
+      margin: 0 2rem;
+    }
+  }
+}
+
 
 // --------------------------------------------------------------- NAVBAR SLIDER
 .navbar-slider {
@@ -732,6 +785,7 @@ $main-color: black;
 // --------------------------------------------------------------- PRODUCTS PAGE
 .products {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -958,7 +1012,7 @@ $main-color: black;
       height: 100%;
       position: relative;
       justify-content: space-between;
-      overflow-y: scroll;
+      // overflow-y: scroll;
       .info-images {
         display: flex;
         flex-direction: column;
