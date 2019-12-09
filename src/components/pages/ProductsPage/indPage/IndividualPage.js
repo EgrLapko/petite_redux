@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import { toggleIndiPage, removeSingleItem } from '../../../../redux/indi-slider/indi-actions';
 import { selectSingleItem } from '../../../../redux/indi-slider/indi-selector';
 import Title from '../../../misc/Title';
 
-const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingleItem}) => {
+const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingleItem }) => {
     const { title, description, price, category, imgBig_1, imgBig_2, sizes, color, cup } = singleItem;
 
     return (
@@ -58,9 +59,9 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                     </div>       
                 </div>  
                 <button className="btn" 
-                        onClick={() => { toggleIndiPage(); setTimeout(() => {removeSingleItem()}, 500)  }}
+                        onClick={() => { toggleIndiPage(); setTimeout(() => {removeSingleItem()}, 200);  }}
                 >
-                    &#10005;
+                     &#10005;
                 </button>
             </div>   
         </div>

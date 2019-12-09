@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { Route } from 'react-router-dom';
 import { selectCollection } from '../../../redux/shop/shop-selectors';
 import { selectIndiVisible } from '../../../redux/indi-slider/indi-selector';
 
@@ -8,7 +9,7 @@ import ProductCard from './ProductCard';
 import Title from '../../misc/Title';
 import IndividualPage from './indPage/IndividualPage';
 
-const Products = ({ collection, indiVisible, match}) => {
+const Products = ({ collection, indiVisible, match }) => {
     const { title, items } = collection;
 
     const defineSingle = (id) => {
@@ -26,13 +27,13 @@ const Products = ({ collection, indiVisible, match}) => {
                             <ProductCard 
                                 key={item.id} 
                                 item={item} 
-                                definengle={defineSingle}
+                                defineSingle={defineSingle}
                             />
                         ))
                     }
                 </div>  
             </div>
-            <IndividualPage indiVisible={indiVisible} />
+            <Route path={`${match.path}/:id&:title`} render={(props) => <IndividualPage {...props} indiVisible={indiVisible} />} />
         </div>
         
     )

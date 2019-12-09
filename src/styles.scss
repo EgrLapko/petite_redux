@@ -910,6 +910,7 @@ $main-color: black;
 
 
 // --------------------------------------------------------------- INDIVIDUAL PAGE
+
 .indi-wrapper {
   position: fixed;
   top: 0rem;
@@ -917,35 +918,47 @@ $main-color: black;
   right: 0rem;
   bottom: 0rem;
   display: flex;
+  pointer-events: none;
   z-index: 100;
   opacity: 0;
   justify-content: center;
   align-items: center;
-  // background-color: rgba(242, 242, 242, .8);
-  background-color: rgba(0, 0, 0, .2);
-  transform: translateX(-100%);
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateX(0%);
   transition: .8s;
   &.opened {
     transform: translateX(0%);
+    background-color: rgba(0, 0, 0, .3);
     opacity: 1;
+    pointer-events: all;
+    .indi-container{
+      height: 85%;
+      width: 85%;
+      opacity: 1;
+      transform: translateY(0%);
+    }
   }
   .indi-container {
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
+    opacity: 0;
     display: flex;
-    position: relative;
+    position: fixed;
     justify-content: center;
     align-items: center;
     background-color: rgba(246, 246, 246, 1);
     border-radius: 15px;
     box-shadow: 0px 0px 40px rgba(105, 105, 105, .3);
     overflow: hidden;
+    transform: translateY(-50%);
+    transition: .3s;
     .info-container {
       display: flex;
       width: 100%;
       height: 100%;
       position: relative;
       justify-content: space-between;
+      overflow-y: scroll;
       .info-images {
         display: flex;
         flex-direction: column;
@@ -1026,6 +1039,68 @@ $main-color: black;
       &:hover {
         background-color: unset;
         color: rgba(241, 106, 123, .9);
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+  .indi-wrapper {
+    &.opened {
+      .indi-container {
+        width: 90%;
+        height: 95%;
+        overflow: auto;
+        .info-container {
+          flex-direction: column;
+          .info-images {
+            width: 100%;
+            overflow: auto;
+          }
+          .info-text {
+            width: 100%;
+            overflow: unset;
+            .text-container {
+              width: 90%;
+              padding: 0;
+              .main-title {
+                margin: 0;
+                .main-title-text {
+                  font-size: 1.8rem;
+                  padding: 0;
+                }
+              }
+              .indi-category {
+                font-size: .8rem;
+                padding: .4rem;
+              }
+              .indi-price {
+                font-size: 1.5rem;
+                margin: .5rem 0rem;
+              }
+              .indi-description {
+                width: 100%;
+                font-size: 1rem;
+              }
+              .indi-color {
+                font-size: 1rem;
+              }
+            }
+          }
+          .extra-info {
+            .sizes {
+              padding: 0;
+              .size-type {
+                font-size: 1rem;
+              }
+              .info-size {
+                .size-item {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -1711,4 +1786,14 @@ $main-color: black;
     animation: spin 1s ease-in-out infinite;
     -webkit-animation: spin 1s ease-in-out infinite;
   }
+}
+
+
+
+.items-modal {
+  position: fixed;
+  top: 5rem;
+  width: 50vw;
+  height: 70vh;
+  background-color: bisque;
 }
