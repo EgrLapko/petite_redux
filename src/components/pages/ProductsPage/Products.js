@@ -20,14 +20,15 @@ const Products = ({ collection, indiVisible, match }) => {
     }
 
     let itemType = [...new Set(items.map(item => item.type).flat())].toString();
+    let itemCategory = [...new Set(items.map(item => item.category).flat())].toString();
 
     return (
         <div className="products">
-            <Title text={title} />
+            <Title text={itemCategory} />
             <InnerNav 
                 type={itemType}
             />
-            <FilterPanel items={items} />
+            <FilterPanel items={items} category={itemCategory} type={itemType} />
             <h1> {items.length} </h1>
             <div className="products-section">
                 <div className="items">

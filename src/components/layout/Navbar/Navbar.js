@@ -17,6 +17,9 @@ import NavbarSmall from './NavbarSmall';
 import SliderMobile from './SliderMobile';
 
 function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart }) {
+    
+    console.log(currentUser ? currentUser.email : null);
+
     return (
         <React.Fragment>
              <div className="navbar">
@@ -31,6 +34,12 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                         <li className="link" onClick={toggleSliderSleep}>Sleepwear</li>
                     </ul>
                     <div className="nav-right">
+                        {
+                            currentUser ?
+                            <p className="hello-text"> <span>{currentUser.displayName}</span> </p>
+                            :
+                            null
+                        }
                         {   
                             currentUser ?
                             <div className="nav-option" onClick={signOutStart}>sign out</div>

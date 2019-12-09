@@ -168,6 +168,12 @@ ul {
       -ms-flex-align: center;
       align-items: center;
       padding: 0rem 1rem; }
+      .navbar .menu .nav-right .hello-text {
+        margin: 0;
+        padding-right: 1rem;
+        font-size: 1.1rem; }
+        .navbar .menu .nav-right .hello-text span {
+          font-weight: 600; }
       .navbar .menu .nav-right .nav-option {
         font-size: 1.2rem;
         color: rgba(105, 105, 105, 0.9);
@@ -919,6 +925,8 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .products .main-title .main-title-text {
+    font-size: 3rem; }
 
 .products-page {
   display: -webkit-box;

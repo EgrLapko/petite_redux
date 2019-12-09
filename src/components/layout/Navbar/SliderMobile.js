@@ -25,6 +25,12 @@ const SliderMobile = ({ currentUser, signOutStart,
                 <li className={`link ${!sliderAccsHidden && "link-active"}`} onClick={toggleSliderAccs}>Accessories</li>
                 <li className={`link ${!sliderSleepHidden && "link-active"}`} onClick={toggleSliderSleep}>Sleepwear</li>
                 <div className="link">
+                    {
+                        currentUser ?
+                        <p className="hello-text"> <span>{currentUser.displayName}</span> </p>
+                        :
+                        null
+                    }
                     {   
                         currentUser ?
                         <div className="nav-option" onClick={signOutStart}>sign out</div>
