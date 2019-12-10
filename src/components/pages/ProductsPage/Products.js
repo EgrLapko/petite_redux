@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { Route } from 'react-router-dom';
@@ -12,24 +12,44 @@ import FilterPanel from '../../filters/FilterPanel';
 import InnerNav from '../../layout/InnerNav';
 
 const Products = ({ collection, indiVisible, match }) => {
-    const { title, items } = collection;
+    const { items } = collection;
+
+    const [ filteredItems, setFilteredItems ] = useState([]);
+    const [ colorFilter, setColorFIlter ] = useState('');
+
+    let itemType = [...new Set(items.map(item => item.type).flat())].toString();
+    let itemCategory = [...new Set(items.map(item => item.category).flat())].toString();
 
     const defineSingle = (id) => {
         let singleProduct = items.find(item => item.id === id);
         console.log(singleProduct);
     }
 
-    let itemType = [...new Set(items.map(item => item.type).flat())].toString();
-    let itemCategory = [...new Set(items.map(item => item.category).flat())].toString();
+    const filterByColor = (color) => {
+        setColorFIlter(color);
+        console.log(`now color is ${color}`)
+        sortItems();
+    }
+
+    const sortItems = () => {
+        let tempItems = items;
+        // -----> Filter by colors
+        if (colorFilter) {
+            tempItems = tempItems.filter(item => item.color.includes(colorFilter))
+        }
+        console.log(tempItems);
+    }
 
     return (
         <div className="products">
-            <Title text={itemCategory} />
-            <InnerNav 
-                type={itemType}
+            <Title text={itemCategory}  />
+            <InnerNav type={itemType} />
+            <FilterPanel 
+                items={items} 
+                category={itemCategory} 
+                type={itemType} 
+                filterByColor={filterByColor}
             />
-            <FilterPanel items={items} category={itemCategory} type={itemType} />
-            <h1> {items.length} </h1>
             <div className="products-section">
                 <div className="items">
                     {
