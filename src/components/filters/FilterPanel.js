@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import { connect } from 'react-redux';
 
-const FilterPanel = ({ items, category, type, filterByColor }) => {
+const FilterPanel = ({ items, category, type, dropColorFIlter, dropFilter, setColor, setColorFilter }) => {
 
-    const [colorFilter, setColorFilter] = useState(false);
-    const [sizeFilter, setSizeFilter] = useState(false);
-    const [cupFilter, setCupFilter] = useState(false)
+    const [colorFilter, handleColorFilter] = useState(false);
+    const [sizeFilter, handleSizeFilter] = useState(false);
+    const [cupFilter, handleCupFilter] = useState(false)
 
     let colors = [...new Set(items.map(item => item.color).flat())];
     let sizes = [...new Set(items.map(item => item.sizes).flat())];
@@ -21,16 +21,17 @@ const FilterPanel = ({ items, category, type, filterByColor }) => {
                 category !== "Accessories, other" ? 
                 <React.Fragment>
                     <div className="filter">
-                        <h3 className="filter-title" onClick={() => handleFilter(colorFilter, setColorFilter)}>Color<i className="fas fa-angle-down"></i></h3>
+                        <h3 className="filter-title" onClick={() => handleFilter(colorFilter, handleColorFilter)}>Color<i className="fas fa-angle-down"></i></h3>
                         <ul className={`filter-list  ${colorFilter && "opened-filter"}`}>
                             {   
                                 colors.map((color, index) => (  
-                                    <li className="filter-item color-filter" key={index} onClick={() => filterByColor(color)}> 
+                                    <li className="filter-item color-filter" key={index} onClick={() => setColor(color)}> 
                                         <div className="color-ball" style={{ backgroundColor: color }} />
                                         {color} 
                                     </li>
                                 ))
                             }
+                            <button className="btn" onClick={() => dropFilter(setColorFilter)}>Clear</button>
                         </ul>
                     </div>
                 </React.Fragment>
@@ -40,7 +41,7 @@ const FilterPanel = ({ items, category, type, filterByColor }) => {
                 category !== "Bras, bralettes" && category !== "Accessories, socks" && category !== "Accessories, other" ?
                 <React.Fragment>
                     <div className="filter">
-                        <h3 className="filter-title" onClick={() => handleFilter(sizeFilter, setSizeFilter)}>Size<i className="fas fa-angle-down"></i></h3>
+                        <h3 className="filter-title" onClick={() => handleFilter(sizeFilter, handleSizeFilter)}>Size<i className="fas fa-angle-down"></i></h3>
                          <ul className={`filter-list  ${sizeFilter && "opened-filter"}`}>
                             {
                                 sizes.map((sizes, index) => (
@@ -56,7 +57,7 @@ const FilterPanel = ({ items, category, type, filterByColor }) => {
                 type === "Bras" | category === "Accessories, bodysuits" ?
                 <React.Fragment>
                     <div className="filter">
-                        <h3 className="filter-title" onClick={() => handleFilter(cupFilter, setCupFilter)}>Cup<i className="fas fa-angle-down"></i></h3>
+                        <h3 className="filter-title" onClick={() => handleFilter(cupFilter, handleCupFilter)}>Cup<i className="fas fa-angle-down"></i></h3>
                          <ul className={`filter-list  ${cupFilter && "opened-filter"}`}>
                             {
                                 cups.map((cup, index) => (

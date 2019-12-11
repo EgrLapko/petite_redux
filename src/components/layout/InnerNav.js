@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { navbarLinks } from '../navbarLinks';
 
-const InnerNav = ({type}) => {
+const InnerNav = ({ type, clearFilters }) => {
 
     const ifType = () => {
         let category
@@ -16,7 +16,7 @@ const InnerNav = ({type}) => {
         if(type) {
             return (
                 navbarLinks.map(link => link.category === category &&
-                    <li className="inner-link" key={link.id}>
+                    <li className="inner-link" key={link.id} onClick={clearFilters}>
                         <NavLink to={link.path} activeClassName="link-active"> 
                             {link.text} 
                         </NavLink>

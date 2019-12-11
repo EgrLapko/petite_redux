@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 
 import { Route } from 'react-router-dom';
@@ -14,46 +14,76 @@ import InnerNav from '../../layout/InnerNav';
 const Products = ({ collection, indiVisible, match }) => {
     const { items } = collection;
 
-    const [ filteredItems, setFilteredItems ] = useState([]);
-    const [ colorFilter, setColorFIlter ] = useState('');
+    useEffect(() => {
+        let tempItems = [...items]
+        setFilteredItems(tempItems)
 
-    let itemType = [...new Set(items.map(item => item.type).flat())].toString();
-    let itemCategory = [...new Set(items.map(item => item.category).flat())].toString();
+    }, [items])
 
+// ---------------------- Defining states
+    const [ filteredItems, setFilteredItems ] = useState(items);
+    const [ colorFilter, setColorFilter ] = useState('');
+
+// ---------------------- Fetching items types and categories for filtering
+    let itemType = [...new Set(filteredItems.map(item => item.type).flat())].toString();
+    let itemCategory = [...new Set(filteredItems.map(item => item.category).flat())].toString();
+
+// ---------------------- Onclick grab info into state (for individual page)
     const defineSingle = (id) => {
-        let singleProduct = items.find(item => item.id === id);
+        let singleProduct = filteredItems.find(item => item.id === id);
         console.log(singleProduct);
     }
 
-    const filterByColor = (color) => {
-        setColorFIlter(color);
-        console.log(`now color is ${color}`)
+// ---------------------- Sort items
+    const sortItems = useCallback(() => {
+        let tempItems = [...items];
+        // -----> Filter by colors
+        if (colorFilter) {
+            tempItems = tempItems.filter(item => item.color.includes(colorFilter));
+        } 
+
+        setFilteredItems(tempItems);
+            console.log(`items are sorted. new array has ${tempItems.length} items`)
+    }, [colorFilter, items])
+
+// ---------------------- Set Filter to Default
+    const dropFilter = (filterName) => {
+        filterName('');
+        sortItems()
+    }
+
+// ---------------------- Empty all filters
+    const clearFilters = () => {
+        setColorFilter('');
+
         sortItems();
     }
 
-    const sortItems = () => {
-        let tempItems = items;
-        // -----> Filter by colors
-        if (colorFilter) {
-            tempItems = tempItems.filter(item => item.color.includes(colorFilter))
+    useEffect(() => {
+        if (setColorFilter) {
+            sortItems()
         }
-        console.log(tempItems);
-    }
+    }, [colorFilter, sortItems])
 
     return (
         <div className="products">
             <Title text={itemCategory}  />
-            <InnerNav type={itemType} />
+            <InnerNav 
+                type={itemType} 
+                clearFilters={clearFilters}    
+            />
             <FilterPanel 
                 items={items} 
                 category={itemCategory} 
                 type={itemType} 
-                filterByColor={filterByColor}
+                setColor={setColorFilter}
+                setColorFilter={setColorFilter}
+                dropFilter={dropFilter}
             />
             <div className="products-section">
                 <div className="items">
                     {
-                        items.map(item => (
+                        filteredItems.map(item => (
                             <ProductCard 
                                 key={item.id} 
                                 item={item} 
