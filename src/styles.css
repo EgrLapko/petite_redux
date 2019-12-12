@@ -57,6 +57,14 @@ ul {
     border: 1px solid rgba(242, 242, 242, 0);
     background-color: rgba(241, 106, 123, 0.9); }
 
+.btn-simple {
+  border: none;
+  padding: .5rem; }
+  .btn-simple:hover {
+    border: none;
+    background-color: unset;
+    color: rgba(241, 106, 123, 0.9); }
+
 .custom-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,7 +334,9 @@ ul {
     justify-content: space-around;
     margin: 0; }
     .inner-nav .inner-links-list .inner-link {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 600;
       padding: .5rem;
       color: rgba(105, 105, 105, 0.9);
       -webkit-transition: .4s;
@@ -352,6 +362,9 @@ ul {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 4.5rem;
@@ -359,6 +372,11 @@ ul {
   width: 100%;
   height: 3.5rem;
   background-color: #f8f8f8; }
+  .filter-panels .close-btn {
+    margin: 0;
+    margin-right: .3rem;
+    padding: 0;
+    font-size: .8rem; }
   .filter-panels .filter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -369,16 +387,12 @@ ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     justify-content: center;
     position: relative;
     width: 10rem; }
     .filter-panels .filter .filter-title {
       text-transform: capitalize;
-      font-size: 1.2rem;
+      font-size: .9rem;
       font-weight: 600;
       color: dimgray;
       cursor: pointer; }
@@ -414,6 +428,9 @@ ul {
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s; }
+      .filter-panels .filter .filter-list .btn {
+        margin-top: .4rem;
+        font-size: 1rem; }
       .filter-panels .filter .filter-list.opened-filter {
         -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -423,7 +440,10 @@ ul {
       .filter-panels .filter .filter-list .filter-item {
         margin: .5rem 2rem;
         cursor: pointer;
+        font-weight: 600;
         color: dimgray; }
+        .filter-panels .filter .filter-list .filter-item.filter-active {
+          color: rgba(241, 106, 123, 0.9); }
         .filter-panels .filter .filter-list .filter-item:hover {
           color: rgba(241, 106, 123, 0.9); }
         .filter-panels .filter .filter-list .filter-item.color-filter {
@@ -448,13 +468,35 @@ ul {
             border-radius: 50%;
             -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+  .filter-panels .items-counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0rem .2rem; }
+    .filter-panels .items-counter .counter-text {
+      margin: 0;
+      font-size: .9rem; }
+      .filter-panels .items-counter .counter-text span {
+        font-weight: 600; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .filter-panels .close-btn {
+    margin-right: .7rem; }
   .filter-panels .filter .filter-title {
     font-size: 1.1rem; }
   .filter-panels .filter .filter-list {
     width: 100%;
     padding: .5rem; }
+    .filter-panels .filter .filter-list .btn {
+      padding: .5rem;
+      margin: 0;
+      margin-top: .5rem; }
     .filter-panels .filter .filter-list.opened-filter {
       -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
@@ -478,7 +520,9 @@ ul {
         justify-content: space-between;
         width: 80%;
         margin: 0;
-        padding: .4rem; } }
+        padding: .4rem; }
+  .filter-panels .items-counter {
+    display: none; } }
 
 .navbar-slider {
   position: fixed;
@@ -1039,7 +1083,8 @@ ul {
   -ms-flex-align: center;
   align-items: center; }
   .products .main-title .main-title-text {
-    font-size: 3rem; }
+    font-size: 2.5rem;
+    text-transform: uppercase; }
 
 .products-page {
   display: -webkit-box;
@@ -1109,6 +1154,10 @@ ul {
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
+  .product-card .on-loading {
+    width: 100%;
+    height: 33rem;
+    background-color: rebeccapurple; }
   .product-card img {
     width: 100%;
     cursor: pointer;

@@ -2,13 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { toggleColorFilter, toggleSizeFilter, toggleCupFilter, setFilterColor, setFilterSize, setFilterCup } from '../../redux/filters/filters-actions';
-import { selectColorFilter, selectSizeFilter, selectCupFilter } from '../../redux/filters/filters-selectors';
+import { toggleColorFilter, toggleSizeFilter, toggleCupFilter, setFilterColor, setFilterSize, setFilterCup,
+    removeColorFilter, removeCupFilter, removeSizeFilter, clearFiltersValues } from '../../redux/filters/filters-actions';
+import { selectColorFilter, selectSizeFilter, selectCupFilter, 
+    selectColorToFilter, selectSizeToFilter, selectCupToFilter } from '../../redux/filters/filters-selectors';
 
 
-const FilterPanel = ({ items, category, type, 
+const FilterPanel = ({ items, category, type, itemsFiltered, clearFiltersValues,
     toggleColorFilter, toggleCupFilter, toggleSizeFilter, setFilterColor, setFilterSize, setFilterCup,
-    colorFilterHidden, sizeFilterHidden, cupFilterHidden }) => {
+    colorFilterHidden, sizeFilterHidden, cupFilterHidden, removeColorFilter, removeCupFilter, removeSizeFilter,
+    colorToFilter, sizeToFilter, cupToFilter }) => {
 
     let colors = [...new Set(items.map(item => item.color).flat())];
     let sizes = [...new Set(items.map(item => item.sizes).flat())];
@@ -20,17 +23,20 @@ const FilterPanel = ({ items, category, type,
                 category !== "Accessories, other" ? 
                 <React.Fragment>
                     <div className="filter">
-                        <h3 className="filter-title" onClick={toggleColorFilter}>Color<i className="fas fa-angle-down"></i></h3>
+                        <h3 className="filter-title" onClick={toggleColorFilter}>
+                            Color{colorToFilter && `: ${colorToFilter}`}
+                            <i className="fas fa-angle-down"/>
+                        </h3>
                         <ul className={`filter-list  ${!colorFilterHidden && "opened-filter"}`}>
                             {   
                                 colors.map((color, index) => (  
-                                    <li className="filter-item color-filter" key={index} onClick={() => setFilterColor(color)}> 
+                                    <li className={`filter-item color-filter ${color === colorToFilter && "filter-active" }`} key={index} onClick={() => { setFilterColor(color); setTimeout(toggleColorFilter, 500)}}> 
                                         <div className="color-ball" style={{ backgroundColor: color }} />
                                         {color} 
                                     </li>
                                 ))
                             }
-                            <button className="btn">Clear</button>
+                            <button className="btn btn-simple" onClick={() => {removeColorFilter(); setTimeout(toggleColorFilter, 500)}}>Clear</button>
                         </ul>
                     </div>
                 </React.Fragment>
@@ -40,15 +46,19 @@ const FilterPanel = ({ items, category, type,
                 category !== "Bras, bralettes" && category !== "Accessories, socks" && category !== "Accessories, other" ?
                 <React.Fragment>
                     <div className="filter">
-                        <h3 className="filter-title" onClick={toggleSizeFilter}>Size<i className="fas fa-angle-down"></i></h3>
+                        <h3 className="filter-title" onClick={toggleSizeFilter}>
+                            Size{sizeToFilter && `: ${sizeToFilter}`}
+                            <i className="fas fa-angle-down"/>
+                        </h3>
                          <ul className={`filter-list  ${!sizeFilterHidden && "opened-filter"}`}>
                             {
                                 sizes.map((sizes, index) => (
-                                    <li className="filter-item" key={index} onClick={() => setFilterSize(sizes)}> 
+                                    <li className={`filter-item ${sizes === sizeToFilter && "filter-active" }`} key={index} onClick={() => { setFilterSize(sizes); setTimeout(toggleSizeFilter, 500)}}> 
                                         {sizes} 
                                     </li>
                                 ))
                             }
+                            <button className="btn btn-simple" onClick={() => {removeSizeFilter(); setTimeout(toggleSizeFilter, 500)}}>Clear</button>
                         </ul>
                     </div>
                 </React.Fragment>
@@ -58,18 +68,26 @@ const FilterPanel = ({ items, category, type,
                 type === "Bras" | category === "Accessories, bodysuits" ?
                 <React.Fragment>
                     <div className="filter">
-                        <h3 className="filter-title" onClick={toggleCupFilter}>Cup<i className="fas fa-angle-down"></i></h3>
+                        <h3 className="filter-title" onClick={toggleCupFilter}>
+                            Cup{cupToFilter && `: ${cupToFilter}`}
+                            <i className="fas fa-angle-down"/>
+                        </h3>
                          <ul className={`filter-list  ${!cupFilterHidden && "opened-filter"}`}>
                             {
                                 cups.map((cup, index) => (
-                                    <li className="filter-item" key={index} onClick={() => setFilterCup(cup)}> {cup} </li>
+                                    <li className={`filter-item ${cup === cupToFilter && "filter-active" }`} key={index} onClick={() => {setFilterCup(cup); setTimeout(toggleCupFilter, 500)}}> {cup} </li>
                                 ))
                             }
+                            <button className="btn btn-simple" onClick={() => { removeCupFilter(); setTimeout(toggleCupFilter, 500) }}>Clear</button>
                         </ul>
                     </div>
                 </React.Fragment>
                 : null
             }  
+            { cupToFilter || sizeToFilter || colorToFilter ? <button className="btn btn-simple close-btn" onClick={() => clearFiltersValues()}>&#10005;</button> : null }
+            <div className="items-counter">
+                <p className="counter-text"> <span>{itemsFiltered.length}</span> item{itemsFiltered.length > 1 && "s"}</p>
+            </div>
         </div>
     )
 }
@@ -77,7 +95,10 @@ const FilterPanel = ({ items, category, type,
 const mapStateToProps = createStructuredSelector({
     colorFilterHidden: selectColorFilter,
     sizeFilterHidden: selectSizeFilter,
-    cupFilterHidden: selectCupFilter
+    cupFilterHidden: selectCupFilter,
+    colorToFilter: selectColorToFilter,
+    sizeToFilter: selectSizeToFilter,
+    cupToFilter: selectCupToFilter,
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -86,7 +107,11 @@ const mapDispatchToProps = dispatch => ({
     toggleSizeFilter: () => dispatch(toggleSizeFilter()),
     setFilterColor: color => dispatch(setFilterColor(color)),
     setFilterSize: size => dispatch(setFilterSize(size)),
-    setFilterCup: cup => dispatch(setFilterCup(cup))
+    setFilterCup: cup => dispatch(setFilterCup(cup)),
+    removeColorFilter: () => dispatch(removeColorFilter()),
+    removeSizeFilter: () => dispatch(removeSizeFilter()),
+    removeCupFilter: () => dispatch(removeCupFilter()),
+    clearFiltersValues: () => dispatch(clearFiltersValues())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterPanel)

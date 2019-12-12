@@ -14,13 +14,20 @@ const ProductCard = ({item, addItem, toggleIndiPage, setSingleItem }) => {
         <React.Fragment>
             <div className="product-card">
                 <Link to={`${url}/${id}&${title}`}>
-                    <img 
-                        className="card-image" 
-                        src={imgSmall_1} alt="item" 
-                        onMouseOver = {e => {e.currentTarget.src = imgSmall_2}}
-                        onMouseOut = {e => {e.currentTarget.src = imgSmall_1}}   
-                        onClick={() => { setSingleItem(item); toggleIndiPage() }}
-                    />
+                    {
+                        imgSmall_1 ?
+                            <img 
+                                className="card-image" 
+                                src={imgSmall_1} alt="item" 
+                                onMouseOver = {e => {e.currentTarget.src = imgSmall_2}}
+                                onMouseOut = {e => {e.currentTarget.src = imgSmall_1}}   
+                                onClick={() => { setSingleItem(item); toggleIndiPage() }}
+                            />
+                        :
+                        <div className="on-loading">
+                            <h3> Loading image </h3>
+                        </div>
+                    }
                 </Link>
                 <div className="bottom-info">
                     <h3 className="category">{category}</h3>

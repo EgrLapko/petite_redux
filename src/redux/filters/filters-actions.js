@@ -35,6 +35,18 @@ export const setFilterCup = cup => ({
     payload: cup
 })
 
+export const removeColorFilter = () => ({
+    type: filtersActionTypes.REMOVE_COLOR_FILTER
+})
+
+export const removeSizeFilter = () => ({
+    type: filtersActionTypes.REMOVE_SIZE_FILTER
+})
+
+export const removeCupFilter = () => ({
+    type: filtersActionTypes.REMOVE_CUP_FILTER
+})
+
 export const setItemsFiltered = items => ({
     type: filtersActionTypes.SET_FILTERED_ITEMS,
     payload: items

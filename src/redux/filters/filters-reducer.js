@@ -58,6 +58,21 @@ const filtersReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 cupToFilter: action.payload
             }
+        case filtersActionTypes.REMOVE_CUP_FILTER:
+            return {
+                ...state,
+                cupToFilter: ''
+            }
+        case filtersActionTypes.REMOVE_COLOR_FILTER:
+            return {
+                ...state,
+                colorToFilter: ''
+            }
+        case filtersActionTypes.REMOVE_SIZE_FILTER:
+            return {
+                ...state,
+                sizeToFilter: ''
+            }
         case filtersActionTypes.SET_FILTERED_ITEMS:
             return {
                 ...state,

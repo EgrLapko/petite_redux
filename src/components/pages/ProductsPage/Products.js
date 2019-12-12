@@ -62,6 +62,7 @@ const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFilte
             <InnerNav type={itemType} />
             <FilterPanel 
                 items={items} 
+                itemsFiltered={itemsFiltered}
                 category={itemCategory} 
                 type={itemType} 
             />
