@@ -7,6 +7,7 @@ import cartReducer from './cart/cart-reducer';
 import shopReducer from  './shop/shop-reducer';
 import sliderReducer from './navbar-slider/slider-reducer';
 import indiReducer from './indi-slider/indi-reducer';
+import filtersReducer from './filters/filters-reducer';
 
 
 const persistConfig = {
@@ -20,7 +21,8 @@ export const rootReducer = combineReducers ({
     cart: cartReducer,
     shop: shopReducer,
     slider: sliderReducer,
-    indi: indiReducer
+    indi: indiReducer,
+    filters: filtersReducer
 });
 
 export default persistReducer(persistConfig, rootReducer);

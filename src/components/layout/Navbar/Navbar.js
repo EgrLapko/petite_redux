@@ -8,6 +8,7 @@ import {
     toggleSliderPanties, 
     toggleSliderAccs, 
     toggleSliderSleep} from '../../../redux/navbar-slider/slider-actions';
+import { closeFilters, clearFiltersValues } from '../../../redux/filters/filters-actions';
 import { signOutStart } from '../../../redux/user/user-actions';
 import { selectCurrentUser } from '../../../redux/user/user-selectors';
 import CartIcon from '../../misc/CartIcon';
@@ -16,7 +17,7 @@ import NavbarSlider from './NavbarSlider';
 import NavbarSmall from './NavbarSmall';
 import SliderMobile from './SliderMobile';
 
-function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart }) {
+function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart, closeFilters, clearFiltersValues }) {
     
     console.log(currentUser ? currentUser.email : null);
 
@@ -24,8 +25,8 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
         <React.Fragment>
              <div className="navbar">
                 <div className="menu">
-                    <div className="nav-logo">
-                        <Link className="option" to="/"><span className="first-letter">P</span>etite.<span className="second-letter">M</span>amsel</Link>
+                    <div className="nav-logo" onClick={() => { closeFilters(); clearFiltersValues() }}>
+                        <Link className="option" to="/"><span className="first-letter" >P</span>etite.<span className="second-letter">M</span>amsel</Link>
                     </div>
                     <ul className="nav-links">
                         <li className="link" onClick={toggleSliderBras}>Bras</li>
@@ -42,7 +43,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                         }
                         {   
                             currentUser ?
-                            <div className="nav-option" onClick={signOutStart}>sign out</div>
+                            <div className="nav-option" onClick={signOutStart} >sign out</div>
                             :
                             <NavLink className="nav-option" activeClassName="link-active" to="/login">log in</NavLink>
                         }
@@ -65,7 +66,9 @@ const mapDispatchToProps = (dispatch) => ({
     toggleSliderPanties: () => dispatch(toggleSliderPanties()),
     toggleSliderAccs: () => dispatch(toggleSliderAccs()),
     toggleSliderSleep: () => dispatch(toggleSliderSleep()),
-    signOutStart: () => dispatch(signOutStart())
+    signOutStart: () => dispatch(signOutStart()),
+    closeFilters: () => dispatch(closeFilters()),
+    clearFiltersValues: () => dispatch(clearFiltersValues())
 });
 
 const mapStateToProps = createStructuredSelector({

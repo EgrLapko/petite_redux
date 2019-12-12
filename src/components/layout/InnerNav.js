@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import { navbarLinks } from '../navbarLinks';
+import { closeFilters, clearFiltersValues } from '../../redux/filters/filters-actions';
 
-const InnerNav = ({ type, clearFilters }) => {
+const InnerNav = ({ type, closeFilters , clearFiltersValues }) => {
 
     const ifType = () => {
         let category
@@ -16,7 +18,7 @@ const InnerNav = ({ type, clearFilters }) => {
         if(type) {
             return (
                 navbarLinks.map(link => link.category === category &&
-                    <li className="inner-link" key={link.id} onClick={clearFilters}>
+                    <li className="inner-link" key={link.id} onClick={() => { closeFilters(); clearFiltersValues()}}>
                         <NavLink to={link.path} activeClassName="link-active"> 
                             {link.text} 
                         </NavLink>
@@ -24,7 +26,7 @@ const InnerNav = ({ type, clearFilters }) => {
                 )
             )
         } 
-    } 
+    };
 
     return (
         <div className="inner-nav">
@@ -35,4 +37,9 @@ const InnerNav = ({ type, clearFilters }) => {
     )
 }
 
-export default InnerNav
+const mapDispatchToProps = dispatch => ({
+    closeFilters: () => dispatch(closeFilters()),
+    clearFiltersValues: () => dispatch(clearFiltersValues())
+});
+
+export default connect(null, mapDispatchToProps)(InnerNav);

@@ -377,7 +377,7 @@ ul {
     position: relative;
     width: 10rem; }
     .filter-panels .filter .filter-title {
-      text-transform: lowercase;
+      text-transform: capitalize;
       font-size: 1.2rem;
       font-weight: 600;
       color: dimgray;
@@ -448,6 +448,37 @@ ul {
             border-radius: 50%;
             -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .filter-panels .filter .filter-title {
+    font-size: 1.1rem; }
+  .filter-panels .filter .filter-list {
+    width: 100%;
+    padding: .5rem; }
+    .filter-panels .filter .filter-list.opened-filter {
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      transform: translateY(0%);
+      opacity: 1;
+      pointer-events: all; }
+    .filter-panels .filter .filter-list .filter-item {
+      margin: .5rem 2rem; }
+      .filter-panels .filter .filter-list .filter-item.color-filter {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0;
+        padding: .4rem; } }
 
 .navbar-slider {
   position: fixed;

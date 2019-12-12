@@ -3,8 +3,9 @@ import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { toggleMobileMenu, dropAllSliders } from '../../../redux/navbar-slider/slider-actions';
+import { closeFilters, clearFiltersValues } from '../../../redux/filters/filters-actions';
 
-const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders}) => {
+const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders, closeFilters, clearFiltersValues }) => {
     return (
         <div className="slider-item">
             <div className="image-container">
@@ -12,12 +13,14 @@ const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders}
                     <img 
                         className="nav-menu-image" 
                         src={image} alt="menu-item" 
-                        onClick={() => { toggleMobileMenu(); dropAllSliders()}}
+                        onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}
                     />
                 </Link>   
             </div>
             <div className="bottom-link">
-                <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders()}}><h3>{text}</h3></NavLink>
+                <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}>
+                    <h3>{text}</h3>
+                </NavLink>
             </div>
         </div>
     )
@@ -25,7 +28,9 @@ const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders}
 
 const mapDispatchToProps = (dispatch) => ({
     toggleMobileMenu: () => dispatch(toggleMobileMenu()),
-    dropAllSliders: () => dispatch(dropAllSliders())
+    dropAllSliders: () => dispatch(dropAllSliders()),
+    closeFilters: () => dispatch(closeFilters()),
+    clearFiltersValues: () => dispatch(clearFiltersValues())
 });
 
 export default connect(null, mapDispatchToProps)(NavbarSliderItem);

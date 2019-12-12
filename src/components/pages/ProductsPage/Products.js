@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 
 import { Route } from 'react-router-dom';
 import { selectCollection } from '../../../redux/shop/shop-selectors';
 import { selectIndiVisible } from '../../../redux/indi-slider/indi-selector';
+import { selectItemsFiltered, selectColorToFilter, selectSizeToFilter, selectCupToFilter } from '../../../redux/filters/filters-selectors';
+import { setFilterColor, setFilterSize, setItemsFiltered, setFilterCup } from '../../../redux/filters/filters-actions';
 
 import ProductCard from './ProductCard';
 import Title from '../../misc/Title';
@@ -11,79 +13,62 @@ import IndividualPage from './indPage/IndividualPage';
 import FilterPanel from '../../filters/FilterPanel';
 import InnerNav from '../../layout/InnerNav';
 
-const Products = ({ collection, indiVisible, match }) => {
+const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFiltered, colorToFilter, sizeToFilter, cupToFilter, setFilterColor, setFilterSize, setFilterCup }) => {
     const { items } = collection;
 
     useEffect(() => {
-        let tempItems = [...items]
-        setFilteredItems(tempItems)
-
-    }, [items])
-
-// ---------------------- Defining states
-    const [ filteredItems, setFilteredItems ] = useState(items);
-    const [ colorFilter, setColorFilter ] = useState('');
-
-// ---------------------- Fetching items types and categories for filtering
-    let itemType = [...new Set(filteredItems.map(item => item.type).flat())].toString();
-    let itemCategory = [...new Set(filteredItems.map(item => item.category).flat())].toString();
-
-// ---------------------- Onclick grab info into state (for individual page)
-    const defineSingle = (id) => {
-        let singleProduct = filteredItems.find(item => item.id === id);
-        console.log(singleProduct);
-    }
-
-// ---------------------- Sort items
-    const sortItems = useCallback(() => {
         let tempItems = [...items];
-        // -----> Filter by colors
-        if (colorFilter) {
-            tempItems = tempItems.filter(item => item.color.includes(colorFilter));
+        setItemsFiltered(tempItems);
+
+    }, [items, setItemsFiltered]);
+
+
+    let itemType = [...new Set(itemsFiltered.map(item => item.type).flat())].toString(); // TAKING ITEMS TYPES FOR CONDITIONAL FILTERING
+    let itemCategory = [...new Set(itemsFiltered.map(item => item.category).flat())].toString(); // TAKING ITEMS CATEGORIES FOR CONDITIONAL FILTERING
+
+
+    const defineSingle = (id) => { // PICK SINGLE ITEM INFO ON CLICK
+        itemsFiltered.find(item => item.id === id);
+    };
+
+    const sortItems = useCallback(() => { // SORTING ITEMS WITH FILTERS STATES
+        let tempItems = [...items];
+
+        if (colorToFilter) {
+            tempItems = tempItems.filter(item => item.color.includes(colorToFilter));
         } 
 
-        setFilteredItems(tempItems);
-            console.log(`items are sorted. new array has ${tempItems.length} items`)
-    }, [colorFilter, items])
+        if (sizeToFilter) {
+            tempItems = tempItems.filter(item => item.sizes.includes(sizeToFilter));
+        } 
 
-// ---------------------- Set Filter to Default
-    const dropFilter = (filterName) => {
-        filterName('');
-        sortItems()
-    }
+        if (cupToFilter) {
+            tempItems = tempItems.filter(item => item.cup.includes(cupToFilter));
+        } 
 
-// ---------------------- Empty all filters
-    const clearFilters = () => {
-        setColorFilter('');
+        setItemsFiltered(tempItems);
+    }, [colorToFilter, sizeToFilter, items, setItemsFiltered, cupToFilter]);
 
-        sortItems();
-    }
 
-    useEffect(() => {
-        if (setColorFilter) {
-            sortItems()
-        }
-    }, [colorFilter, sortItems])
+    useEffect(() => { // RE-RENDER ITEMS IF FILTER WAS CLICKED
+        if (setFilterColor) { sortItems() };
+        if (setFilterSize) { sortItems() };
+        if (setFilterCup) { sortItems() };
+    }, [ sortItems, setFilterColor, setFilterSize, setFilterCup ]);
 
     return (
         <div className="products">
             <Title text={itemCategory}  />
-            <InnerNav 
-                type={itemType} 
-                clearFilters={clearFilters}    
-            />
+            <InnerNav type={itemType} />
             <FilterPanel 
                 items={items} 
                 category={itemCategory} 
                 type={itemType} 
-                setColor={setColorFilter}
-                setColorFilter={setColorFilter}
-                dropFilter={dropFilter}
             />
             <div className="products-section">
                 <div className="items">
                     {
-                        filteredItems.map(item => (
+                        itemsFiltered.map(item => (
                             <ProductCard 
                                 key={item.id} 
                                 item={item} 
@@ -99,10 +84,20 @@ const Products = ({ collection, indiVisible, match }) => {
     )
   };
 
-  
 const mapStateToProps = (state, ownProps) => ({
     collection: selectCollection(ownProps.match.params.categoryId)(state),
-    indiVisible: selectIndiVisible(state)
+    indiVisible: selectIndiVisible(state),
+    colorToFilter: selectColorToFilter(state),
+    sizeToFilter: selectSizeToFilter(state),
+    cupToFilter: selectCupToFilter(state),
+    itemsFiltered: selectItemsFiltered(state)
 });
 
-export default connect(mapStateToProps)(Products);
+const mapDispatchToProps = dispatch => ({
+    setFilterColor: color => dispatch(setFilterColor(color)),
+    setFilterSize: size => dispatch(setFilterSize(size)),
+    setFilterCup: cup => dispatch(setFilterCup(cup)),
+    setItemsFiltered: items => dispatch(setItemsFiltered(items))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Products);

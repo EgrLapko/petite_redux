@@ -358,7 +358,7 @@ $main-color: black;
     position: relative;
     width: 10rem;
     .filter-title {
-      text-transform: lowercase;
+      text-transform: capitalize;      
       font-size: 1.2rem;
       font-weight: 600;
       color: rgba(105, 105, 105, 1);
@@ -408,6 +408,36 @@ $main-color: black;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
           }
         }  
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .filter-panels {
+    .filter {
+      .filter-title {
+        font-size: 1.1rem;
+      }
+      .filter-list {
+        width: 100%;
+        padding: .5rem;
+        &.opened-filter {
+          transform: translateY(0%);
+          opacity: 1;
+          pointer-events: all;
+        }
+        .filter-item {
+          margin: .5rem 2rem;
+          &.color-filter {
+            @include flexbox;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0;
+            padding: .4rem;
+          }  
+        }
       }
     }
   }
