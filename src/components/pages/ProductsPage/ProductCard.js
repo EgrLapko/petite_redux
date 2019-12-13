@@ -1,7 +1,7 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, useRouteMatch } from 'react-router-dom';
+
 import { addItem } from '../../../redux/cart/cart-actions';
 import { toggleIndiPage, setSingleItem } from '../../../redux/indi-slider/indi-actions';
 
@@ -10,15 +10,26 @@ const ProductCard = ({item, addItem, toggleIndiPage, setSingleItem }) => {
 
     let { url } = useRouteMatch();
 
+    const [ didLoad, onLoad ] = useState(false);
+
+    const style = didLoad ? {} : { backgroundColor: 'rgba(105, 105, 105, .2)', height: '33rem' }
+
+    const onLoadFunc = () => {
+        onLoad(true)
+    }
+
     return (
         <React.Fragment>
             <div className="product-card">
                 <Link to={`${url}/${id}&${title}`}>
                     {
                         imgSmall_1 ?
-                            <img 
+                            <img
+                                style={style}
+                                onLoad={onLoadFunc}
                                 className="card-image" 
-                                src={imgSmall_1} alt="item" 
+                                src={imgSmall_1}
+                                alt="item"
                                 onMouseOver = {e => {e.currentTarget.src = imgSmall_2}}
                                 onMouseOut = {e => {e.currentTarget.src = imgSmall_1}}   
                                 onClick={() => { setSingleItem(item); toggleIndiPage() }}

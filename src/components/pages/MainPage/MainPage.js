@@ -5,7 +5,7 @@ import Title from '../../misc/Title'
 import Selection from './side-components/Selection'
 import InstagramSection from './side-components/InstagramSection';
 
-const MainPage = () => {
+const MainPage = () => {    
     return (
         <div className="main-page">
             <div className="trends-container">

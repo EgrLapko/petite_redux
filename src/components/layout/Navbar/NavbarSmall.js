@@ -10,10 +10,15 @@ import { closeFilters, clearFiltersValues } from '../../../redux/filters/filters
 import CartIcon from '../../misc/CartIcon';
 
 const NavbarSmall = ({ toggleMobileMenu, dropAllSliders, mobileMenuHidden, closeFilters, clearFiltersValues }) => {
+
+    function vibrateSimple() {
+        navigator.vibrate(200);
+    }
+
     return (
         <div className="navbar-mobile">
             <div className="mobile-menu">
-                <p className="hamburger" onClick={() => { toggleMobileMenu(); dropAllSliders(); }}>  
+                <p className="hamburger" onClick={() => { toggleMobileMenu(); dropAllSliders(); vibrateSimple() }}>  
                     {mobileMenuHidden ? <>&#9776;</> : <>&#10005;</> } 
                 </p>
             </div>

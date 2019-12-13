@@ -1,20 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { toggleIndiPage, removeSingleItem } from '../../../../redux/indi-slider/indi-actions';
 import { selectSingleItem } from '../../../../redux/indi-slider/indi-selector';
+import { addItem } from '../../../../redux/cart/cart-actions';
+
 import Title from '../../../misc/Title';
 
 const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingleItem }) => {
     const { title, description, price, category, imgBig_1, imgBig_2, sizes, color, cup } = singleItem;
+
+    const { pickedItem, setSize } = useState({
+        pickedSize: 'size',
+        pickedCup: 'cup'
+    }); 
+
+    const pickSizeBra = (size) => {
+        let newItem = pickedItem
+        setSize({ 
+            pickedSize: size
+        })
+    }
 
     return (
         <div className={`indi-wrapper ${indiVisible ? "opened" : ''}`}>
             <div className="indi-container">
                 <div className="info-container">
                     <div className="info-images">
-                        <img src={imgBig_1} alt="product"/>
-                        <img src={imgBig_2} alt="product"/>
+                        <img 
+                            src={imgBig_1} 
+                            alt="product"
+                        />
+                        <img 
+                            src={imgBig_2} 
+                            alt="product"
+                        />
                     </div>
                     <div className="info-text">
                         <div className="text-container">
@@ -33,7 +53,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                         {
                                             sizes.map((size, index) => {
                                                 return (
-                                                    <li className="size-item" key={index}> {size} </li>
+                                                    <li className="size-item" key={index} onClick={() => pickSizeBra(size)}> {size} </li>
                                                 )
                                             })
                                         }
@@ -55,10 +75,11 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                     </ul>
                                 </div>
                             }
+                            <button className="btn btn-pink"> Add to bag </button>
                         </div>
                     </div>       
                 </div>  
-                <button className="btn" 
+                <button className="btn close-btn" 
                         onClick={() => { toggleIndiPage(); setTimeout(() => {removeSingleItem()}, 200);  }}
                 >
                      &#10005;
