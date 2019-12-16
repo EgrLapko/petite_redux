@@ -4,23 +4,29 @@ import { connect } from 'react-redux';
 import { toggleIndiPage, removeSingleItem } from '../../../../redux/indi-slider/indi-actions';
 import { selectSingleItem } from '../../../../redux/indi-slider/indi-selector';
 import { addItem } from '../../../../redux/cart/cart-actions';
+import { selectCartItems } from '../../../../redux/cart/cart-selectors';
 
 import Title from '../../../misc/Title';
 
-const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingleItem }) => {
-    const { title, description, price, category, imgBig_1, imgBig_2, sizes, color, cup } = singleItem;
 
-    const { pickedItem, setSize } = useState({
-        pickedSize: 'size',
-        pickedCup: 'cup'
-    }); 
+const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingleItem, cartItems, addItem }) => {
+    const { title, description, price, category, imgBig_1, imgBig_2, sizes, color, cup, id } = singleItem;
 
-    const pickSizeBra = (size) => {
-        let newItem = pickedItem
-        setSize({ 
-            pickedSize: size
-        })
+    const [chosenParameters, setParameters] = useState({ size: '', cup: ''});
+
+    const pickSize = (size) => {
+        setParameters({ ...chosenParameters, size: size });
     }
+
+    const pickCup = (cup) => {
+        setParameters({ ...chosenParameters, cup: cup });
+    }
+
+    const clearSizes = () => {
+        setParameters({ size: '', cup: '' })
+    }
+
+
 
     return (
         <div className={`indi-wrapper ${indiVisible ? "opened" : ''}`}>
@@ -48,12 +54,18 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                             {
                                 sizes &&
                                 <div className="sizes">
-                                    <p className="size-type">Size: </p>
+                                    <p className="size-type">Size: {chosenParameters.size} </p>
                                     <ul className="info-size">
                                         {
                                             sizes.map((size, index) => {
                                                 return (
-                                                    <li className="size-item" key={index} onClick={() => pickSizeBra(size)}> {size} </li>
+                                                    <li 
+                                                        className={`size-item ${chosenParameters.size === size && 'active-size'}`} 
+                                                        key={index} 
+                                                        onClick={() => pickSize(size)}
+                                                    > 
+                                                        {size} 
+                                                    </li>
                                                 )
                                             })
                                         }
@@ -63,24 +75,74 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                             {
                                 cup &&
                                 <div className="sizes">
-                                    <p className="size-type">Cup: </p>
+                                    <p className="size-type">Cup: {chosenParameters.cup} </p>
                                     <ul className="info-size">
                                         {
                                             cup.map((cup, index) => {
                                                 return (
-                                                    <li className="size-item" key={index}> {cup} </li>
+                                                    <li 
+                                                        className={`size-item ${chosenParameters.cup === cup && 'active-size'}`} 
+                                                        key={index} 
+                                                        onClick={ () => pickCup(cup) }
+                                                    > 
+                                                        {cup} 
+                                                    </li>
                                                 )
                                             })
                                         }
                                     </ul>
                                 </div>
                             }
-                            <button className="btn btn-pink"> Add to bag </button>
+
+                            {
+                                !singleItem.cup && singleItem.sizes ?
+                                <button 
+                                    className={`shop-btn ${chosenParameters.size !== '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`} 
+                                    onClick={() => addItem(singleItem)}
+                                >
+                                    <i className="fas fa-shopping-bag"/> 
+                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
+                                </button>
+                                : null
+                            }
+                            {
+                                singleItem.cup && singleItem.sizes ?
+                                <button 
+                                    className={`shop-btn ${chosenParameters.size !==  '' && chosenParameters.cup !==  '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`}
+                                    onClick={() => addItem(singleItem)}
+                                >
+                                    <i className="fas fa-shopping-bag"/>
+                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
+                                </button>
+                                : null
+                            }
+                            {
+                                singleItem.cup && !singleItem.sizes ?
+                                <button 
+                                    className={`shop-btn ${chosenParameters.cup !== '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`}
+                                    onClick={() => addItem(singleItem)}
+                                >
+                                    <i className="fas fa-shopping-bag"/>
+                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
+                                </button>
+                                : null
+                            }
+                            {
+                                !singleItem.cup && !singleItem.sizes ?
+                                <button 
+                                    className="shop-btn shop-active"
+                                    onClick={() => addItem(singleItem)}
+                                >
+                                    <i className="fas fa-shopping-bag"/> {cartItems.singleItem && "In Cart"}
+                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
+                                </button>
+                                : null
+                            }
                         </div>
                     </div>       
                 </div>  
                 <button className="btn close-btn" 
-                        onClick={() => { toggleIndiPage(); setTimeout(() => {removeSingleItem()}, 200);  }}
+                        onClick={() => { toggleIndiPage(); setTimeout(() => {removeSingleItem()}, 200); clearSizes()  }}
                 >
                      &#10005;
                 </button>
@@ -90,12 +152,14 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
 }
 
 const mapStateToProps = (state) => ({
-    singleItem: selectSingleItem(state)
+    singleItem: selectSingleItem(state),
+    cartItems: selectCartItems(state)
 })
 
 const mapDispatchToProps = dispatch => ({
     toggleIndiPage: () => dispatch(toggleIndiPage()),
-    removeSingleItem: () => dispatch(removeSingleItem())
+    removeSingleItem: () => dispatch(removeSingleItem()),
+    addItem: item => dispatch(addItem(item))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(IndividualPage);

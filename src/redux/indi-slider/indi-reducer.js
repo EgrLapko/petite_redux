@@ -17,7 +17,7 @@ const indiReducer = (state = INITIAL_STATE, action) => {
         case indiActionTypes.SET_SINGLE_ITEM:
             return {
                 ...state,
-                singleItem: setSingle(state.singleItem, action.payload)
+                singleItem: setSingle(action.payload),
             };
         case indiActionTypes.EMPTY_SINGLE_ITEM:
             return {

@@ -12,7 +12,7 @@ import CartIcon from '../../misc/CartIcon';
 const NavbarSmall = ({ toggleMobileMenu, dropAllSliders, mobileMenuHidden, closeFilters, clearFiltersValues }) => {
 
     function vibrateSimple() {
-        navigator.vibrate(200);
+        navigator.vibrate(50);
     }
 
     return (

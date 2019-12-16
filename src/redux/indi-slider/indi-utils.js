@@ -1,6 +1,3 @@
-
-export const setSingle = (singleItem, item) => {
-    singleItem = item;
-    console.log(singleItem.title);
-    return singleItem;
+export const setSingle = (item) => {
+    return item;
 }

@@ -26,11 +26,6 @@ const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFilte
     let itemType = [...new Set(itemsFiltered.map(item => item.type).flat())].toString(); // TAKING ITEMS TYPES FOR CONDITIONAL FILTERING
     let itemCategory = [...new Set(itemsFiltered.map(item => item.category).flat())].toString(); // TAKING ITEMS CATEGORIES FOR CONDITIONAL FILTERING
 
-
-    const defineSingle = (id) => { // PICK SINGLE ITEM INFO ON CLICK
-        itemsFiltered.find(item => item.id === id);
-    };
-
     const sortItems = useCallback(() => { // SORTING ITEMS WITH FILTERS STATES
         let tempItems = [...items];
 
@@ -73,7 +68,6 @@ const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFilte
                             <ProductCard 
                                 key={item.id} 
                                 item={item} 
-                                defineSingle={defineSingle}
                             />
                         ))
                     }
