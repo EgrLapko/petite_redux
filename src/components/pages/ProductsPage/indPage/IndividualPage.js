@@ -94,19 +94,31 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                 </div>
                             }
 
+                            {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH JUST SIZES */}
                             {
-                                !singleItem.cup && singleItem.sizes ?
+                                !singleItem.cup && singleItem.sizes 
+                                    ? chosenParameters.size !== '' 
+                                    ?
                                 <button 
                                     className={`shop-btn ${chosenParameters.size !== '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`} 
                                     onClick={() => addItem(singleItem)}
                                 >
                                     <i className="fas fa-shopping-bag"/> 
-                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
+                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In bag" : "Add to bag"} </p>
+                                </button>
+                                : 
+                                <button className="shop-btn" disabled>
+                                    <i className="fas fa-shopping-bag"/>
+                                    <p className="btn-text">Add to bag</p>
                                 </button>
                                 : null
                             }
+
+                            {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH SIZES AND CUP */}
                             {
-                                singleItem.cup && singleItem.sizes ?
+                                singleItem.cup && singleItem.sizes 
+                                    ? chosenParameters.size !==  '' && chosenParameters.cup !==  ''
+                                    ?
                                 <button 
                                     className={`shop-btn ${chosenParameters.size !==  '' && chosenParameters.cup !==  '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`}
                                     onClick={() => addItem(singleItem)}
@@ -114,10 +126,19 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                     <i className="fas fa-shopping-bag"/>
                                     <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
                                 </button>
+                                :
+                                <button className="shop-btn" disabled>
+                                    <i className="fas fa-shopping-bag"/>
+                                    <p className="btn-text">Add to bag</p>
+                                </button>
                                 : null
                             }
+
+                            {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH JUST CUPS */}
                             {
-                                singleItem.cup && !singleItem.sizes ?
+                                singleItem.cup && !singleItem.sizes 
+                                    ? chosenParameters.cup !== ''
+                                    ?
                                 <button 
                                     className={`shop-btn ${chosenParameters.cup !== '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`}
                                     onClick={() => addItem(singleItem)}
@@ -125,8 +146,15 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                     <i className="fas fa-shopping-bag"/>
                                     <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
                                 </button>
+                                :
+                                <button className="shop-btn" disabled>
+                                    <i className="fas fa-shopping-bag"/>
+                                    <p className="btn-text">Add to bag</p>
+                                </button>
                                 : null
                             }
+
+                            {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITHOUT SIZES*/}
                             {
                                 !singleItem.cup && !singleItem.sizes ?
                                 <button 
@@ -138,6 +166,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                 </button>
                                 : null
                             }
+                            
                         </div>
                     </div>       
                 </div>  
