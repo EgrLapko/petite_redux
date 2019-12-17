@@ -26,6 +26,12 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
         setParameters({ size: '', cup: '' })
     }
 
+    const ifInCart = () => {
+        if (cartItems.singleItem) {
+            return <h3> Item is in Cart</h3>
+        } 
+    }
+
 
 
     return (
@@ -96,75 +102,62 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH JUST SIZES */}
                             {
-                                !singleItem.cup && singleItem.sizes 
-                                    ? chosenParameters.size !== '' 
-                                    ?
-                                <button 
-                                    className={`shop-btn ${chosenParameters.size !== '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`} 
-                                    onClick={() => addItem(singleItem)}
-                                >
-                                    <i className="fas fa-shopping-bag"/> 
-                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In bag" : "Add to bag"} </p>
-                                </button>
-                                : 
-                                <button className="shop-btn" disabled>
-                                    <i className="fas fa-shopping-bag"/>
-                                    <p className="btn-text">Add to bag</p>
-                                </button>
-                                : null
+                                !singleItem.cup && singleItem.sizes &&
+                                    <button 
+                                        className={`shop-btn ${chosenParameters.size !== '' ? 'shop-active'
+                                                            : cartItems.find(item => item.id === id) ? 'shop-active' 
+                                                            : null }`}
+                                        onClick={() => addItem(singleItem)}
+                                        disabled={chosenParameters.size ===  '' ? true : false}
+                                    >
+                                        <i className="fas fa-shopping-bag"/>
+                                        <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
+                                    </button>
                             }
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH SIZES AND CUP */}
                             {
-                                singleItem.cup && singleItem.sizes 
-                                    ? chosenParameters.size !==  '' && chosenParameters.cup !==  ''
-                                    ?
-                                <button 
-                                    className={`shop-btn ${chosenParameters.size !==  '' && chosenParameters.cup !==  '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`}
-                                    onClick={() => addItem(singleItem)}
-                                >
-                                    <i className="fas fa-shopping-bag"/>
-                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
-                                </button>
-                                :
-                                <button className="shop-btn" disabled>
-                                    <i className="fas fa-shopping-bag"/>
-                                    <p className="btn-text">Add to bag</p>
-                                </button>
-                                : null
+                                singleItem.cup && singleItem.sizes &&
+                                    <button 
+                                        className={`shop-btn ${chosenParameters.size !==  '' && chosenParameters.cup !==  '' ? 'shop-active'
+                                                            : cartItems.find(item => item.id === id) ? 'shop-active' 
+                                                            : null }`}
+                                        onClick={() => addItem(singleItem)}
+                                        disabled={chosenParameters.size ===  '' | chosenParameters.cup ===  '' ? true : false}
+                                    >
+                                        <i className="fas fa-shopping-bag"/>
+                                        <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
+                                    </button>
                             }
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH JUST CUPS */}
                             {
-                                singleItem.cup && !singleItem.sizes 
-                                    ? chosenParameters.cup !== ''
-                                    ?
-                                <button 
-                                    className={`shop-btn ${chosenParameters.cup !== '' ? 'shop-active' : cartItems.find(item => item.id === id) && 'shop-active'}`}
-                                    onClick={() => addItem(singleItem)}
-                                >
-                                    <i className="fas fa-shopping-bag"/>
-                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
-                                </button>
-                                :
-                                <button className="shop-btn" disabled>
-                                    <i className="fas fa-shopping-bag"/>
-                                    <p className="btn-text">Add to bag</p>
-                                </button>
-                                : null
+                                singleItem.cup && !singleItem.sizes &&
+                                    <button 
+                                        className={`shop-btn ${chosenParameters.cup !==  '' ? 'shop-active'
+                                                            : cartItems.find(item => item.id === id) ? 'shop-active' 
+                                                            : null }`}
+                                        onClick={() => addItem(singleItem)}
+                                        disabled={chosenParameters.cup ===  '' ? true : false}
+                                    >
+                                        <i className="fas fa-shopping-bag"/>
+                                        <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
+                                    </button>
+
                             }
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITHOUT SIZES*/}
                             {
-                                !singleItem.cup && !singleItem.sizes ?
-                                <button 
-                                    className="shop-btn shop-active"
-                                    onClick={() => addItem(singleItem)}
-                                >
-                                    <i className="fas fa-shopping-bag"/> {cartItems.singleItem && "In Cart"}
-                                    <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In cart" : "add to cart"} </p>
-                                </button>
-                                : null
+                                !singleItem.cup && !singleItem.sizes 
+                                    ? 
+                                        <button 
+                                            className="shop-btn shop-active"
+                                            onClick={() => addItem(singleItem)}
+                                        >
+                                            <i className="fas fa-shopping-bag"/> 
+                                            <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In bag" : "add to bag"} </p>
+                                        </button>
+                                    : null
                             }
                             
                         </div>
@@ -182,13 +175,13 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
 
 const mapStateToProps = (state) => ({
     singleItem: selectSingleItem(state),
-    cartItems: selectCartItems(state)
+    cartItems: selectCartItems(state),
 })
 
 const mapDispatchToProps = dispatch => ({
     toggleIndiPage: () => dispatch(toggleIndiPage()),
     removeSingleItem: () => dispatch(removeSingleItem()),
-    addItem: item => dispatch(addItem(item))
+    addItem: item => dispatch(addItem(item)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(IndividualPage);

@@ -215,10 +215,11 @@ ul {
         .navbar .menu .nav-right .hello-text span {
           font-weight: 600; }
       .navbar .menu .nav-right .nav-option {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: rgba(105, 105, 105, 0.9);
         font-weight: 600;
         cursor: pointer;
+        text-transform: capitalize;
         -webkit-transition: .3s;
         -o-transition: .3s;
         transition: .3s; }
@@ -1537,7 +1538,7 @@ ul {
             font-size: 2rem;
             color: #6a6969; }
           .indi-wrapper .indi-container .info-container .info-text .text-container .indi-description {
-            width: 60%;
+            width: 80%;
             margin: 0; }
         .indi-wrapper .indi-container .info-container .info-text .extra-info {
           display: -webkit-box;
@@ -1553,7 +1554,8 @@ ul {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+            width: 7rem; }
             .indi-wrapper .indi-container .info-container .info-text .extra-info .shop-btn .btn-text {
               font-size: .9rem;
               margin: 0;
@@ -1588,9 +1590,9 @@ ul {
                 margin: 0rem .5rem;
                 cursor: pointer; }
                 .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item:hover {
-                  color: #5fae57; }
+                  color: rgba(241, 106, 123, 0.9); }
                 .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item.active-size {
-                  color: #5fae57;
+                  color: rgba(241, 106, 123, 0.9);
                   font-weight: 600; }
     .indi-wrapper .indi-container .close-btn {
       position: absolute;
@@ -1638,21 +1640,31 @@ ul {
             font-size: .9rem;
             margin: .2rem 0; }
           .indi-wrapper.opened .indi-container .info-container .info-text .text-container .indi-color {
-            font-size: .8rem; }
-      .indi-wrapper.opened .indi-container .info-container .extra-info .shop-btn {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        font-size: 1.5rem; }
-        .indi-wrapper.opened .indi-container .info-container .extra-info .shop-btn .btn-text {
-          font-size: .7rem; }
-      .indi-wrapper.opened .indi-container .info-container .extra-info .sizes {
-        padding: 0; }
-        .indi-wrapper.opened .indi-container .info-container .extra-info .sizes .size-type {
-          font-size: 1rem; }
-        .indi-wrapper.opened .indi-container .info-container .extra-info .sizes .info-size .size-item {
-          font-size: 1rem; } }
+            font-size: .7rem;
+            margin: .4rem 0; }
+      .indi-wrapper.opened .indi-container .info-container .extra-info {
+        width: 100%;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .indi-wrapper.opened .indi-container .info-container .extra-info .shop-btn {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          font-size: 1.5rem; }
+          .indi-wrapper.opened .indi-container .info-container .extra-info .shop-btn .btn-text {
+            font-size: .7rem; }
+        .indi-wrapper.opened .indi-container .info-container .extra-info .sizes {
+          padding: 0; }
+          .indi-wrapper.opened .indi-container .info-container .extra-info .sizes .size-type {
+            font-size: .7rem;
+            font-weight: 600;
+            text-transform: uppercase; }
+          .indi-wrapper.opened .indi-container .info-container .extra-info .sizes .info-size {
+            padding: .5rem; }
+            .indi-wrapper.opened .indi-container .info-container .extra-info .sizes .info-size .size-item {
+              font-size: .8rem;
+              font-weight: 600; } }
 
 .main-page {
   display: -webkit-box;

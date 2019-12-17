@@ -16,6 +16,8 @@ const FilterPanel = ({ items, category, type, itemsFiltered, clearFiltersValues,
     let colors = [...new Set(items.map(item => item.color).flat())];
     let sizes = [...new Set(items.map(item => item.sizes).flat())];
     let cups = [...new Set(items.map(item => item.cup).flat())];
+
+
     
     return (
         <div className="filter-panels">
@@ -31,7 +33,7 @@ const FilterPanel = ({ items, category, type, itemsFiltered, clearFiltersValues,
                             {   
                                 colors.map((color, index) => (  
                                     <li className={`filter-item color-filter ${color === colorToFilter && "filter-active" }`} key={index} onClick={() => { setFilterColor(color); setTimeout(toggleColorFilter, 500)}}> 
-                                        <div className="color-ball" style={{ backgroundColor: color }} />
+                                        <div className="color-ball" style={ {backgroundColor: color} } />
                                         {color} 
                                     </li>
                                 ))

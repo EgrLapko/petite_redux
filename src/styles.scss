@@ -225,10 +225,11 @@ $main-color: black;
               }
             }
             .nav-option {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 color: rgba(105, 105, 105, .9);
                 font-weight: 600;
                 cursor: pointer;
+                text-transform: capitalize;
                 transition: .3s;
                 &:hover {
                   color: rgba(241, 106, 123, .9);
@@ -1271,7 +1272,7 @@ $main-color: black;
             color: rgba(106, 105, 105, 1);
           }
           .indi-description {
-            width: 60%;
+            width: 80%;
             margin: 0;
           }
         }
@@ -1282,6 +1283,7 @@ $main-color: black;
           width: 80%;
           .shop-btn {
             flex-direction: column;
+            width: 7rem;
             .btn-text {
               font-size: .9rem;
               margin: 0;
@@ -1308,10 +1310,10 @@ $main-color: black;
                 margin: 0rem .5rem;
                 cursor: pointer;
                 &:hover {
-                  color: rgba(95, 174, 87, 1)
+                  color: rgba(241, 106, 123, .9)
                 }
                 &.active-size {
-                  color: rgba(95, 174, 87, 1);
+                  color: rgba(241, 106, 123, .9);
                   font-weight: 600;
                 }
               }
@@ -1375,11 +1377,14 @@ $main-color: black;
                 margin: .2rem 0;
               }
               .indi-color {
-                font-size: .8rem;
+                font-size: .7rem;
+                margin: .4rem 0;
               }
             }
           }
           .extra-info {
+            width: 100%;
+            flex-wrap: wrap;
             .shop-btn {
               flex-direction: column;
               font-size: 1.5rem;
@@ -1390,11 +1395,15 @@ $main-color: black;
             .sizes {
               padding: 0;
               .size-type {
-                font-size: 1rem;
+                font-size: .7rem;
+                font-weight: 600;
+                text-transform: uppercase;
               }
               .info-size {
+                padding: .5rem;
                 .size-item {
-                  font-size: 1rem;
+                  font-size: .8rem;
+                  font-weight: 600;
                 }
               }
             }

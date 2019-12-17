@@ -65,7 +65,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item)),
     toggleIndiPage: () => dispatch(toggleIndiPage()),
-    setSingleItem: item => dispatch(setSingleItem(item))
+    setSingleItem: item => dispatch(setSingleItem(item)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductCard);
