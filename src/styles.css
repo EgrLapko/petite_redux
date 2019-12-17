@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -21,13 +21,13 @@ ul {
   font-size: 1.2rem;
   border: 1px solid rgba(241, 106, 123, 0.7);
   color: dimgray;
-  font-weight: 600;
-  text-transform: lowercase;
+  font-weight: 400;
+  text-transform: capitalize;
   background-color: unset;
   border-radius: .7rem;
   padding: .8rem;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
@@ -103,7 +103,7 @@ ul {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   height: 50px;
   padding: 0 1.5rem;
@@ -167,7 +167,7 @@ ul {
       align-items: center;
       padding: 0rem 1rem;
       color: rgba(105, 105, 105, 0.9);
-      font-weight: 600;
+      font-weight: 300;
       text-transform: lowercase;
       font-size: 1.3rem; }
       .navbar .menu .nav-logo .first-letter, .navbar .menu .nav-logo .second-letter {
@@ -190,7 +190,7 @@ ul {
         font-size: 1.1rem;
         text-transform: uppercase;
         color: rgba(105, 105, 105, 0.9);
-        font-weight: 600;
+        font-weight: 400;
         cursor: pointer;
         margin: 0rem 2rem;
         -webkit-transition: .3s;
@@ -213,11 +213,11 @@ ul {
         padding-right: 1rem;
         font-size: 1.1rem; }
         .navbar .menu .nav-right .hello-text span {
-          font-weight: 600; }
+          font-weight: 300; }
       .navbar .menu .nav-right .nav-option {
         font-size: 1.1rem;
         color: rgba(105, 105, 105, 0.9);
-        font-weight: 600;
+        font-weight: 300;
         cursor: pointer;
         text-transform: capitalize;
         -webkit-transition: .3s;
@@ -272,7 +272,7 @@ ul {
     color: dimgray; }
     .navbar-mobile .mobile-logo .pink {
       color: rgba(241, 106, 123, 0.9);
-      font-weight: 600; }
+      font-weight: 400; }
   .navbar-mobile .mobile-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -301,7 +301,7 @@ ul {
     .navbar-mobile .mobile-right .nav-option {
       font-size: 1.2rem;
       color: rgba(105, 105, 105, 0.9);
-      font-weight: 600;
+      font-weight: 400;
       cursor: pointer;
       -webkit-transition: .3s;
       -o-transition: .3s;
@@ -330,7 +330,7 @@ ul {
       .navbar-mobile .mobile-right .cart-icon .item-count {
         position: absolute;
         font-size: .9rem;
-        font-weight: bold;
+        font-weight: 400;
         bottom: 10px; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
@@ -369,7 +369,7 @@ ul {
     .inner-nav .inner-links-list .inner-link {
       font-size: 1.2rem;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 300;
       padding: .5rem;
       color: rgba(105, 105, 105, 0.9);
       -webkit-transition: .4s;
@@ -425,7 +425,7 @@ ul {
     .filter-panels .filter .filter-title {
       text-transform: capitalize;
       font-size: .8rem;
-      font-weight: 600;
+      font-weight: 300;
       color: dimgray;
       cursor: pointer; }
       .filter-panels .filter .filter-title:hover {
@@ -464,7 +464,8 @@ ul {
       transition: .3s; }
       .filter-panels .filter .filter-list .btn {
         margin-top: .4rem;
-        font-size: 1rem; }
+        font-size: 1rem;
+        font-weight: 400; }
       .filter-panels .filter .filter-list.opened-filter {
         -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -474,7 +475,7 @@ ul {
       .filter-panels .filter .filter-list .filter-item {
         margin: .5rem 2rem;
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 300;
         color: dimgray; }
         .filter-panels .filter .filter-list .filter-item.filter-active {
           color: rgba(241, 106, 123, 0.9); }
@@ -518,7 +519,7 @@ ul {
       margin: 0;
       font-size: .9rem; }
       .filter-panels .items-counter .counter-text span {
-        font-weight: 600; }
+        font-weight: 300; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .filter-panels {
@@ -624,7 +625,8 @@ ul {
         color: rgba(241, 106, 123, 0.9); }
       .navbar-slider .slider-item .bottom-link .nav-menu-title h3 {
         margin: .5rem 0;
-        font-size: 1.1em; }
+        font-size: 1.1em;
+        font-weight: 400; }
   .navbar-slider.visible {
     opacity: 1;
     -webkit-transform: translateY(0%);
@@ -774,7 +776,7 @@ ul {
         .nav-mobile-slider .nav-links .nav-mobile-section .section-title {
           font-size: .9rem;
           margin: 0;
-          font-weight: 600;
+          font-weight: 300;
           color: rgba(105, 105, 105, 0.7); }
       .nav-mobile-slider .nav-links .link, .nav-mobile-slider .nav-links .link-about {
         width: 100%;
@@ -783,7 +785,7 @@ ul {
         cursor: pointer;
         color: dimgray;
         text-transform: capitalize;
-        font-weight: 600; }
+        font-weight: 400; }
         .nav-mobile-slider .nav-links .link.link-active, .nav-mobile-slider .nav-links .link-about.link-active {
           color: rgba(241, 106, 123, 0.9); }
       .nav-mobile-slider .nav-links .bottom-links {
@@ -806,7 +808,7 @@ ul {
         width: 100%; }
         .nav-mobile-slider .nav-links .bottom-links .nav-option {
           color: dimgray;
-          font-weight: 600;
+          font-weight: 400;
           text-transform: capitalize;
           font-size: .9rem; }
           .nav-mobile-slider .nav-links .bottom-links .nav-option.sign-out {
@@ -916,9 +918,10 @@ ul {
     padding: .8rem 0;
     width: 100%;
     height: 4rem; }
-    .dropdown-wrapper .btn-container .custom-button {
-      width: 8rem;
-      padding: 0; }
+    .dropdown-wrapper .btn-container .btn {
+      font-size: .9rem;
+      text-transform: uppercase;
+      font-weight: 700; }
     .dropdown-wrapper .btn-container.visible {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -951,6 +954,7 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -962,11 +966,20 @@ ul {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 10px 20px; }
-    .cart-item .item-details .name {
-      font-size: 16px; }
+    .cart-item .item-details .cart-item-name, .cart-item .item-details .cart-item-price, .cart-item .item-details .cart-item-size {
+      margin: 0; }
+    .cart-item .item-details .cart-item-name {
+      font-size: 1rem; }
+    .cart-item .item-details .cart-item-price {
+      font-size: .9rem; }
+    .cart-item .item-details .cart-item-price, .cart-item .item-details .cart-item-size {
+      font-size: .9rem; }
     .cart-item .item-details .remove-button {
       cursor: pointer;
-      margin-top: .8rem; }
+      padding: .5rem;
+      position: absolute;
+      top: 0;
+      right: 0; }
 
 .main-title {
   display: -webkit-box;
@@ -989,7 +1002,7 @@ ul {
   padding: 1rem;
   text-align: center; }
   .main-title .main-title-text {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 3.5rem;
     margin: 0;
     padding: .5rem;
@@ -999,6 +1012,7 @@ ul {
     font-size: 1.6rem;
     color: dimgray;
     text-transform: lowercase;
+    font-weight: 300;
     margin: 0;
     padding: .5rem; }
 
@@ -1098,9 +1112,8 @@ ul {
         cursor: pointer; }
         .selections .selections-container .sel-card .sel-text-wrapper .sel-description, .selections .selections-container .sel-card .sel-text-wrapper .sel-title {
           font-size: 1.5rem;
-          font-family: "Roboto", sans-serif;
+          font-family: "Open Sans", sans-serif;
           color: #f6f6f6;
-          font-weight: 200;
           margin: 0;
           opacity: 0;
           -webkit-transition: .5s ease-in-out;
@@ -1108,7 +1121,7 @@ ul {
           transition: .5s ease-in-out; }
         .selections .selections-container .sel-card .sel-text-wrapper .sel-title {
           font-size: 2.5rem;
-          font-weight: 600;
+          font-weight: 300;
           opacity: 1; }
         .selections .selections-container .sel-card .sel-text-wrapper .btn {
           opacity: 0;
@@ -1170,7 +1183,7 @@ ul {
   .products .main-title {
     border-top: none; }
     .products .main-title .main-title-text {
-      font-size: 2.4rem;
+      font-size: 2rem;
       text-transform: uppercase; }
 
 .products-page {
@@ -1281,7 +1294,7 @@ ul {
       font-size: 1.2rem;
       margin: 0;
       padding: .5rem;
-      font-weight: 600;
+      font-weight: 400;
       color: rgba(105, 105, 105, 0.9);
       cursor: pointer;
       -webkit-transition: .3s;
@@ -1300,7 +1313,7 @@ ul {
       justify-content: space-between;
       padding: 1rem; }
       .product-card .bottom-info .bottom-container .price, .product-card .bottom-info .bottom-container .cart {
-        font-weight: 600;
+        font-weight: 400;
         color: rgba(105, 105, 105, 0.7); }
       .product-card .bottom-info .bottom-container .if-in-cart {
         display: -webkit-box;
@@ -1531,15 +1544,20 @@ ul {
           .indi-wrapper .indi-container .info-container .info-text .text-container .indi-category {
             font-size: 1.5rem;
             text-transform: uppercase;
-            font-weight: 200;
+            font-weight: 300;
             margin: 0;
             color: rgba(105, 105, 105, 0.4); }
           .indi-wrapper .indi-container .info-container .info-text .text-container .indi-price {
             font-size: 2rem;
-            color: #6a6969; }
+            color: #6a6969;
+            font-weight: 300; }
+          .indi-wrapper .indi-container .info-container .info-text .text-container .indi-color {
+            font-weight: 300; }
           .indi-wrapper .indi-container .info-container .info-text .text-container .indi-description {
             width: 80%;
-            margin: 0; }
+            margin: 0;
+            font-weight: 400;
+            color: #6a6969; }
         .indi-wrapper .indi-container .info-container .info-text .extra-info {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1577,7 +1595,8 @@ ul {
             padding: 1rem; }
             .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .size-type {
               font-size: 1.5rem;
-              margin: 0; }
+              margin: 0;
+              font-weight: 300; }
             .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -1588,7 +1607,9 @@ ul {
               .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item {
                 font-size: 1.5rem;
                 margin: 0rem .5rem;
-                cursor: pointer; }
+                cursor: pointer;
+                font-weight: 300;
+                color: rgba(105, 105, 105, 0.9); }
                 .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item:hover {
                   color: rgba(241, 106, 123, 0.9); }
                 .indi-wrapper .indi-container .info-container .info-text .extra-info .sizes .info-size .size-item.active-size {
@@ -1759,10 +1780,11 @@ ul {
         .trends-container .trends-card a .trends-info .trends-title {
           font-size: 4rem;
           color: #f6f6f6;
+          font-weight: 400;
           margin: 0;
           text-transform: lowercase; }
         .trends-container .trends-card a .trends-info .trends-description {
-          font-size: 2rem;
+          font-size: 1.6rem;
           margin: 0;
           color: #f6f6f6;
           padding: .5rem; }
@@ -1837,10 +1859,12 @@ ul {
     .parallax-content-section .parallax-top-info .parallax-title {
       color: #f2f2f2;
       font-size: 4rem;
+      font-weight: 400;
       margin: 0; }
     .parallax-content-section .parallax-top-info .parallax-description {
       color: #f2f2f2;
       font-size: 2rem;
+      font-weight: 300;
       margin: 0; }
 
 .parallax-mobile {
@@ -1986,7 +2010,7 @@ ul {
           font-size: 1.3rem;
           opacity: 1;
           color: #f2f2f2;
-          font-family: "Roboto", sans-serif;
+          font-family: "Open Sans", sans-serif;
           border-bottom: 1px solid rgba(242, 242, 242, 0); }
         .insta-section .insta-container .insta-card .middle .insta-link:hover {
           border-bottom: 1px solid rgba(242, 242, 242, 0.6); }
@@ -2046,7 +2070,7 @@ ul {
     .login .sign-in .title {
       margin: 1rem 0;
       font-size: 1.6rem;
-      font-weight: 200; }
+      font-weight: 300; }
   .login .sign-up {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2066,7 +2090,7 @@ ul {
     .login .sign-up .title {
       margin: 1rem 0;
       font-size: 1.6rem;
-      font-weight: 200; }
+      font-weight: 300; }
   .login .group {
     position: relative;
     margin: 40px 0; }
@@ -2092,7 +2116,7 @@ ul {
     .login .group .form-input-label {
       color: rgba(128, 128, 128, 0.4);
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 400;
       text-transform: capitalize;
       position: absolute;
       pointer-events: none;
@@ -2142,7 +2166,7 @@ ul {
       .login .sign-in .title {
         font-size: 1.3  rem;
         color: #6a6969;
-        font-weight: 600; }
+        font-weight: 400; }
     .login .sign-up {
       border-radius: 0;
       border-bottom-right-radius: 5%;
@@ -2150,14 +2174,15 @@ ul {
       .login .sign-up .title {
         font-size: 1.3  rem;
         color: #6a6969;
-        font-weight: 600; }
+        font-weight: 400; }
     .login .group {
       margin: 1.3rem 0; }
       .login .group .form-input {
         margin: 1rem 0; }
     .login .buttons {
       -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+      font-weight: 400; }
     .login .btn {
       border: 1px solid rgba(105, 105, 105, 0.3);
       font-size: 1.3rem;
@@ -2216,7 +2241,7 @@ ul {
     .checkout-page .checkout-header {
       font-size: .7rem;
       font-weight: 600;
-      font-family: "Roboto", sans-serif;
+      font-family: "Open Sans", sans-serif;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
@@ -2269,7 +2294,8 @@ ul {
     width: 23%; }
   .checkout-item .name {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
+    padding: .3rem;
     color: dimgray; }
   .checkout-item .quantity {
     display: -webkit-box;
@@ -2285,15 +2311,15 @@ ul {
 
 .maintag {
   font-size: 1.8rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   text-transform: lowercase;
   padding: .5rem 0rem;
   color: dimgray;
   border-bottom: 1px solid rgba(105, 105, 105, 0.2); }
 
 .footer-item {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: lowercase;
   margin-top: .8rem;
   font-size: 1.3rem;
@@ -2302,7 +2328,7 @@ ul {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s;
-  font-weight: 400; }
+  font-weight: 300; }
 
 .footer-item:hover {
   -webkit-transform: translateX(5px);
@@ -2365,9 +2391,9 @@ ul {
     flex-wrap: wrap; }
     .footer-container .subscribe-container .sub-text {
       text-transform: lowercase;
-      font-family: "Roboto", sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-size: 1.4rem;
-      font-weight: 600;
+      font-weight: 400;
       color: #6a6969;
       width: 80%;
       text-align: center; }
@@ -2396,7 +2422,7 @@ ul {
           background-color: #fff;
           color: black;
           border: 1px solid #ddd;
-          font-family: "Roboto", sans-serif;
+          font-family: "Open Sans", sans-serif;
           font-size: 1.1rem;
           border-radius: 10px; }
         .footer-container .subscribe-container .form-container .form-inline .submit {
@@ -2421,7 +2447,7 @@ ul {
     flex-direction: column;
     padding: 1rem; }
     .footer-container .about-container .about-item {
-      font-family: "Roboto", sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-top: .8rem;
       line-height: 1.3rem;
       font-size: 1.1rem;
@@ -2452,8 +2478,8 @@ ul {
   width: 100%;
   border-top: 1px solid rgba(105, 105, 105, 0.1); }
   .under-part .under-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
     margin-left: 1rem;
     font-size: .9rem; }
 

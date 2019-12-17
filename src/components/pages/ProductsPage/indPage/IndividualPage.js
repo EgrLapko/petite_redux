@@ -15,24 +15,25 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
     const [chosenParameters, setParameters] = useState({ size: '', cup: ''});
 
     const pickSize = (size) => {
-        setParameters({ ...chosenParameters, size: size });
-    }
+        setParameters(
+            { ...chosenParameters, size: size }
+        );
+        singleItem.pickedSize = size
+        return singleItem 
+    };
+        
 
     const pickCup = (cup) => {
-        setParameters({ ...chosenParameters, cup: cup });
+        setParameters(
+            { ...chosenParameters, cup: cup }
+        );
+        singleItem.pickedCup = cup
+        return singleItem 
     }
 
     const clearSizes = () => {
         setParameters({ size: '', cup: '' })
     }
-
-    const ifInCart = () => {
-        if (cartItems.singleItem) {
-            return <h3> Item is in Cart</h3>
-        } 
-    }
-
-
 
     return (
         <div className={`indi-wrapper ${indiVisible ? "opened" : ''}`}>

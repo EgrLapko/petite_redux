@@ -4,15 +4,23 @@ import { connect } from 'react-redux';
 import { clearItemFromCart } from '../../redux/cart/cart-actions';
 
 function CartItem({cartItem, clearItem}) {
-    const { imgSmall_1, title, quantity, price } = cartItem;
+    const { imgSmall_2, title, quantity, price, pickedSize, pickedCup } = cartItem;
     return (
         <div className="cart-item">
-            <img src={imgSmall_1} alt='item'/>
+            <img src={imgSmall_2} alt='item'/>
             <div className="item-details">
-                <span className="name"> {title} </span>
-                <span className="price">
+                <p className="cart-item-name"> {title} </p>
+                <p className="cart-item-price">
                     {quantity} x ${price}
-                </span>
+                </p>
+                {
+                    pickedSize &&
+                    <p className="cart-item-size"> Size: {pickedSize} </p>
+                }
+                {
+                    pickedCup &&
+                    <p className="cart-item-size"> Cup: {pickedCup} </p>
+                }
                 <div className="remove-button" onClick={() => clearItem(cartItem)}>&#10005;</div>
             </div>
         </div>

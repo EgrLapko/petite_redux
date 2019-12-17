@@ -61,10 +61,10 @@ const MainPage = () => {
                 >   
                     <div className="parallax-content-section">
                         <div className="parallax-top-info">
-                            <h2 className="parallax-title">we`re on instagram!</h2>
+                            <h2 className="parallax-title">We are on instagram!</h2>
                             <p className="parallax-description">come find us and become 
                             a part of our cozy community</p>
-                            <button className="btn btn-white">We`re here</button>
+                            <button className="btn btn-white">Here!</button>
                         </div>
                         <div className="insta-section">
                             <Title 
@@ -80,7 +80,7 @@ const MainPage = () => {
             
             <div className="parallax-mobile">
                 <Title 
-                    text = "We`re on Instagram"
+                    text = "We are on Instagram"
                     desc= "So come find us!"
                 /> 
                 <Parallax

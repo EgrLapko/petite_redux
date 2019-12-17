@@ -1,7 +1,7 @@
 $mainpink: rgba(241, 106, 123, .9);
 $mainwhite: rgba(246, 246, 246, 1);
 $maingrey: rgba(105, 105, 105, 1);
-$fontmain: 'Roboto', sans-serif;
+$fontmain: 'Open Sans', sans-serif;
 
 @mixin flexbox {
     display: flex;
@@ -10,7 +10,7 @@ $fontmain: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -44,8 +44,8 @@ $main-color: black;
   font-size: 1.2rem;
   border: 1px solid rgba(241, 106, 123, .7);
   color: rgba(105, 105, 105, 1);
-  font-weight: 600;
-  text-transform: lowercase;
+  font-weight: 400;
+  text-transform: capitalize;
   background-color: unset;
   border-radius: .7rem;
   padding: .8rem;
@@ -184,7 +184,7 @@ $main-color: black;
             align-items: center;
             padding: 0rem 1rem;
             color: rgba(105, 105, 105, .9);
-            font-weight: 600;
+            font-weight: 300;
             text-transform: lowercase;
             font-size: 1.3rem;
             .first-letter, .second-letter {
@@ -202,7 +202,7 @@ $main-color: black;
                 font-size: 1.1rem;
                 text-transform: uppercase;
                 color: rgba(105, 105, 105, .9);
-                font-weight: 600;
+                font-weight: 400;
                 cursor: pointer;
                 margin: 0rem 2rem;
                 transition: .3s;
@@ -221,13 +221,13 @@ $main-color: black;
               padding-right: 1rem;
               font-size: 1.1rem;
               span {
-                font-weight: 600;
+                font-weight: 300;
               }
             }
             .nav-option {
                 font-size: 1.1rem;
                 color: rgba(105, 105, 105, .9);
-                font-weight: 600;
+                font-weight: 300;
                 cursor: pointer;
                 text-transform: capitalize;
                 transition: .3s;
@@ -280,7 +280,7 @@ $main-color: black;
     color: rgba(105, 105, 105, 1);
     .pink {
       color: rgba(241, 106, 123, .9);
-      font-weight: 600;
+      font-weight: 400;
     }
   }
   .mobile-menu {
@@ -300,7 +300,7 @@ $main-color: black;
     .nav-option {
         font-size: 1.2rem;
         color: rgba(105, 105, 105, .9);
-        font-weight: 600;
+        font-weight: 400;
         cursor: pointer;
         transition: .3s;
         &:hover {
@@ -325,7 +325,7 @@ $main-color: black;
       .item-count {
         position: absolute;
         font-size: .9rem;
-        font-weight: bold;
+        font-weight: 400;
         bottom: 10px;
       }
     }
@@ -353,7 +353,7 @@ $main-color: black;
     .inner-link {
       font-size: 1.2rem;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 300;
       padding: .5rem;
       color: rgba(105, 105, 105, .9);
       transition: .4s;
@@ -407,7 +407,7 @@ $main-color: black;
     .filter-title {
       text-transform: capitalize;      
       font-size: .8rem;
-      font-weight: 600;
+      font-weight: 300;
       color: rgba(105, 105, 105, 1);
       &:hover{
         color: rgba(0, 0, 0, 1);
@@ -436,6 +436,7 @@ $main-color: black;
       .btn {
         margin-top: .4rem;
         font-size: 1rem;
+        font-weight: 400;
       }
       &.opened-filter {
         transform: translateY(0%);
@@ -445,7 +446,7 @@ $main-color: black;
       .filter-item {
         margin: .5rem 2rem;
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 300;
         color: rgba(105, 105, 105, 1);
         &.filter-active {
           color: rgba(241, 106, 123, .9);
@@ -477,7 +478,7 @@ $main-color: black;
       margin: 0;
       font-size: .9rem;
       span {
-        font-weight: 600;
+        font-weight: 300;
       }
     }
   }
@@ -575,6 +576,7 @@ $main-color: black;
         h3 {
           margin: .5rem 0;
           font-size: 1.1em;
+          font-weight: 400;
         }
       }
     }
@@ -683,7 +685,7 @@ $main-color: black;
         .section-title {
           font-size: .9rem;
           margin: 0;
-          font-weight: 600;
+          font-weight: 300;
           color: rgba(105, 105, 105, .7);
         }
       }
@@ -694,7 +696,7 @@ $main-color: black;
         cursor: pointer;
         color: rgba(105, 105, 105, 1);
         text-transform: capitalize;
-        font-weight: 600;
+        font-weight: 400;
         &.link-active {
           color: rgba(241, 106, 123, .9);
         }
@@ -706,7 +708,7 @@ $main-color: black;
         width: 100%;
         .nav-option {
           color: rgba(105, 105, 105, 1);
-          font-weight: 600;
+          font-weight: 400;
           text-transform: capitalize;
           font-size: .9rem;
           &.sign-out {
@@ -783,9 +785,10 @@ $main-color: black;
     padding: .8rem 0;
     width: 100%;
     height: 4rem;
-    .custom-button {
-      width: 8rem;
-      padding: 0;
+    .btn {
+      font-size: .9rem;
+      text-transform: uppercase;
+      font-weight: 700;
     }
     &.visible {
       display: flex;
@@ -821,16 +824,29 @@ $main-color: black;
   .item-details {
     width: 70%;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 10px 20px;
-    .name {
-      font-size: 16px;
+    .cart-item-name, .cart-item-price, .cart-item-size {
+      margin: 0;
+    }
+    .cart-item-name {
+      font-size: 1rem;
+    }
+    .cart-item-price {
+      font-size: .9rem;
+    }
+    .cart-item-price, .cart-item-size {
+      font-size: .9rem;
     }
     .remove-button {
       cursor: pointer;
-      margin-top: .8rem;
+      padding: .5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -847,7 +863,7 @@ $main-color: black;
   padding: 1rem;
   text-align: center;
   .main-title-text {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 3.5rem;
     margin: 0;
     padding: .5rem;
@@ -858,6 +874,7 @@ $main-color: black;
     font-size: 1.6rem;
     color: rgba(105, 105, 105, 1);
     text-transform: lowercase;
+    font-weight: 300;
     margin: 0;
     padding: .5rem;
   }
@@ -924,14 +941,13 @@ $main-color: black;
                 font-size: 1.5rem;
                 font-family: $fontmain;
                 color: rgba(246, 246, 246, 1);
-                font-weight: 200;
                 margin: 0;
                 opacity: 0;
                 transition: .5s ease-in-out;
             }
             .sel-title {
                 font-size: 2.5rem;
-                font-weight: 600;
+                font-weight: 300;
                 opacity: 1;
             }
             .btn {
@@ -1002,7 +1018,7 @@ $main-color: black;
   .main-title {
     border-top: none;
     .main-title-text {
-      font-size: 2.4rem;
+      font-size: 2rem;
       text-transform: uppercase;
     }
   }
@@ -1085,7 +1101,7 @@ $main-color: black;
       font-size: 1.2rem;
       margin: 0;
       padding: .5rem;
-      font-weight: 600;
+      font-weight: 400;
       color: rgba(105, 105, 105, .9);
       cursor: pointer;
       transition: .3s;
@@ -1100,7 +1116,7 @@ $main-color: black;
       justify-content: space-between;
       padding: 1rem;
       .price, .cart {
-        font-weight: 600;
+        font-weight: 400;
         color: rgba(105, 105, 105, .7);
       }
       .if-in-cart {
@@ -1263,17 +1279,23 @@ $main-color: black;
           .indi-category {
             font-size: 1.5rem;
             text-transform: uppercase;
-            font-weight: 200;
+            font-weight: 300;
             margin: 0;
             color: rgba(105, 105, 105, .4);
           }
           .indi-price {
             font-size: 2rem;
             color: rgba(106, 105, 105, 1);
+            font-weight: 300;
+          }
+          .indi-color {
+            font-weight: 300;
           }
           .indi-description {
             width: 80%;
             margin: 0;
+            font-weight: 400;
+            color: rgba(106, 105, 105, 1);
           }
         }
         .extra-info {
@@ -1299,6 +1321,7 @@ $main-color: black;
             .size-type {
               font-size: 1.5rem;
               margin: 0;
+              font-weight: 300;
             }
             .info-size {
               display: flex;
@@ -1309,6 +1332,8 @@ $main-color: black;
                 font-size: 1.5rem;
                 margin: 0rem .5rem;
                 cursor: pointer;
+                font-weight: 300;
+                color: rgba(105, 105, 105, .9);
                 &:hover {
                   color: rgba(241, 106, 123, .9)
                 }
@@ -1476,11 +1501,12 @@ $main-color: black;
         .trends-title {
           font-size: 4rem;
           color: rgba(246, 246, 246, 1);
+          font-weight: 400;
           margin: 0;
           text-transform: lowercase;
         }
         .trends-description {
-          font-size: 2rem;
+          font-size: 1.6rem;
           margin: 0;
           color: rgba(246, 246, 246, 1);
           padding: .5rem;
@@ -1547,11 +1573,13 @@ $main-color: black;
     .parallax-title {
       color: rgba(242, 242, 242, 1);
       font-size: 4rem;
+      font-weight: 400;
       margin: 0;
     }
     .parallax-description {
       color: rgba(242, 242, 242, 1);
       font-size: 2rem;
+      font-weight: 300;
       margin: 0;
     }
   }
@@ -1697,7 +1725,7 @@ $main-color: black;
       .title {
         margin: 1rem 0;
         font-size: 1.6rem;
-        font-weight: 200;
+        font-weight: 300;
       }
     }
     .sign-up {
@@ -1713,7 +1741,7 @@ $main-color: black;
       .title {
         margin: 1rem 0;
         font-size: 1.6rem;
-        font-weight: 200;
+        font-weight: 300;
       }
     }
     .group {
@@ -1744,7 +1772,7 @@ $main-color: black;
       .form-input-label {
         color: rgba($sub-color, .4);
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 400;
         text-transform: capitalize;
         position: absolute;
         pointer-events: none;
@@ -1795,7 +1823,7 @@ $main-color: black;
       .title {
         font-size: 1.3  rem;
         color: rgba(106, 105, 105, 1);
-        font-weight: 600;
+        font-weight: 400;
       }
       
     }
@@ -1806,7 +1834,7 @@ $main-color: black;
       .title {
         font-size: 1.3  rem;
         color: rgba(106, 105, 105, 1);
-        font-weight: 600;
+        font-weight: 400;
       }
     }
     .group {
@@ -1817,6 +1845,7 @@ $main-color: black;
     }
     .buttons {
       justify-content: space-around;
+      font-weight: 400;
     }
     .btn {
       border: 1px solid rgba(105, 105, 105, .3);
@@ -1916,7 +1945,8 @@ $main-color: black;
   }
   .name {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
+    padding: .3rem;
     color: rgba(105, 105, 105, 1);
   }
   .quantity {
@@ -1939,7 +1969,7 @@ $main-color: black;
 .maintag {
   font-size: 1.8rem;
   font-family: $fontmain;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: lowercase;
   padding: .5rem 0rem;
   color: rgba(105, 105, 105, 1);
@@ -1954,7 +1984,7 @@ $main-color: black;
   color: rgba(106, 105, 105, 1);
   cursor: pointer;
   transition: .4s;
-  font-weight: 400;
+  font-weight: 300;
 }
 .footer-item:hover {
   transform: translateX(5px);
@@ -1984,7 +2014,7 @@ $main-color: black;
           text-transform: lowercase;
           font-family: $fontmain;
           font-size: 1.4rem;
-          font-weight: 600;
+          font-weight: 400;
           color: rgba(106, 105, 105, 1);
           width: 80%;
           text-align: center;
@@ -2040,7 +2070,7 @@ $main-color: black;
   border-top: 1px solid rgba(105, 105, 105, .1);
   .under-text {
       font-family: $fontmain;
-      font-weight: 600;
+      font-weight: 300;
       margin-left: 1rem;
       font-size: .9rem;
     }

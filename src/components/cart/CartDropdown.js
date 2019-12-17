@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 
-import CustomButton from '../misc/CustomButton';
 import CartItem from './CartItem';
 
 import { selectCartItems, selectCartHidden } from '../../redux/cart/cart-selectors';
@@ -26,10 +25,11 @@ function CartDropdown({ cartItems, history, hidden, dispatch }) {
                 </div>
             </div>
             <div className={`btn-container ${cartItems.length > 0 && "visible"}`}> 
-                <CustomButton onClick={() => {
+                <button className="btn" onClick={() => {
                     history.push('/checkout');
                     dispatch(toggleCartHidden());
-                }}>Checkout</CustomButton>
+                 }}>Checkout
+                </button>
             </div>
         </div>
     )
