@@ -18,7 +18,7 @@ const InnerNav = ({ type, closeFilters , clearFiltersValues }) => {
         if(type) {
             return (
                 navbarLinks.map(link => link.category === category &&
-                    <li className="inner-link" key={link.id} onClick={() => { closeFilters(); clearFiltersValues()}}>
+                    <li className={`inner-link ${category === "sleepwear" && "link-small"}`} key={link.id} onClick={() => { closeFilters(); clearFiltersValues()}}>
                         <NavLink to={link.path} activeClassName="link-active"> 
                             {link.text} 
                         </NavLink>

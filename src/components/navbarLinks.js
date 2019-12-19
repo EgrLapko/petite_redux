@@ -57,7 +57,7 @@ export const navbarLinks = [
     },
     {
         id: 9,
-        text: 'tights & leggins',
+        text: 'tights',
         path: '/products/tights',
         image: 'https://i.imgur.com/3BLnWUr.jpg',
         category: 'accessories'

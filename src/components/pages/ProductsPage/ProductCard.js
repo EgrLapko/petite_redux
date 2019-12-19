@@ -9,7 +9,7 @@ import { selectCartItems } from '../../../redux/cart/cart-selectors';
 import { selectGridSmall } from '../../../redux/filters/filters-selectors';
 
 const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems, gridSmall }) => {
-    const { imgSmall_1, imgSmall_2, title, category, price, id } = item;
+    const { imgSmall_1, imgSmall_2, title, category, price, id, sizes, cup } = item;
 
     let { url } = useRouteMatch();
 
@@ -43,7 +43,25 @@ const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems, gridSmall 
                     </Link>
                 </h3>
                 <div className="bottom-container">
-                    <p className="price">${price}</p>   
+                    <p className="price">${price}</p>
+                    <div className="size-box">
+                        <div className="sizes uni-size">
+                            {
+                                sizes &&
+                                sizes.map((size, index) => size &&
+                                    <p className="size-item" key={index}> {size} </p>
+                                )
+                            }
+                        </div>
+                        <div className="sizes cup-size">
+                            {
+                                cup &&
+                                cup.map((cup, index) => cup &&
+                                    <p className="cup-item" key={index}> {cup} </p>
+                                )
+                            }
+                        </div>
+                    </div>   
                     {
                         cartItems.find(item => item.id === id)
                         ?
@@ -52,6 +70,7 @@ const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems, gridSmall 
                         </div>
                         : null
                     }
+                    
                 </div>
             </div>
         </div>

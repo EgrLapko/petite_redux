@@ -7,13 +7,16 @@ import { addItem } from '../../../../redux/cart/cart-actions';
 import { selectCartItems } from '../../../../redux/cart/cart-selectors';
 
 import Title from '../../../misc/Title';
+import PopUp from './PopUp';
 
 
 const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingleItem, cartItems, addItem }) => {
+
     const { title, description, price, category, imgBig_1, imgBig_2, sizes, color, cup, id } = singleItem;
 
+    // -------------------------------------------- PICKING SIZES SECTION
     const [chosenParameters, setParameters] = useState({ size: '', cup: ''});
-
+    
     const pickSize = (size) => {
         setParameters(
             { ...chosenParameters, size: size }
@@ -22,7 +25,6 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
         return singleItem 
     };
         
-
     const pickCup = (cup) => {
         setParameters(
             { ...chosenParameters, cup: cup }
@@ -35,8 +37,17 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
         setParameters({ size: '', cup: '' })
     }
 
+    // -------------------------------------------- POPUP MESSAGE FUNCTIONALITY
+    const [popUpMessage, togglePopUp] = useState(false);
+
+    const showPopUp = () => {
+        togglePopUp(true);
+        setTimeout(() => togglePopUp(false), 2000);
+    }
+
     return (
         <div className={`indi-wrapper ${indiVisible ? "opened" : ''}`}>
+            <PopUp popUp={popUpMessage} />
             <div className="indi-container">
                 <div className="info-container">
                     <div className="info-images">
@@ -108,8 +119,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                         className={`shop-btn ${chosenParameters.size !== '' ? 'shop-active'
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
-                                        onClick={() => addItem(singleItem)}
-                                        disabled={chosenParameters.size ===  '' ? true : false}
+                                        onClick={chosenParameters.size ===  '' ? () => showPopUp() : () => addItem(singleItem)}
                                     >
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
@@ -123,8 +133,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                         className={`shop-btn ${chosenParameters.size !==  '' && chosenParameters.cup !==  '' ? 'shop-active'
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
-                                        onClick={() => addItem(singleItem)}
-                                        disabled={chosenParameters.size ===  '' | chosenParameters.cup ===  '' ? true : false}
+                                        onClick={chosenParameters.cup ===  '' | chosenParameters.size === '' ? () => showPopUp() : () => addItem(singleItem)}
                                     >
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
@@ -138,8 +147,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                         className={`shop-btn ${chosenParameters.cup !==  '' ? 'shop-active'
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
-                                        onClick={() => addItem(singleItem)}
-                                        disabled={chosenParameters.cup ===  '' ? true : false}
+                                        onClick={chosenParameters.cup ===  '' ? () => showPopUp() : () => addItem(singleItem)}
                                     >
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>

@@ -381,6 +381,9 @@ $main-color: black;
       width: 100%;
       .inner-link {
         font-size: 1rem;
+        &.link-small {
+          font-size: .8rem;
+        }
       }
     }
   }
@@ -527,6 +530,7 @@ $main-color: black;
           padding: .5rem;
           margin: 0;
           margin-top: .5rem;
+          width: 100%;
         }
         &.opened-filter {
           transform: translateY(0%);
@@ -1062,9 +1066,9 @@ $main-color: black;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     .items {
-      width: 100%;
+      width: 80%;
       justify-content: center;
       display: flex;
       flex-wrap: wrap;
@@ -1072,12 +1076,39 @@ $main-color: black;
   }
 }
 
+// MOBILE PORTRAIT
 @media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
   .products-page {
     .products-section {
       width: 100%;
       .items {
         justify-content: space-around;
+      }
+    }
+  }
+}
+
+// TABLET LANDSCAPE
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1112px) {
+  .products-page {
+    .products-section {
+      width: 100%;
+      .items {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// TABLET PORTRAIT
+@media only screen and (min-device-width : 768px) and (max-device-width : 834px) {
+  .products-page {
+    .products-section {
+      width: 100%;
+      .items {
+        width: 100%;
+        justify-content: center;
       }
     }
   }
@@ -1115,24 +1146,24 @@ $main-color: black;
     .category {
       text-transform: uppercase;
       text-align: center;
-      color: rgba(105, 105, 105, .5);
-      letter-spacing: .2rem;
+      color: rgba(105, 105, 105, .3);
+      letter-spacing: .1rem;
       font-size: .8rem;
       margin: 0;
-      padding: .7rem;
+      padding: .5rem;
     }
     .card-title {
       width: 90%;
       text-transform: capitalize;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin: 0;
       padding: .5rem;
       font-weight: 400;
       color: rgba(105, 105, 105, .9);
       cursor: pointer;
       transition: .3s;
-      border-bottom: 1px solid rgba(241, 106, 123, .3);
+      border-bottom: 1px solid rgba(241, 106, 123, .2);
       &:hover {
         color: rgba(241, 106, 123, .7);
       }
@@ -1141,7 +1172,7 @@ $main-color: black;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 1rem;
+      padding: .8rem 1rem;
       .price, .cart {
         font-weight: 400;
         color: rgba(105, 105, 105, .7);
@@ -1160,15 +1191,52 @@ $main-color: black;
         @include flexbox;
         padding: 0;
         margin: 0;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+      }
+      .size-box {
+        @include flexbox;
+        margin-right: auto;
+        opacity: 0;
+        transition: .3s;
+        .sizes {
+          @include flexbox;
+          justify-content: space-between;
+          margin: 0 .8rem;
+          .cup-item, .size-item {
+            margin: 0 .3rem;
+            font-size: .8rem;
+            font-weight: 400;
+            color: rgba(105, 105, 105, .7);
+            cursor: default;
+          }
+        }
       }
     }
   }
   &:hover {
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, .1);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, .15);
+    .bottom-container {
+      .size-box {
+        opacity: 1;
+      }
+    }
   }
   &.card-small {
-    width: 18rem;
+    width: 17rem;
+    .card-title {
+      font-size: .9rem;
+    }
+    .bottom-container {
+      .size-box {
+        .sizes {
+          margin: 0 .5rem;
+          .cup-item, .size-item {
+            font-size: .6rem;
+            margin: 0 .2rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1249,6 +1317,30 @@ $main-color: black;
   background-color: rgba(0, 0, 0, 0);
   transform: translateX(0%);
   transition: .8s;
+  .pop-up {
+    @include flexbox;
+    position: fixed;
+    top: 0;
+    background-color: rgba(105, 105, 105, 1);
+    padding: .3rem 1rem;
+    border-radius: 15px;
+    color: rgba(246, 246, 246, 1);
+    box-shadow: 0px 0px 40px rgba(105, 105, 105, .3);
+    z-index: 99;
+    transition: .7s;
+    transform: translateY(-10rem);
+    opacity: 0;
+    cursor: default;
+    .message {
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+    &.pop-active {
+      transform: translateY(3rem);
+      background-color: rgba(241, 106, 123, 1);
+      opacity: 1;
+    }
+  }
   &.opened {
     transform: translateX(0%);
     background-color: rgba(0, 0, 0, .3);
@@ -1303,11 +1395,13 @@ $main-color: black;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 80%;
-          padding: 1rem;
+          width: 70%;
           text-align: center;
+          .main-title {
+            width: 100%;
+          }
           .indi-category {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
             font-weight: 300;
             margin: 0;
@@ -1315,6 +1409,7 @@ $main-color: black;
           }
           .indi-price {
             font-size: 2rem;
+            margin: 1rem 0 ;
             color: rgba(106, 105, 105, 1);
             font-weight: 300;
           }
@@ -1322,9 +1417,10 @@ $main-color: black;
             font-weight: 300;
           }
           .indi-description {
-            width: 80%;
+            width: 95%;
             margin: 0;
             font-weight: 400;
+            font-size: 1.1rem;
             color: rgba(106, 105, 105, 1);
           }
         }
@@ -1349,7 +1445,7 @@ $main-color: black;
             align-items: center;
             padding: 1rem;
             .size-type {
-              font-size: 1.5rem;
+              font-size: 1.3rem;
               margin: 0;
               font-weight: 300;
             }
@@ -1359,7 +1455,7 @@ $main-color: black;
               padding: .7rem;
               border: 1px solid rgba(105, 105, 105, .1);
               .size-item {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 margin: 0rem .5rem;
                 cursor: pointer;
                 font-weight: 300;
