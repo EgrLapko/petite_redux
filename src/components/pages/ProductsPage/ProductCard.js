@@ -6,8 +6,9 @@ import { addItem } from '../../../redux/cart/cart-actions';
 import { toggleIndiPage, setSingleItem } from '../../../redux/indi-slider/indi-actions';
 import { selectSingleItem } from '../../../redux/indi-slider/indi-selector'
 import { selectCartItems } from '../../../redux/cart/cart-selectors';
+import { selectGridSmall } from '../../../redux/filters/filters-selectors';
 
-const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems }) => {
+const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems, gridSmall }) => {
     const { imgSmall_1, imgSmall_2, title, category, price, id } = item;
 
     let { url } = useRouteMatch();
@@ -21,7 +22,7 @@ const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems }) => {
     }
 
     return (
-        <div className="product-card">
+        <div className={`product-card ${gridSmall && "card-small"}`}>
             <Link to={`${url}/${id}&${title}`}>
                 <img
                     style={style}
@@ -59,7 +60,8 @@ const ProductCard = ({item, toggleIndiPage, setSingleItem, cartItems }) => {
 
 const mapStateToProps = state => ({
     singleItem: selectSingleItem(state),
-    cartItems: selectCartItems(state)
+    cartItems: selectCartItems(state),
+    gridSmall: selectGridSmall(state)
 })
 
 const mapDispatchToProps = dispatch => ({

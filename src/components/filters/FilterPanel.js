@@ -3,22 +3,20 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { toggleColorFilter, toggleSizeFilter, toggleCupFilter, setFilterColor, setFilterSize, setFilterCup,
-    removeColorFilter, removeCupFilter, removeSizeFilter, clearFiltersValues } from '../../redux/filters/filters-actions';
+    removeColorFilter, removeCupFilter, removeSizeFilter, clearFiltersValues, setSmallGrid, setNormalGrid } from '../../redux/filters/filters-actions';
 import { selectColorFilter, selectSizeFilter, selectCupFilter, 
-    selectColorToFilter, selectSizeToFilter, selectCupToFilter } from '../../redux/filters/filters-selectors';
+    selectColorToFilter, selectSizeToFilter, selectCupToFilter, selectGridSmall } from '../../redux/filters/filters-selectors';
 
 
 const FilterPanel = ({ items, category, type, itemsFiltered, clearFiltersValues,
     toggleColorFilter, toggleCupFilter, toggleSizeFilter, setFilterColor, setFilterSize, setFilterCup,
     colorFilterHidden, sizeFilterHidden, cupFilterHidden, removeColorFilter, removeCupFilter, removeSizeFilter,
-    colorToFilter, sizeToFilter, cupToFilter }) => {
+    colorToFilter, sizeToFilter, cupToFilter, setSmallGrid, setNormalGrid, gridSmall }) => {
 
     let colors = [...new Set(items.map(item => item.color).flat())];
     let sizes = [...new Set(items.map(item => item.sizes).flat())];
     let cups = [...new Set(items.map(item => item.cup).flat())];
 
-
-    
     return (
         <div className="filter-panels">
             {
@@ -90,6 +88,10 @@ const FilterPanel = ({ items, category, type, itemsFiltered, clearFiltersValues,
             <div className="items-counter">
                 <p className="counter-text"> <span>{itemsFiltered.length}</span> item{itemsFiltered.length > 1 && "s"}</p>
             </div>
+            <div className="grid-buttons">
+                <div className={`grid-icon ${gridSmall && "grid-active"}`} onClick={() => setSmallGrid()}><i className="fas fa-th"></i></div>
+                <div className={`grid-icon ${!gridSmall && "grid-active"}`} onClick={() => setNormalGrid()}><i className="fas fa-th-large"></i></div>
+            </div>
         </div>
     )
 }
@@ -101,6 +103,7 @@ const mapStateToProps = createStructuredSelector({
     colorToFilter: selectColorToFilter,
     sizeToFilter: selectSizeToFilter,
     cupToFilter: selectCupToFilter,
+    gridSmall: selectGridSmall
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -113,7 +116,9 @@ const mapDispatchToProps = dispatch => ({
     removeColorFilter: () => dispatch(removeColorFilter()),
     removeSizeFilter: () => dispatch(removeSizeFilter()),
     removeCupFilter: () => dispatch(removeCupFilter()),
-    clearFiltersValues: () => dispatch(clearFiltersValues())
+    clearFiltersValues: () => dispatch(clearFiltersValues()),
+    setSmallGrid: () => dispatch(setSmallGrid()),
+    setNormalGrid: () => dispatch(setNormalGrid())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterPanel)

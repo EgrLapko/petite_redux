@@ -9,7 +9,9 @@ const INITIAL_STATE = {
 
     colorToFilter: '',
     sizeToFilter: '',
-    cupToFilter: ''
+    cupToFilter: '',
+
+    gridSmallFilter: false
 }
 
 const filtersReducer = (state = INITIAL_STATE, action) => {
@@ -77,6 +79,16 @@ const filtersReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 itemsFiltered: action.payload
+            }
+        case filtersActionTypes.SET_GRID_SMALL:
+            return {
+                ...state,
+                gridSmallFilter: true
+            }
+        case filtersActionTypes.SET_GRID_NORMAL:
+            return {
+                ...state,
+                gridSmallFilter: false
             }
         default:
             return state

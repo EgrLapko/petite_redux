@@ -54,7 +54,7 @@ const MainPage = () => {
             <div className="parallax-container">
                 <Parallax
                     blur={{ min: -1, max: 3 }}
-                    bgImage={require('../../images/parallax/parallax-banner2.png')}
+                    bgImage={require('../../images/parallax/parallax-banner2.jpg')}
                     bgImageAlt="parallax-1"
                     strength={300}
                     contentClassName="parallax-background"

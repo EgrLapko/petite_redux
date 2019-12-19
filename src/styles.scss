@@ -45,8 +45,9 @@ $main-color: black;
   border: 1px solid rgba(241, 106, 123, .7);
   color: rgba(105, 105, 105, 1);
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: uppercase;
   background-color: unset;
+  font-size: 1rem;
   border-radius: .7rem;
   padding: .8rem;
   cursor: pointer;
@@ -199,16 +200,19 @@ $main-color: black;
             align-items: center;
             padding: 0;
             .link {
-                font-size: 1.1rem;
-                text-transform: uppercase;
-                color: rgba(105, 105, 105, .9);
-                font-weight: 400;
-                cursor: pointer;
-                margin: 0rem 2rem;
-                transition: .3s;
-                &:hover {
-                  color: rgba(241, 106, 123, .9);
-                }
+              font-size: 1.1rem;
+              text-transform: uppercase;
+              color: rgba(105, 105, 105, .9);
+              font-weight: 400;
+              cursor: pointer;
+              margin: 0rem 2rem;
+              transition: .3s;
+              &:hover {
+                color: rgba(241, 106, 123, .9);
+              }
+              &.link-active {
+                color: rgba(241, 106, 123, .9);
+              }
             }
         }
         .nav-right {
@@ -476,9 +480,29 @@ $main-color: black;
     cursor: default;
     .counter-text {
       margin: 0;
-      font-size: .9rem;
+      font-size: .8rem;
+      font-weight: 300;
       span {
-        font-weight: 300;
+        font-weight: 400;
+        font-size: .9rem;
+      }
+    }
+  }
+  .grid-buttons {
+    @include flexbox;
+    justify-content: space-around;
+    padding: .5rem;
+    width: 5rem;
+    margin-left: 10rem;
+    .grid-icon {
+      color: rgba(105, 105, 105, .6);
+      cursor: pointer;
+      transition: .3s;
+      &:hover {
+        color: rgba(105, 105, 105, 1);
+      }
+      &.grid-active {
+        color: rgba(105, 105, 105, 1);
       }
     }
   }
@@ -522,6 +546,9 @@ $main-color: black;
       }
     }
     .items-counter {
+      display: none;
+    }
+    .grid-buttons {
       display: none;
     }
   }
@@ -867,7 +894,6 @@ $main-color: black;
     font-size: 3.5rem;
     margin: 0;
     padding: .5rem;
-    text-transform: lowercase;
     color: rgba(105, 105, 105, 1);
   }
   .main-title-description {
@@ -946,8 +972,9 @@ $main-color: black;
                 transition: .5s ease-in-out;
             }
             .sel-title {
-                font-size: 2.5rem;
+                font-size: 2.7rem;
                 font-weight: 300;
+                text-transform: capitalize;
                 opacity: 1;
             }
             .btn {
@@ -1139,6 +1166,9 @@ $main-color: black;
   }
   &:hover {
     box-shadow: 0px 20px 40px rgba(0, 0, 0, .1);
+  }
+  &.card-small {
+    width: 18rem;
   }
 }
 

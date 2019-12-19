@@ -36,3 +36,8 @@ export const selectItemsFiltered = createSelector (
     [ selectFilters ],
     filters => filters.itemsFiltered
 )
+
+export const selectGridSmall = createSelector (
+    [ selectFilters ],
+    filters => filters.gridSmallFilter
+)

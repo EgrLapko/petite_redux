@@ -2,8 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
-export default function Trend(props) {
-    const { title, desc, imgUrl, link } = props;
+export default function Trend({ title, desc, imgUrl, link }) {
     const divStyle = {backgroundImage: `url(${imgUrl})`};
     return (
         <div className="trends-card">    
@@ -12,7 +11,6 @@ export default function Trend(props) {
                 <div className="trends-info">
                     <h2 className="trends-title" > {title}</h2>
                     <p className="trends-description">{desc}</p> 
-                    {/* <Link to = {link}> <button className="btn btn-pink">{btnName}</button></Link>   */}
                 </div> 
             </Link>                   
         </div> 

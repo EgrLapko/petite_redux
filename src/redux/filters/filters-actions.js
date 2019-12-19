@@ -51,3 +51,11 @@ export const setItemsFiltered = items => ({
     type: filtersActionTypes.SET_FILTERED_ITEMS,
     payload: items
 })
+
+export const setSmallGrid = () => ({
+    type: filtersActionTypes.SET_GRID_SMALL
+})
+
+export const setNormalGrid = () => ({
+    type: filtersActionTypes.SET_GRID_NORMAL
+})
