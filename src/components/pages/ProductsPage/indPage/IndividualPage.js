@@ -120,7 +120,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem , removeSingle
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
                                         onClick={chosenParameters.size ===  '' ? () => showPopUp() : () => addItem(singleItem)}
-                                    >
+                                    >   
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
                                     </button>

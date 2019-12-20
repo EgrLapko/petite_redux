@@ -6,9 +6,9 @@ import { createStructuredSelector } from 'reselect';
 import CartItem from './CartItem';
 
 import { selectCartItems, selectCartHidden } from '../../redux/cart/cart-selectors';
-import { toggleCartHidden } from '../../redux/cart/cart-actions';
+import { toggleCartHidden, clearCart } from '../../redux/cart/cart-actions';
 
-function CartDropdown({ cartItems, history, hidden, dispatch }) {
+function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden }) {
     return (
         <div className={`dropdown-wrapper ${hidden ? '' : 'visible'}`}>
             <div className="cart-dropdown">
@@ -25,10 +25,11 @@ function CartDropdown({ cartItems, history, hidden, dispatch }) {
                 </div>
             </div>
             <div className={`btn-container ${cartItems.length > 0 && "visible"}`}> 
-                <button className="btn" onClick={() => {
-                    history.push('/checkout');
-                    dispatch(toggleCartHidden());
-                 }}>Checkout
+                <button className="btn" onClick={() => { history.push('/checkout'); toggleCartHidden()}}>
+                    Checkout
+                </button>
+                <button className="btn btn-simple" onClick={() => { clearCart(); setTimeout(toggleCartHidden, 400) }}>
+                    Clear All
                 </button>
             </div>
         </div>
@@ -40,4 +41,9 @@ const mapStateToProps = createStructuredSelector({
     hidden: selectCartHidden
 });
 
-export default withRouter(connect(mapStateToProps)(CartDropdown));
+const mapDispatchToProps = dispatch => ({
+    clearCart: () => dispatch(clearCart()),
+    toggleCartHidden: () => dispatch(toggleCartHidden())
+})
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDropdown));

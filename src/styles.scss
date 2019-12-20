@@ -810,7 +810,7 @@ $main-color: black;
   }
   .btn-container {
     display: none;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: .5rem 0;
     padding: .8rem 0;
@@ -1082,6 +1082,7 @@ $main-color: black;
     .products-section {
       width: 100%;
       .items {
+        width: 100%;
         justify-content: space-around;
       }
     }
@@ -1116,33 +1117,24 @@ $main-color: black;
 
 // --------------------------------------------------------------- PRODUCT CARD
 .product-card {
-  display: flex;
+  @include flexbox;
   flex-direction: column;
-  width: 22rem;
   margin: 1rem 1.5rem;
-  position: relative;
+  width: 22rem;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, .05);
   transition: .5s;
-  .on-loading {
-    width: 100%;
-    height: 33rem;
-    background-color: rgba(105, 105, 105, .4)
-  }
   img {
     width: 100%;
     cursor: pointer;
-    transition: .2s;
-    position: relative;
+    transition: .5s;
   }
-  
   .bottom-info {
-    display: flex;
+    @include flexbox;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     .category {
       text-transform: uppercase;
       text-align: center;
@@ -1244,24 +1236,38 @@ $main-color: black;
   .product-card {
     width: 48%;
     margin: .2rem .2rem;
+    justify-content: space-between;
     border-radius: 0;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, .1);
+    img {
+      height: 17rem;
+      object-fit: cover;
+      transition: .4s;
+    }
     .bottom-info {
       .category {
         text-align: center;
-        letter-spacing: .2rem;
-        font-size: .6rem;
+        letter-spacing: .1rem;
+        font-size: .5rem;
         padding: .4rem;
       }
       .card-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        font-size: 1rem;
-        padding: .3rem;
+        min-height: 2.9rem;
+        font-size: .9rem;
+        padding: .2rem;
         border-bottom: 1px solid rgba(241, 106, 123, .1);
       }
       .bottom-container {
         padding: .5rem;
         .price, .cart {
-          font-size: .9rem;
+          font-size: .8rem;
+        }
+        .size-box {
+          display: none;
         }
         .if-in-cart {
           @include flexbox;

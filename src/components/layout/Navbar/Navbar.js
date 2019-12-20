@@ -18,8 +18,6 @@ import SliderMobile from './SliderMobile';
 function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart, closeFilters, clearFiltersValues,
     sliderAccs, sliderBras, sliderPanties, sliderSleep }) {
     
-    console.log(currentUser ? currentUser.email : null);
-
     return (
         <React.Fragment>
              <div className="navbar">

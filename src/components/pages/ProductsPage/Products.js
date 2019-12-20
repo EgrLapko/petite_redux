@@ -73,6 +73,7 @@ const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFilte
                     }
                 </div>  
             </div>
+            
             <Route path={`${match.path}/:id&:title`} render={(props) => <IndividualPage {...props} indiVisible={indiVisible} />} />
         </div>
         

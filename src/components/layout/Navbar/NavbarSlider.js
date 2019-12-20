@@ -7,6 +7,7 @@ import { navbarLinks } from '../../navbarLinks';
 import NavbarSliderItem from './NavbarSliderItem';
 
 function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, sliderSleepHidden}) {
+
     return (
         <React.Fragment>
             <div className={`navbar-slider ${sliderBrasHidden ? '' : 'visible' }`}>
