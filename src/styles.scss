@@ -179,17 +179,13 @@ $main-color: black;
         justify-content: space-between;
         text-transform: lowercase;
         .nav-logo {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0rem 1rem;
-            color: rgba(105, 105, 105, .9);
-            font-weight: 300;
-            text-transform: lowercase;
-            font-size: 1.3rem;
-            .first-letter, .second-letter {
-              color: rgba(241, 106, 123, .9);
+            @include flexbox;
+            width: 11rem;
+            height: 4.5rem;
+            // background-color: yellow;
+            .logo {
+              width: 100%;
+              padding: 1rem;
             }
         }
         .nav-links {
@@ -278,13 +274,11 @@ $main-color: black;
   background-color: rgba(248, 248, 248, 1);
   box-shadow: 0px 0px 30px rgba(105, 105, 105, .2);
   .mobile-logo {
-    padding: .5rem;
-    font-size: .8rem;
-    text-transform: lowercase;
-    color: rgba(105, 105, 105, 1);
-    .pink {
-      color: rgba(241, 106, 123, .9);
-      font-weight: 400;
+    @include flexbox;
+    width:  45vw;
+    .logo {
+      width: 100%;
+      height: 4.5rem;
     }
   }
   .mobile-menu {

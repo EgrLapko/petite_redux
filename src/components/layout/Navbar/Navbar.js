@@ -14,6 +14,7 @@ import CartDropdown from '../../cart/CartDropdown';
 import NavbarSlider from './NavbarSlider';
 import NavbarSmall from './NavbarSmall';
 import SliderMobile from './SliderMobile';
+import { ReactComponent as Logo } from './petiteMamsell.svg'
 
 function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart, closeFilters, clearFiltersValues,
     sliderAccs, sliderBras, sliderPanties, sliderSleep }) {
@@ -23,7 +24,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
              <div className="navbar">
                 <div className="menu">
                     <div className="nav-logo" onClick={() => { closeFilters(); clearFiltersValues() }}>
-                        <Link className="option" to="/"><span className="first-letter" >P</span>etite.<span className="second-letter">M</span>amsel</Link>
+                        <Link className="option" to="/"> <Logo className="logo"/> </Link>  
                     </div>
                     <ul className="nav-links">
                         <li className={`link ${!sliderBras && "link-active"}`} onClick={toggleSliderBras}>Bras</li>

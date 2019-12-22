@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="180" viewBox="0 0 950 180">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 72px;
+        fill: #655d5d;
+        font-family: "Baskerville Old Face";
+      }
+
+      .cls-2 {
+        fill: #e46273;
+      }
+    </style>
+  </defs>
+  <text id="petite.mamsell" class="cls-1" transform="translate(-2.123 139.216) scale(2.303)">petite<tspan class="cls-2">.</tspan>mamsell</text>
+</svg>

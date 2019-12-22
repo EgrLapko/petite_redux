@@ -14,7 +14,7 @@ const MainPage = () => {
                     title = 'Tights'
                     desc = 'them really good'
                     btnName = 'discover'
-                    link = '/products/tights'
+                    link = '/products/accessories_tights'
                 />
 
                 <Trend 
@@ -22,7 +22,7 @@ const MainPage = () => {
                     title = 'Bralettes'
                     desc = 'them good too'
                     btnName = 'discover'
-                    link = '/products/bralettes'
+                    link = '/products/bras_bralettes'
                 />
             </div>
             <div className="selections">

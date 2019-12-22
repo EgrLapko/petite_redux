@@ -27,13 +27,13 @@ export const navbarLinks = [
         image: 'https://i.imgur.com/7Ea1jq4.jpg',
         category: 'bra'
     },
-    {
-        id: 17,
-        text: 'all-in',
-        path: '/products/bras_all',
-        image: '',
-        category: 'bra'
-    },
+    // {
+    //     id: 17,
+    //     text: 'all-in',
+    //     path: '/products/bras_all',
+    //     image: '',
+    //     category: 'bra'
+    // },
     {
         id: 5,
         text: 'classic',

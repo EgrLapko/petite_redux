@@ -6,6 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import { toggleMobileMenu, dropAllSliders } from '../../../redux/navbar-slider/slider-actions';
 import { selectMobileMenuSlider } from '../../../redux/navbar-slider/slider-selector';
 import { closeFilters, clearFiltersValues } from '../../../redux/filters/filters-actions';
+import { ReactComponent as Logo } from './petiteMamsell.svg'
 
 import CartIcon from '../../misc/CartIcon';
 
@@ -24,7 +25,7 @@ const NavbarSmall = ({ toggleMobileMenu, dropAllSliders, mobileMenuHidden, close
             </div>
 
             <div className="mobile-logo" onClick={() => { closeFilters(); clearFiltersValues() }}>
-                <Link to="/"><h1 className="logo"><span className="pink">petite</span>.mamsell</h1></Link>
+                <Link to="/"><Logo className="logo"/></Link>
             </div>
             <div className="mobile-right">
                 <CartIcon />
