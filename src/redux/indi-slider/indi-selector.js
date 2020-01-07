@@ -11,3 +11,13 @@ export const selectSingleItem = createSelector(
     [selectIndi],
     indi => indi.singleItem
 )
+
+export const selectChosenSize = createSelector(
+    [selectIndi],
+    indi => indi.chosenParameters.size
+)
+
+export const selectChosenCup = createSelector(
+    [selectIndi],
+    indi => indi.chosenParameters.cup
+)

@@ -12,3 +12,17 @@ export const setSingleItem = item => ({
 export const removeSingleItem = () => ({
     type: indiActionTypes.EMPTY_SINGLE_ITEM
 })
+
+export const pickSize = (size) => ({
+    type: indiActionTypes.PICK_SIZE,
+    payload: size
+})
+
+export const pickCup = (cup) => ({
+    type: indiActionTypes.PICK_CUP,
+    payload: cup
+})
+
+export const clearSizes = () => ({
+    type: indiActionTypes.CLEAR_PICKED_SIZES
+})

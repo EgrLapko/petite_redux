@@ -100,7 +100,7 @@ export const navbarLinks = [
     {
         id: 14,
         text: 'nightgowns',
-        path: '/products/nightgowns',
+        path: '/products/sleepwear_nightgowns',
         image: 'https://i.imgur.com/FmyGpvA.jpg',
         category: 'sleepwear'
     },
@@ -114,7 +114,7 @@ export const navbarLinks = [
     {
         id: 16,
         text: 'short pajamas',
-        path: '/products/short',
+        path: '/products/sleepwear_short',
         image: 'https://i.imgur.com/LcolVPm.jpg',
         category: 'sleepwear'
     },

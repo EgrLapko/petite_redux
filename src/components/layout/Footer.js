@@ -41,7 +41,7 @@ const Footer = ({ currentUser }) => {
             </div>
             </div>
             <div className="under-part">
-            <p className="under-text">©2019 Petite Mamsell. Made by Yehor Lapko. </p>
+            <p className="under-text">©2020 Petite Mamsell. Made by Yehor Lapko. </p>
             </div>
         </div>
     )

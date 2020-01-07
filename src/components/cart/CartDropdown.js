@@ -5,10 +5,10 @@ import { createStructuredSelector } from 'reselect';
 
 import CartItem from './CartItem';
 
-import { selectCartItems, selectCartHidden } from '../../redux/cart/cart-selectors';
+import { selectCartItems, selectCartHidden, selectCartTotal } from '../../redux/cart/cart-selectors';
 import { toggleCartHidden, clearCart } from '../../redux/cart/cart-actions';
 
-function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden }) {
+function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden, total }) {
     return (
         <div className={`dropdown-wrapper ${hidden ? '' : 'visible'}`}>
             <div className="cart-dropdown">
@@ -20,9 +20,12 @@ function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden 
                         <CartItem key={cartItem.id} cartItem={cartItem} />
                         ))
                     ) : (
-                        <span className="empty-message">Your cart is empty</span>
+                        <span className="empty-message">No panties here :(</span>
                     )}
                 </div>
+            </div>
+            <div className={`total-counter ${cartItems.length > 0 && "visible"}`}>
+                Total: ${total}
             </div>
             <div className={`btn-container ${cartItems.length > 0 && "visible"}`}> 
                 <button className="btn" onClick={() => { history.push('/checkout'); toggleCartHidden()}}>
@@ -31,6 +34,9 @@ function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden 
                 <button className="btn btn-simple" onClick={() => { clearCart(); setTimeout(toggleCartHidden, 400) }}>
                     Clear All
                 </button>
+                <button className="btn btn-simple close-cart" onClick={() => toggleCartHidden()}>
+                    <i className="fas fa-times"></i>
+                </button>
             </div>
         </div>
     )
@@ -38,7 +44,8 @@ function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden 
 
 const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems,
-    hidden: selectCartHidden
+    hidden: selectCartHidden,
+    total: selectCartTotal
 });
 
 const mapDispatchToProps = dispatch => ({

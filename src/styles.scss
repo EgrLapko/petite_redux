@@ -275,10 +275,10 @@ $main-color: black;
   box-shadow: 0px 0px 30px rgba(105, 105, 105, .2);
   .mobile-logo {
     @include flexbox;
-    width:  45vw;
+    width: 8rem;
+    height: 4.5rem;
     .logo {
       width: 100%;
-      height: 4.5rem;
     }
   }
   .mobile-menu {
@@ -339,9 +339,19 @@ $main-color: black;
   }
 }
 
+// --------------------------------------------------------------- STICKY PANELS
+.sticky-panels {
+  @include flexbox;
+  flex-direction: column;
+  width: 100%;
+  position: sticky;
+  top: 4.5rem;
+}
+
 // --------------------------------------------------------------- INNER NAV
 .inner-nav {
   width: 100%;
+  background-color: rgba(248, 248, 248, 1);
   @include flexbox;
   .inner-links-list {
     width: 40%;
@@ -388,8 +398,8 @@ $main-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 4.5rem;
+  // position: sticky;
+  // top: 4.5rem;
   z-index: 95;
   width: 100%;
   height: 3rem;
@@ -760,6 +770,9 @@ $main-color: black;
     opacity: 0;
     transform: translateX(100%);
   }
+  75% {
+    transform: translateX(-10%)
+  }
   100% {
     opacity: 1;
     transform: translateX(0)
@@ -769,24 +782,25 @@ $main-color: black;
 .dropdown-wrapper {
   opacity: 0;
   transform: translateX(100%);
-  transition: .5s ease-in-out;
+  transition: .7s ease-in-out;
   position: fixed;
-  width: 25rem;
+  width: 28rem;
   height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: .5rem 0;
   top: 4.5rem;
   right: -1rem;
-  z-index: 98;
-  background-color: white;
+  z-index: 100;
+  background-color: rgba(252, 252, 252, 1);
   box-shadow: -10px 30px 30px rgba(0, 0, 0, .1);
   border-bottom-left-radius: 1rem;
   .cart-dropdown {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    padding: 20px;
+    padding: 1rem;
     height: 100%;
     .cart-items {
       display: flex;
@@ -801,19 +815,35 @@ $main-color: black;
   &.visible {
     opacity: 1;
     transform: translateX(0);
+    animation: cartDrop .7s;
+  }
+  .total-counter {
+    @include flexbox;
+    display: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: .5rem;
+    &.visible {
+      display: flex;
+    }
   }
   .btn-container {
     display: none;
     justify-content: space-around;
     align-items: center;
-    margin: .5rem 0;
+    // margin: .5rem 0;
     padding: .8rem 0;
     width: 100%;
-    height: 4rem;
+    // height: 4rem;
     .btn {
       font-size: .9rem;
       text-transform: uppercase;
       font-weight: 700;
+      margin: 0;
+      &.close-cart {
+        font-size: 1.2rem;
+      }
     }
     &.visible {
       display: flex;
@@ -838,13 +868,16 @@ $main-color: black;
 .cart-item {
   width: 100%;
   display: flex;
-  height: 150px;
-  margin-bottom: 15px;
-  img {
+  height: 10rem;
+  padding: .3rem 0;
+  border-bottom: 1px solid rgba(105, 105, 105, .1);
+  .cart-img {
     width: 30%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
   }
   .item-details {
     width: 70%;
@@ -852,23 +885,41 @@ $main-color: black;
     position: relative;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    padding: 10px 20px;
+    justify-content: flex-start;
+    padding: 0 .8rem;
+    .info-size {
+      @include flexbox;
+      display: none;
+      margin: 0;;
+    }
+    .quantity {
+      @include flexbox;
+      .arrow {
+        cursor: pointer;
+        font-size: .6rem;
+      }
+      .value {
+        margin: 0rem .5rem;
+        font-size: .9rem;
+      }
+    }
     .cart-item-name, .cart-item-price, .cart-item-size {
       margin: 0;
+      color: rgba(105, 105, 105, 1);
     }
     .cart-item-name {
-      font-size: 1rem;
-    }
-    .cart-item-price {
       font-size: .9rem;
     }
     .cart-item-price, .cart-item-size {
+      font-size: .8rem;
+    }
+    .cart-item-price {
       font-size: .9rem;
+      margin-top: 1rem;
+      font-weight: 700;
     }
     .remove-button {
       cursor: pointer;
-      padding: .5rem;
       position: absolute;
       top: 0;
       right: 0;
@@ -1310,7 +1361,7 @@ $main-color: black;
   bottom: 0rem;
   display: flex;
   pointer-events: none;
-  z-index: 100;
+  z-index: 99;
   opacity: 0;
   justify-content: center;
   align-items: center;
@@ -2260,4 +2311,27 @@ $main-color: black;
   width: 50vw;
   height: 70vh;
   background-color: bisque;
+}
+
+// ----------------------------- TO TOP BUTTON
+.scroll-to-top {
+  @include flexbox;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  opacity: .8;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, .1);
+  bottom: 8%;
+  right: 3%;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .scroll-to-top {
+    bottom: 2%;
+    right: 5%;
+    padding: .3rem;
+  }
 }

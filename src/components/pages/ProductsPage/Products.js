@@ -54,13 +54,16 @@ const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFilte
     return (
         <div className="products">
             <Title text={itemCategory}  />
-            <InnerNav type={itemType} />
-            <FilterPanel 
-                items={items} 
-                itemsFiltered={itemsFiltered}
-                category={itemCategory} 
-                type={itemType} 
-            />
+            <div className="sticky-panels">
+                <InnerNav type={itemType} />
+                <FilterPanel 
+                    items={items} 
+                    itemsFiltered={itemsFiltered}
+                    category={itemCategory} 
+                    type={itemType} 
+                />
+            </div>
+            
             <div className="products-section">
                 <div className="items">
                     {

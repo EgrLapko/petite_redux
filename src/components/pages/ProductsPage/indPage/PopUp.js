@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PopUp = ({ popUp }) => {
+const PopUp = ({ popUp, text }) => {
     return (
         <div className={`pop-up ${popUp && "pop-active"}`}>
-            <p className="message"> Please, choose the size </p>
+            <p className="message"> {text} </p>
         </div>
     )
 }
