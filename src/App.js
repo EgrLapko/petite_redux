@@ -23,7 +23,7 @@ const App = ({ checkUserSession, currentUser }) => {
     checkUserSession();
   }, [checkUserSession]);
 
-
+// Check
   return (
     <div className="app">
       <Navbar />
