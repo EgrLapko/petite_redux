@@ -175,7 +175,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, singleItem, cartItems, ad
                 <button className="btn close-btn" 
                         onClick={() => { toggleIndiPage(); clearSizes(); removeSingleItem()  }}
                 >
-                     &#10005;
+                     <i className="far fa-times-circle"></i>
                 </button>
             </div>   
         </div>

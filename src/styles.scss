@@ -270,21 +270,24 @@ $main-color: black;
   align-items: center;
   position: sticky;
   top: 0rem;
-  z-index: 100;
+  z-index: 101;
   background-color: rgba(248, 248, 248, 1);
   box-shadow: 0px 0px 30px rgba(105, 105, 105, .2);
   .mobile-logo {
     @include flexbox;
-    width: 8rem;
+    width: 60%;
     height: 4.5rem;
+    padding: 1.5rem;
     .logo {
       width: 100%;
+      height: 100%;
     }
   }
   .mobile-menu {
     @include flexbox;
-    height: 45px;
-    width: 45px;
+    width: 20%;
+    height: 4.5rem;
+    // width: 45px;
     .hamburger {
       margin: 0;
       font-size: 2rem;
@@ -295,6 +298,8 @@ $main-color: black;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 20%;
+    height: 4.5rem;
     .nav-option {
         font-size: 1.2rem;
         color: rgba(105, 105, 105, .9);
@@ -694,7 +699,7 @@ $main-color: black;
     justify-content: center;
     position: fixed;
     top: 0rem;
-    z-index: 98;
+    z-index: 100  ;
     width: 40%;
     height: 100%;
     padding: .3rem;
@@ -767,12 +772,12 @@ $main-color: black;
 @keyframes cartDrop {
   0% {
     display: flex;
-    opacity: 0;
+    opacity: .5;
     transform: translateX(100%);
   }
-  75% {
-    transform: translateX(-10%)
-  }
+  // 75% {
+  //   transform: translateX(-10%)
+  // }
   100% {
     opacity: 1;
     transform: translateX(0)
@@ -1525,10 +1530,15 @@ $main-color: black;
       }
     }
     .close-btn {
+      @include flexbox;
       position: absolute;
+      border-radius: 50%;
       top: 1rem;
       right: 1rem;
       border: none;
+      i {
+        font-size: 2rem;
+      }
       &:hover {
         background-color: unset;
         color: rgba(241, 106, 123, .9);
@@ -1539,6 +1549,7 @@ $main-color: black;
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
   .indi-wrapper {
+    top: 4.5rem;
     &.opened {
       .indi-container {
         width: 90%;
@@ -1610,6 +1621,13 @@ $main-color: black;
               }
             }
           }
+        }
+      }
+      .close-btn  {
+        margin: 0;
+        padding: 0;
+        i {
+          font-size: 2rem;
         }
       }
     }
