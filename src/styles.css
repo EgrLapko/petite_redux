@@ -306,7 +306,6 @@ ul {
   position: sticky;
   top: 0rem;
   z-index: 101;
-  background-color: blue;
   background-color: #f8f8f8;
   -webkit-box-shadow: 0px 0px 30px rgba(105, 105, 105, 0.2);
           box-shadow: 0px 0px 30px rgba(105, 105, 105, 0.2);
@@ -409,7 +408,6 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: blue;
   }
 }
 .sticky-panels {
@@ -801,7 +799,7 @@ ul {
           transform: translateY(0%);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .navbar-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -887,7 +885,7 @@ ul {
   display: none;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .nav-mobile-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1151,7 +1149,7 @@ ul {
   display: flex;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .dropdown-wrapper {
     width: 100%;
     height: 70%;
@@ -1288,7 +1286,7 @@ ul {
   padding: 0.5rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .main-title {
     width: 100%;
     margin: 1rem;
@@ -1427,7 +1425,7 @@ ul {
   opacity: 1;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .selections .selections-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1529,7 +1527,7 @@ ul {
       flex-wrap: wrap;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .products-page .products-section {
     width: 100%;
   }
@@ -1743,7 +1741,7 @@ ul {
   margin: 0 0.2rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .product-card {
     width: 48%;
     margin: 0.2rem 0.2rem;
@@ -2134,7 +2132,7 @@ ul {
   color: rgba(241, 106, 123, 0.9);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .indi-wrapper {
     top: 4.5rem;
   }
@@ -2339,7 +2337,7 @@ ul {
   background-color: rgba(195, 195, 195, 0.4);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .trends-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2429,12 +2427,12 @@ ul {
   display: none;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .parallax-container {
     display: none;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .parallax-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2739,7 +2737,7 @@ ul {
   color: rgba(241, 106, 123, 0.9);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .login {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2846,7 +2844,7 @@ ul {
   font-size: 36px;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
   .checkout-page {
     width: 90%;
   }

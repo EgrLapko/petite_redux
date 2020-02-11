@@ -271,7 +271,6 @@ $main-color: black;
   position: sticky;
   top: 0rem;
   z-index: 101;
-  background-color: blue;
   background-color: rgba(248, 248, 248, 1);
   box-shadow: 0px 0px 30px rgba(105, 105, 105, .2);
   .mobile-logo {
@@ -342,7 +341,6 @@ $main-color: black;
   }
   .navbar-mobile {
     display: flex;
-    background-color: blue;
   }
 }
 
@@ -629,7 +627,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .navbar-slider {
     display: flex;
     flex-direction: column;
@@ -693,7 +691,7 @@ $main-color: black;
   display: none;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .nav-mobile-slider {
     display: flex;
     opacity: 0;
@@ -858,7 +856,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .dropdown-wrapper {
     width: 100%;
     height: 70%;
@@ -962,7 +960,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .main-title {
     width: 100%;
     margin: 1rem;
@@ -1056,7 +1054,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .selections {
     .selections-container {
       flex-direction: column;
@@ -1129,7 +1127,7 @@ $main-color: black;
 }
 
 // MOBILE PORTRAIT
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .products-page {
     .products-section {
       width: 100%;
@@ -1284,7 +1282,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .product-card {
     width: 48%;
     margin: .2rem .2rem;
@@ -1549,7 +1547,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .indi-wrapper {
     top: 4.5rem;
     &.opened {
@@ -1716,7 +1714,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .trends-container {
     flex-direction: column;
     justify-content: flex-end;
@@ -1787,7 +1785,7 @@ $main-color: black;
   display: none;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .parallax-container {
     display: none;
   }
@@ -1795,7 +1793,7 @@ $main-color: black;
 
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .parallax-mobile {
     @include flexbox; 
     flex-direction: column;
@@ -1999,7 +1997,7 @@ $main-color: black;
   }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .login {
     flex-direction: column;
     padding: 1rem 0;
@@ -2084,7 +2082,7 @@ $main-color: black;
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
   .checkout-page {
     width: 90%;
     .checkout-header {
