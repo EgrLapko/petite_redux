@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import { selectSliderBras, selectSliderPanties, selectSliderAccs, selectSliderSleep } from '../../../redux/navbar-slider/slider-selector';
+import { toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep} from '../../../redux/navbar-slider/slider-actions';
 import { navbarLinks } from '../../navbarLinks';
 import NavbarSliderItem from './NavbarSliderItem';
 
-function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, sliderSleepHidden}) {
+function NavbarSlider({ sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, sliderSleepHidden,
+    toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep}) {
 
     return (
         <React.Fragment>
@@ -17,6 +19,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
                     )
                 }
             </div>
+            <div className={`slider-overlay ${!sliderBrasHidden && "active"}`} onClick={() => toggleSliderBras()} />
 
             <div className={`navbar-slider ${sliderPantiesHidden ? '' : 'visible' }`}>
                 {
@@ -25,6 +28,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
                     )
                 }
             </div>
+            <div className={`slider-overlay ${!sliderPantiesHidden && "active"}`} onClick={() => toggleSliderPanties()} />
 
             <div className={`navbar-slider ${sliderAccsHidden ? '' : 'visible' }`}>
                 {
@@ -33,6 +37,7 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
                     )
                 }
             </div>
+            <div className={`slider-overlay ${!sliderAccsHidden && "active"}`} onClick={() => toggleSliderAccs()} />
 
             <div className={`navbar-slider ${sliderSleepHidden ? '' : 'visible' }`}>
                 {
@@ -41,10 +46,18 @@ function NavbarSlider({sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, 
                     )
                 }
             </div>
+            <div className={`slider-overlay ${!sliderSleepHidden && "active"}`} onClick={() => toggleSliderSleep()} />
         </React.Fragment>
         
     )
-}
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    toggleSliderBras: () => dispatch(toggleSliderBras()),
+    toggleSliderPanties: () => dispatch(toggleSliderPanties()),
+    toggleSliderAccs: () => dispatch(toggleSliderAccs()),
+    toggleSliderSleep: () => dispatch(toggleSliderSleep()),
+});
 
 const mapStateToProps = createStructuredSelector({
     sliderBrasHidden: selectSliderBras,
@@ -53,6 +66,6 @@ const mapStateToProps = createStructuredSelector({
     sliderSleepHidden: selectSliderSleep
 })
 
-export default connect(mapStateToProps)(NavbarSlider);
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarSlider);
 
 

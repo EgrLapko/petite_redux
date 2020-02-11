@@ -10,35 +10,39 @@ import { toggleCartHidden, clearCart } from '../../redux/cart/cart-actions';
 
 function CartDropdown({ cartItems, history, hidden, clearCart, toggleCartHidden, total }) {
     return (
-        <div className={`dropdown-wrapper ${hidden ? '' : 'visible'}`}>
-            <div className="cart-dropdown">
-                <div className="inner-wrapper"></div>
-                <div className="cart-items">
-                    {cartItems.length 
-                        ? (
-                        cartItems.map(cartItem => (
-                        <CartItem key={cartItem.id} cartItem={cartItem} />
-                        ))
-                    ) : (
-                        <span className="empty-message">No panties here :(</span>
-                    )}
+        <React.Fragment>
+            <div className={`dropdown-wrapper ${hidden ? '' : 'visible'}`}>
+                <div className="cart-dropdown">
+                    <div className="inner-wrapper"></div>
+                    <div className="cart-items">
+                        {cartItems.length 
+                            ? (
+                            cartItems.map(cartItem => (
+                            <CartItem key={cartItem.id} cartItem={cartItem} />
+                            ))
+                        ) : (
+                            <span className="empty-message">No panties here :(</span>
+                        )}
+                    </div>
+                </div>
+                <div className={`total-counter ${cartItems.length > 0 && "visible"}`}>
+                    Total: ${total}
+                </div>
+                <div className={`btn-container ${cartItems.length > 0 && "visible"}`}> 
+                    <button className="btn" onClick={() => { history.push('/checkout'); toggleCartHidden()}}>
+                        Checkout
+                    </button>
+                    <button className="btn btn-simple" onClick={() => { clearCart(); setTimeout(toggleCartHidden, 400) }}>
+                        Clear All
+                    </button>
+                    <button className="btn btn-simple close-cart" onClick={() => toggleCartHidden()}>
+                        <i className="fas fa-times"></i>
+                    </button>
                 </div>
             </div>
-            <div className={`total-counter ${cartItems.length > 0 && "visible"}`}>
-                Total: ${total}
-            </div>
-            <div className={`btn-container ${cartItems.length > 0 && "visible"}`}> 
-                <button className="btn" onClick={() => { history.push('/checkout'); toggleCartHidden()}}>
-                    Checkout
-                </button>
-                <button className="btn btn-simple" onClick={() => { clearCart(); setTimeout(toggleCartHidden, 400) }}>
-                    Clear All
-                </button>
-                <button className="btn btn-simple close-cart" onClick={() => toggleCartHidden()}>
-                    <i className="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
+            <div className={`dropdown-overlay ${!hidden && "active"}`} onClick={() => toggleCartHidden()} />
+        </React.Fragment>
+        
     )
 }
 

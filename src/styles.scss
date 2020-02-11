@@ -568,6 +568,21 @@ $main-color: black;
 
 
 // --------------------------------------------------------------- NAVBAR SLIDER
+.slider-overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(106, 105, 105, 0);
+  pointer-events: none;
+  z-index: 97;
+  transition: .5s ease-in-out;
+  &.active {
+    background-color: rgba(106, 105, 105, .6);
+    pointer-events: all;
+  }
+}
+
 .navbar-slider {
   position: fixed;
   z-index: 98;
@@ -780,6 +795,22 @@ $main-color: black;
   100% {
     opacity: 1;
     transform: translateX(0)
+  }
+}
+
+.dropdown-overlay {
+  background-color: rgba(106, 105, 105, 0);
+  z-index: 99;
+  position: fixed;
+  top: 4.5rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  transition: .5s ease-in-out;
+  &.active {
+    background-color: rgba(106, 105, 105, .6);
+    pointer-events: all;
   }
 }
 

@@ -7,22 +7,25 @@ import { closeFilters, clearFiltersValues } from '../../../redux/filters/filters
 
 const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders, closeFilters, clearFiltersValues }) => {
     return (
-        <div className="slider-item">
-            <div className="image-container">
-                <Link to={path}>
-                    <img 
-                        className="nav-menu-image" 
-                        src={image} alt="menu-item" 
-                        onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}
-                    />
-                </Link>   
+        <React.Fragment>
+            <div className="slider-item">
+                <div className="image-container">
+                    <Link to={path}>
+                        <img 
+                            className="nav-menu-image" 
+                            src={image} alt="menu-item" 
+                            onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}
+                        />
+                    </Link>   
+                </div>
+                <div className="bottom-link">
+                    <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}>
+                        <h3>{text}</h3>
+                    </NavLink>
+                </div>
             </div>
-            <div className="bottom-link">
-                <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}>
-                    <h3>{text}</h3>
-                </NavLink>
-            </div>
-        </div>
+        </React.Fragment>
+        
     )
 }
 
