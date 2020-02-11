@@ -399,7 +399,7 @@ ul {
   bottom: 10px;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .navbar {
     display: none;
   }
@@ -799,7 +799,7 @@ ul {
           transform: translateY(0%);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .navbar-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -885,7 +885,7 @@ ul {
   display: none;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .nav-mobile-slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1149,7 +1149,7 @@ ul {
   display: flex;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .dropdown-wrapper {
     width: 100%;
     height: 70%;
@@ -1286,7 +1286,7 @@ ul {
   padding: 0.5rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .main-title {
     width: 100%;
     margin: 1rem;
@@ -1425,7 +1425,7 @@ ul {
   opacity: 1;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .selections .selections-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1527,7 +1527,7 @@ ul {
       flex-wrap: wrap;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .products-page .products-section {
     width: 100%;
   }
@@ -1741,7 +1741,7 @@ ul {
   margin: 0 0.2rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .product-card {
     width: 48%;
     margin: 0.2rem 0.2rem;
@@ -2132,7 +2132,7 @@ ul {
   color: rgba(241, 106, 123, 0.9);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .indi-wrapper {
     top: 4.5rem;
   }
@@ -2337,7 +2337,7 @@ ul {
   background-color: rgba(195, 195, 195, 0.4);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .trends-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2427,12 +2427,12 @@ ul {
   display: none;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .parallax-container {
     display: none;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .parallax-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2737,7 +2737,7 @@ ul {
   color: rgba(241, 106, 123, 0.9);
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .login {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2844,7 +2844,7 @@ ul {
   font-size: 36px;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 414px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .checkout-page {
     width: 90%;
   }
