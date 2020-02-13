@@ -22,7 +22,6 @@ const Products = ({ collection, indiVisible, match, itemsFiltered, setItemsFilte
 
     }, [items, setItemsFiltered]);
 
-
     let itemType = [...new Set(itemsFiltered.map(item => item.type).flat())].toString(); // TAKING ITEMS TYPES FOR CONDITIONAL FILTERING
     let itemCategory = [...new Set(itemsFiltered.map(item => item.category).flat())].toString(); // TAKING ITEMS CATEGORIES FOR CONDITIONAL FILTERING
 

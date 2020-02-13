@@ -14,12 +14,15 @@ const NavbarSliderItem = ({ path, image, text, toggleMobileMenu, dropAllSliders,
                         <img 
                             className="nav-menu-image" 
                             src={image} alt="menu-item" 
-                            onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}
+                            onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues(); window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}}
                         />
                     </Link>   
                 </div>
                 <div className="bottom-link">
-                    <NavLink to={path} className="nav-menu-title" activeClassName="link-active" onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues()}}>
+                    <NavLink to={path} 
+                            className="nav-menu-title" 
+                            activeClassName="link-active" 
+                            onClick={() => { toggleMobileMenu(); dropAllSliders(); closeFilters(); clearFiltersValues(); window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}}>
                         <h3>{text}</h3>
                     </NavLink>
                 </div>

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Parallax } from 'react-parallax'
 import Trend from './side-components/Trend'
 import Title from '../../misc/Title'
 import Selection from './side-components/Selection'
 import InstagramSection from './side-components/InstagramSection';
 
-const MainPage = () => {    
+const MainPage = () => {  
+    useEffect(() => window.scrollTo(0, 0), []);  
     return (
         <div className="main-page">
             <div className="trends-container">

@@ -26,7 +26,7 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                 <div className="menu">
                     <div className="nav-logo" onClick={() => { closeFilters(); clearFiltersValues() }}>
                         {/* <Link className="option" to="/"> <Logo className="logo"/> </Link>   */}
-                        <Link to="/"><img src={mamLogo} alt="mamsell" className="logo"/></Link>
+                        <Link to="/"><img src={mamLogo} alt="mamsell" className="logo" /></Link>
                     </div>
                     <ul className="nav-links">
                         <li className={`link ${!sliderBras && "link-active"}`} onClick={toggleSliderBras}>Bras</li>

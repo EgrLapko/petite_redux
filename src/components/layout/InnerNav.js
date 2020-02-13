@@ -18,7 +18,9 @@ const InnerNav = ({ type, closeFilters , clearFiltersValues }) => {
         if(type) {
             return (
                 navbarLinks.map(link => link.category === category &&
-                    <li className={`inner-link ${category === "sleepwear" && "link-small"}`} key={link.id} onClick={() => { closeFilters(); clearFiltersValues()}}>
+                    <li className={`inner-link ${category === "sleepwear" && "link-small"}`} 
+                        key={link.id} 
+                        onClick={() => { closeFilters(); clearFiltersValues(); window.scrollTo({top: 0, left: 0, behavior: 'smooth'}) }}>
                         <NavLink to={link.path} activeClassName="link-active"> 
                             {link.text} 
                         </NavLink>
