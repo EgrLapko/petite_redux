@@ -8,6 +8,8 @@ import { closeFilters, clearFiltersValues } from '../../../redux/filters/filters
 import { signOutStart } from '../../../redux/user/user-actions';
 import { selectCurrentUser } from '../../../redux/user/user-selectors';
 import { selectSliderBras, selectSliderPanties, selectSliderAccs, selectSliderSleep } from '../../../redux/navbar-slider/slider-selector';
+import { selectCartHidden } from '../../../redux/cart/cart-selectors';
+import { toggleCartHidden } from '../../../redux/cart/cart-actions';
 
 import CartIcon from '../../misc/CartIcon';
 import CartDropdown from '../../cart/CartDropdown';
@@ -18,7 +20,7 @@ import SliderMobile from './SliderMobile';
 import mamLogo from './petiteMamsell.png';
 
 function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, signOutStart, closeFilters, clearFiltersValues,
-    sliderAccs, sliderBras, sliderPanties, sliderSleep }) {
+    sliderAccs, sliderBras, sliderPanties, sliderSleep, toggleCartHidden, cartHidden }) {
     
     return (
         <React.Fragment>
@@ -29,10 +31,10 @@ function Navbar({ currentUser, toggleSliderBras, toggleSliderPanties, toggleSlid
                         <Link to="/"><img src={mamLogo} alt="mamsell" className="logo" /></Link>
                     </div>
                     <ul className="nav-links">
-                        <li className={`link ${!sliderBras && "link-active"}`} onClick={toggleSliderBras}>Bras</li>
-                        <li className={`link ${!sliderPanties && "link-active"}`} onClick={toggleSliderPanties}>Panties</li>
-                        <li className={`link ${!sliderAccs && "link-active"}`} onClick={toggleSliderAccs}>Accessories</li>
-                        <li className={`link ${!sliderSleep && "link-active"}`} onClick={toggleSliderSleep}>Sleepwear</li>
+                        <li className={`link ${!sliderBras && "link-active"}`} onClick={() => {toggleSliderBras(); !cartHidden && toggleCartHidden()}}>Bras</li>
+                        <li className={`link ${!sliderPanties && "link-active"}`} onClick={() => {toggleSliderPanties(); !cartHidden && toggleCartHidden()}}>Panties</li>
+                        <li className={`link ${!sliderAccs && "link-active"}`} onClick={() => {toggleSliderAccs(); !cartHidden && toggleCartHidden()}}>Accessories</li>
+                        <li className={`link ${!sliderSleep && "link-active"}`} onClick={() => {toggleSliderSleep(); !cartHidden && toggleCartHidden()}}>Sleepwear</li>
                     </ul>
                     <div className="nav-right">
                         {
@@ -68,7 +70,8 @@ const mapDispatchToProps = (dispatch) => ({
     toggleSliderSleep: () => dispatch(toggleSliderSleep()),
     signOutStart: () => dispatch(signOutStart()),
     closeFilters: () => dispatch(closeFilters()),
-    clearFiltersValues: () => dispatch(clearFiltersValues())
+    clearFiltersValues: () => dispatch(clearFiltersValues()),
+    toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 
 const mapStateToProps = createStructuredSelector({
@@ -76,7 +79,8 @@ const mapStateToProps = createStructuredSelector({
     sliderBras: selectSliderBras,
     sliderPanties: selectSliderPanties,
     sliderAccs: selectSliderAccs,
-    sliderSleep: selectSliderSleep
+    sliderSleep: selectSliderSleep,
+    cartHidden: selectCartHidden
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
