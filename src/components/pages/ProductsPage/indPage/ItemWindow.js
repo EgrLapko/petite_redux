@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom'
 
 import { toggleIndiPage, removeSingleItem, pickSize, pickCup, clearSizes } from '../../../../redux/indi-slider/indi-actions';
 import { selectSingleItem, selectChosenSize, selectChosenCup } from '../../../../redux/indi-slider/indi-selector';
@@ -10,36 +9,28 @@ import { selectCartItems } from '../../../../redux/cart/cart-selectors';
 import Title from '../../../misc/Title';
 import PopUp from './PopUp';
 
+const ItemWindow = ({ item, goBack, url, indiVisible, toggleIndiPage, cartItems, addItem, sizeToPick, pickedSize, cupToPick, pickedCup, clearSizes, toggleCartHidden, removeSingleItem }) => {
 
-const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartItems, addItem, sizeToPick, pickedSize, cupToPick, pickedCup, clearSizes, toggleCartHidden, removeSingleItem }) => {
+    const { imgSmall_1, imgSmall_2, title, category, price, id, sizes, cup, description, imgBig_1, imgBig_2, color } = item;
 
-    const { title, description, price, category, imgBig_1, imgBig_2, sizes, color, cup, id } = singleItem;
-
-    
     const pickSize = (size) => {
         sizeToPick(size);
-        singleItem.pickedSize = size
-        return singleItem 
+        item.pickedSize = size
+        return item 
     };
 
     const pickCup = (cup) => {
         cupToPick(cup);
-        singleItem.pickedCup = cup
-        return singleItem 
+        item.pickedCup = cup
+        return item 
     };
 
-    const addToCart = (singleItem) => {
-        addItem(singleItem);
+    const addToCart = (item) => {
+        addItem(item);
         toggleCartHidden();
         setTimeout(() => {
             toggleCartHidden()
         }, 1600)
-    }
-
-    if (indiVisible) {
-        document.body.style.overflow = 'hidden';
-    } else if (!indiVisible) {
-        document.body.style.overflow = 'visible';
     }
     
 
@@ -52,10 +43,17 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
         setTimeout(() => togglePopUp(false), 2000);
     }
 
+
     return (
-        <div className={`indi-wrapper ${indiVisible ? "opened" : ''}`}>
-            <PopUp popUp={popUpMessage} text={"Please, choose the size"} />
-            <div className="indi-container">
+        <div className="item-modal">
+            {/* <div className="main-info">
+                <h1>{title}</h1>
+                <img src={imgSmall_1} alt="item"/>
+                <button onClick={() => goBack(url)}>
+                    Return
+                </button>
+            </div> */}
+            <div className="main-info">
                 <div className="info-container">
                     <div className="info-images">
                         <img 
@@ -85,7 +83,7 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
                                             sizes.map((size, index) => {
                                                 return (
                                                     <li 
-                                                        className={`size-item ${pickedSize === size ? 'active-size' : singleItem.pickedSize === size ? 'active-size' : ''}`} 
+                                                        className={`size-item ${pickedSize === size ? 'active-size' : item.pickedSize === size ? 'active-size' : ''}`} 
                                                         key={index} 
                                                         onClick={() => pickSize(size)}
                                                     > 
@@ -121,12 +119,12 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH JUST SIZES */}
                             {
-                                !singleItem.cup && singleItem.sizes &&
+                                !item.cup && item.sizes &&
                                     <button 
                                         className={`shop-btn ${pickedSize !== '' ? 'shop-active'
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
-                                        onClick={pickedSize ===  '' ? () => showPopUp() : () => addToCart(singleItem)}
+                                        onClick={pickedSize ===  '' ? () => showPopUp() : () => addToCart(item)}
                                     >   
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
@@ -135,12 +133,12 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH SIZES AND CUP */}
                             {
-                                singleItem.cup && singleItem.sizes &&
+                                item.cup && item.sizes &&
                                     <button 
                                         className={`shop-btn ${pickedSize !==  '' && pickedCup !==  '' ? 'shop-active'
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
-                                        onClick={pickedCup ===  '' | pickedSize === '' ? () => showPopUp() : () => addToCart(singleItem)}
+                                        onClick={pickedCup ===  '' | pickedSize === '' ? () => showPopUp() : () => addToCart(item)}
                                     >
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
@@ -149,12 +147,12 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITH JUST CUPS */}
                             {
-                                singleItem.cup && !singleItem.sizes &&
+                                item.cup && !item.sizes &&
                                     <button 
                                         className={`shop-btn ${pickedCup !==  '' ? 'shop-active'
                                                             : cartItems.find(item => item.id === id) ? 'shop-active' 
                                                             : null }`}
-                                        onClick={pickedCup ===  '' ? () => showPopUp() : () => addToCart(singleItem)}
+                                        onClick={pickedCup ===  '' ? () => showPopUp() : () => addToCart(item)}
                                     >
                                         <i className="fas fa-shopping-bag"/>
                                         <p className="btn-text">{cartItems.find(item => item.id === id) ? "In bag" : "add to bag"}</p>
@@ -164,11 +162,11 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
 
                             {/* -----------------------------------------------------   CONDITIONAL FOR ITEMS WITHOUT SIZES*/}
                             {
-                                !singleItem.cup && !singleItem.sizes 
+                                !item.cup && !item.sizes 
                                     ? 
                                         <button 
                                             className="shop-btn shop-active"
-                                            onClick={() => addToCart(singleItem)}
+                                            onClick={() => addToCart(item)}
                                         >
                                             <i className="fas fa-shopping-bag"/> 
                                             <p className="btn-text"> {cartItems.find(item => item.id === id) ? "In bag" : "add to bag"} </p>
@@ -180,17 +178,19 @@ const IndividualPage = ({ indiVisible, toggleIndiPage, item, singleItem, cartIte
                     </div>       
                 </div>  
                 <button className="btn close-btn" 
-                        onClick={() => { toggleIndiPage(); clearSizes(); removeSingleItem()  }}
+                        onClick={() => { goBack(url) }}
                 >
                      <i className="far fa-times-circle"></i>
                 </button>
             </div>   
         </div>
     )
-}
+};
+
+
 
 const mapStateToProps = (state) => ({
-    singleItem: selectSingleItem(state),
+    item: selectSingleItem(state),
     cartItems: selectCartItems(state),
 
     pickedSize: selectChosenSize(state),
@@ -208,4 +208,5 @@ const mapDispatchToProps = dispatch => ({
     clearSizes: () => dispatch(clearSizes()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(IndividualPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ItemWindow);
+

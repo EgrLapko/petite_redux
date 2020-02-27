@@ -18,6 +18,12 @@ const SliderMobile = ({ currentUser, signOutStart,
                         toggleSliderBras, toggleSliderPanties, toggleSliderAccs, toggleSliderSleep, toggleMobileMenu,
                         dropAllSliders, sliderBrasHidden, sliderPantiesHidden, sliderAccsHidden, sliderSleepHidden }) => {
 
+    if (!mobileMenuHidden) {
+        document.body.style.overflow = 'hidden';
+    } else if (mobileMenuHidden) {
+        document.body.style.overflow = 'visible';
+    }
+
 
     return (
         <React.Fragment>
